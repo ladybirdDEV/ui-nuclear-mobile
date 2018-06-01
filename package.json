@@ -17,7 +17,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
-    "pack": "node build/pack.js",
+    "pack": "node build/pack.js"
   },
   "dependencies": {
     "alloyfinger": "^0.1.13",
