@@ -13,6 +13,22 @@ A configurable Mobile UI specification and Vue-based implementation.
 Clone this Project and run
 
 ```bash
-npm run dev
+$ npm run dev
 ```
 
+## Installation
+
+```bash
+$ npm install ui-nuclear-mobile --save
+```
+
+## Usage
+
+```javascript
+import UiNuclearMobile from 'ui-nuclear-mobile'
+import 'ui-nuclear-mobile/dist/main.css'
+  
+...
+
+Vue.use(UiNuclearMobile)
+```
