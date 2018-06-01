@@ -38,7 +38,7 @@ import DatePickerView from './DatePickerView'
 import Picker from './Picker'
 import PickerView from './PickerView'
 import PullToRefresh from './PullToRefresh'
-import ListView from './ListView'
+import { ListView, IndexList } from './ListView'
 import Calendar from './Calendar'
 import SwipeAction from './SwipeAction'
 import { Accordion, Panel } from './Accordion'
@@ -96,6 +96,7 @@ export default{
   PickerView,
   PullToRefresh,
   ListView,
+  IndexList,
   Calendar,
   SwipeAction,
   Accordion,
@@ -152,6 +153,7 @@ export default{
   'unm-picker-view': PickerView,
   'unm-pull-to-refresh': PullToRefresh,
   'unm-list-view': ListView,
+  'unm-index-list': IndexList,
   'unm-calendar': Calendar,
   'unm-swipe-action': SwipeAction,
   'unm-accordion': Accordion,
