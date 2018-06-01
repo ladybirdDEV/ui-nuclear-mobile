@@ -1,0 +1,173 @@
+@popupPickerPrefixCls: mobile-picker-popup;
+.@{popupPickerPrefixCls} {
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+
+  &-close {
+    display: none;
+  }
+
+  &-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #373737;
+    background-color: rgba(55, 55, 55, 0.6);
+    height: 100%;
+    filter: alpha(opacity=50);
+    z-index: 1050;
+    &-hidden {
+      display: none;
+    }
+  }
+
+  &-header {
+    // display: flex;
+    // align-items: center;
+    background-image: -webkit-linear-gradient(top, #e7e7e7, #e7e7e7, transparent, transparent);
+    background-image: linear-gradient(to bottom, #e7e7e7, #e7e7e7, transparent, transparent);
+    background-position: bottom;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    &-left, &-right {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &-item {
+    color: #0ae;
+    font-size: 18px;
+    height: 44px;
+    line-height: 44px;
+    cursor: pointer;
+    box-sizing: border-box;
+    // flex: 1;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    &-active {
+      background-color: #ddd;
+    }
+  }
+
+  &-title {
+    flex: 1;
+    color: #666;
+    cursor: default;
+  }
+
+  .effect() {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
+  // &-fade-enter, &-fade-appear {
+  //   opacity: 0;
+  //   .effect();
+  //   animation-play-state: paused;
+  // }
+
+  // &-fade-leave {
+  //   .effect();
+  //   animation-play-state: paused;
+  // }
+
+  &-fade-enter-active{
+    animation-name: vmPopupPickerFadeIn;
+    .effect();
+    animation-play-state: running;
+  }
+
+  &-fade-leave-active {
+    animation-name: vmPopupPickerFadeOut;
+    .effect();
+    animation-play-state: running;
+  }
+  &-fade-enter, &-fade-leave-to{
+    opacity: 0;
+  }
+  &-fade-enter-to, &-fade-leave{
+    opacity: 1;
+  }
+
+  @keyframes vmPopupPickerFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes vmPopupPickerFadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  // &-slide-fade-enter,
+  // &-slide-fade-appear,
+  // &-slide-fade-leave {
+  //   .effect();
+  //   animation-play-state: paused;
+  // }
+
+  &-slide-fade-enter-active{
+    animation-name: vmPopupPickerSlideFadeIn;
+    .effect();
+    animation-play-state: running;
+  }
+
+  &-slide-fade-leave-active {
+    animation-name: vmPopupPickerSlideFadeOut;
+    .effect();
+    animation-play-state: running;
+  }
+  &-slide-fade-enter,&-slide-fade-leave-to{
+    transform: translate(0, 0);
+  }
+  &-slide-fade-enter-to, &-slide-fade-leave{
+    transform: translate(0, 100%);
+  }
+  @keyframes vmPopupPickerSlideFadeIn {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes vmPopupPickerSlideFadeOut {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+}
