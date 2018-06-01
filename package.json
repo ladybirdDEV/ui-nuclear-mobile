@@ -18,8 +18,6 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "build": "node build/build.js",
     "pack": "node build/pack.js",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "alloyfinger": "^0.1.13",
@@ -105,6 +103,7 @@
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
+    "vuepress": "^0.10.0",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
