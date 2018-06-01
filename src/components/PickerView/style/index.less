@@ -1,0 +1,19 @@
+@import '../../style/mixins';
+@import '../../style/themes/default';
+
+@prefixCls: um-picker;
+@pickerColPrefixCls: um-picker-col;
+
+@import './picker';
+
+@picker-item-height: 34 * @hd;
+
+.@{prefixCls}{
+  display: flex;
+  align-items: center;
+
+  &-item{
+    flex: 1;
+    text-align: center;
+  }
+}

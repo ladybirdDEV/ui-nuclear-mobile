@@ -1,0 +1,28 @@
+@prefixClass: mobile-calendar;
+
+.@{prefixClass} .date-picker {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+
+  .wrapper {
+    height: auto;
+    position: relative;
+  }
+
+  .months {
+    background: #fff;
+  }
+
+  .load-tip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    top: -40px;
+    color: #bbb;
+  }
+}

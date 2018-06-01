@@ -1,0 +1,189 @@
+@import '../../style/mixins';
+@import '../../style/themes/default';
+
+@menuPrefixCls: um-menu;
+@subMenuPrefixCls: um-sub-menu;
+@menuSelectContainer: um-menu-select-container;
+@multiSelectMenuBtns: um-multi-select-btns;
+@flexPrefixCls: um-flexbox;
+@color-blue: #26a2ff;
+
+.@{menuPrefixCls}{
+  background: #f5f5f9;
+
+  .@{menuSelectContainer} {
+    flex-grow: 2;
+
+    .@{menuSelectContainer}-submenu{
+      align-self: stretch;
+    }
+  }
+
+  .@{multiSelectMenuBtns}{
+    height: @menu-multi-select-btns-height;
+    width: 100%;
+    font-size: 0;
+
+    .@{multiSelectMenuBtns}-btn{
+      width: 50%;
+      height: 100%;
+      border-radius: 0;
+
+      .hairline('all', @border-color-base, 0);
+    }
+  }
+
+  .@{flexPrefixCls}{
+    position: relative;
+    height: 100%;
+    .@{flexPrefixCls}-item{
+      margin-left: 0;
+      //position: absolute;
+      //left: 0;
+      //top: 0;
+      //right: 0;
+      //bottom: 0;
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      .um-list{
+        padding: 0;
+      }
+
+      &:first-child{
+        background: @fill-grey;
+        .um-list{
+          &-body{
+            background: @fill-grey;
+            .hairline-remove('bottom');
+
+            .@{menuPrefixCls}-selected {
+              .um-list-item{
+                background: @fill-base;
+              }
+            }
+            .um-list-item{
+              background: @fill-grey;
+              .um-list-line{
+                .hairline-remove('bottom');
+                .um-list-content{
+                  //color: @color-text-base;
+                }
+              }
+            }
+            &:last-child{
+              .hairline-remove('bottom');
+            }
+          }
+        }
+      }
+      &:last-child{
+        background-color: @fill-base;
+        left: 50%;
+        .um-list{
+          &-item{
+            background: @fill-base;
+            .hairline-remove('bottom');
+
+            .um-list-line{
+              .um-list-extra{
+                flex: 0;
+              }
+            }
+            &.@{subMenuPrefixCls}-item-selected{
+              .um-list-line{
+                .um-list-content{
+                  color: @color-link;
+                }
+              }
+            }
+            &.@{subMenuPrefixCls}-item-disabled{
+              .um-list-line{
+                .um-list-content{
+                  color: @color-text-disabled;
+                }
+              }
+            }
+          }
+        }
+      }
+      &:only-child {
+        background: @fill-base;
+        left: 0;
+        .um-list{
+          &-body{
+            background: @fill-base;
+            .um-list-item{
+              background: @fill-base;
+              .um-list-line{
+                border-bottom: 1PX solid #ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+    .um-list{
+      .um-list-item {
+        .um-list-line {
+          .um-list-content {
+            font-size: @link-button-font-size;
+          }
+          .um-list-extra{
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
+}
+.checked{
+  .um-list-item{
+    .um-list-line{
+      .um-list-content{
+        color: #108ee9;
+      }
+    }
+  }
+}
+.um-checkbox-input {
+  display: none;
+  &:checked {
+    + .um-checkbox-core {
+      background-color: @color-blue;
+      border-color: @color-blue;
+      &::after {
+        border-color: #fff;
+        transform: rotate(45deg) scale(1);
+      }
+    }
+  }
+  &[disabled] + .um-checkbox-core {
+    background-color: #d9d9d9;
+    border-color: #ccc;
+  }
+}
+.um-checkbox-core {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  &::after {
+    border: 2px solid transparent;
+    border-left: 0;
+    border-top: 0;
+    content: " ";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    transform: rotate(45deg) scale(0);
+    transition: transform .2s;
+  }
+}

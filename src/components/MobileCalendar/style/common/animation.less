@@ -1,0 +1,125 @@
+.@{prefixClass} {
+
+  .animate {
+    animation-duration: .3s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .fade-enter-active{
+    animation-name: fadeIn;
+    .animate();
+    animation-play-state: running;
+  }
+
+  .fade-leave-active {
+    animation-name: fadeOut;
+    .animate();
+    animation-play-state: running;
+  }
+  .fade-enter, .fade-leave-to{
+    opacity: 0;
+  }
+  .fade-enter-to, .fade-leave{
+    opacity: 1;
+  }
+
+  @keyframes slideInUp {
+    0% {
+      transform: translate(0, 100%);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes slideInDown {
+    0% {
+      transform: translate(0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translate(0, 100%);
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateZ(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateZ(0);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  .slideV-enter-active{
+    animation-name: slideInUp;
+    .animate();
+    animation-play-state: running;
+  }
+
+  .slideV-leave-active {
+    animation-name: slideInDown;
+    .animate();
+    animation-play-state: running;
+  }
+  .slideV-enter, .slideV-leave-to{
+    transform: translate(0, 100%);
+    visibility: visible;
+  }
+  .slideV-enter-to, .slideV-leave{
+    transform: translate(0, 0);
+  }
+
+  .slideH-enter-active{
+    animation-name: slideInLeft;
+    .animate();
+    animation-play-state: running;
+  }
+
+  .slideH-leave-active {
+    animation-name: slideInRight;
+    .animate();
+    animation-play-state: running;
+  }
+  .slideH-enter, .slideH-leave-to{
+    transform: translate3d(100%, 0, 0);
+  }
+  .slideH-enter-to, .slideH-leave{
+    transform: translateZ(0);
+    visibility: visible;
+  }
+}
+

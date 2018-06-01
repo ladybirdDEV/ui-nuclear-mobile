@@ -1,0 +1,65 @@
+.@{prefixClass} {
+  .mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .5);
+  }
+
+  .content {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #fff;
+  }
+
+  .header {
+    margin: 5px;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    .title {
+      text-align: center;
+      width: 100%;
+      font-weight: 700;
+    }
+
+    .left {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 8px;
+      height: 24px;
+      left: 5px;
+      top: 5px;
+      color: #068EEF;
+    }
+
+    .right {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 8px;
+      height: 24px;
+      right: 5px;
+      top: 5px;
+      color: #068EEF;
+      font-size: 14px;
+    }
+  }
+
+  .timePicker {
+    border-top: 1px #ccc solid;
+  }
+}
