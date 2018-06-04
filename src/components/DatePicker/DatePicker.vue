@@ -7,10 +7,10 @@
       :onVisibleChange="visibleChange"
       :dismissText="locale ? locale.dismissText : 'Cancel'"
       :okText="locale ? locale.okText : 'OK'"
-      v-model="visible"
+      v-model="visibleCopy"
       :onDismiss="dismiss"
       :onOk="ok"
-      :maskClosable="maskClosable"
+      :maskClosable="visible === undefined ? maskClosable : false"
       :title="title">
       <MobileDatePicker
         :mode="mode"
@@ -25,7 +25,7 @@
         className="date-picker"
         ></MobileDatePicker>
     </DatePickerPopup>
-    <Feedback activeClassName="um-list-item-active" :onMouseUp="() => {visible = !visible}">
+    <Feedback activeClassName="um-list-item-active" :onMouseUp="mouseUp">
       <slot name="list-item" :extra="value ? dateformat(value, formatCopy) : extra"></slot>
       <slot></slot>
     </Feedback>
@@ -75,6 +75,10 @@ export default {
       default: 1
     },
     title: String,
+    visible: {
+      type: Boolean,
+      default: undefined
+    },
     onDismiss: Function,
     onOk: Function,
     onValueChange: Function,
@@ -87,7 +91,7 @@ export default {
   },
   data () {
     return {
-      visible: false,
+      visibleCopy: this.visible !== undefined ? this.visible : false,
       date: this.value || new Date(),
       maskClosable: true
     }
@@ -130,6 +134,11 @@ export default {
         this.onValueChange(value, index)
       }
       this.$emit('value-change', value, index)
+    },
+    mouseUp () {
+      if (this.visible === undefined) {
+        this.visibleCopy = !this.visibleCopy
+      }
     }
   },
   computed: {
@@ -157,6 +166,11 @@ export default {
         }
       }
       return format
+    }
+  },
+  watch: {
+    visible (val) {
+      this.visibleCopy = val
     }
   }
 }
