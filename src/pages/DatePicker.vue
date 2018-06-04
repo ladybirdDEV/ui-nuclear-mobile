@@ -43,7 +43,7 @@
       <DatePicker
         :onDismiss="dismiss"
         mode="time"
-        format="'UTC Time: 'HH:MM"
+        format="'UTC time: 'HH:MM"
         v-model="dateD">
         <template slot-scope="props" slot="list-item">
           <ListItem arrow="horizontal" :extra="props.extra">UTC time</ListItem>
@@ -56,7 +56,9 @@
         extra=" "
         mode="datetime"
         v-model="dateE"
-        ref="datePickerControlVisible">
+        :visible="datePickerVisible"
+        @ok="okCallback"
+        @dismiss="dismissCallback">
         <template slot-scope="props" slot="list-item">
           <ListItem :onClick="clickControlVisible" :extra="props.extra">External control visible state</ListItem>
         </template>
@@ -112,6 +114,10 @@ import DatePicker from '@/components/DatePicker'
 import dateformat from 'dateformat'
 import InputItem from '@/components/InputItem'
 import Button from '@/components/Button'
+const nowTimeStamp = Date.now()
+const now = new Date(nowTimeStamp)
+// GMT is not currently observed in the UK. So use UTC now.
+const utcNow = new Date(now.getTime() + (now.getTimezoneOffset() * 60000))
 export default {
   name: 'DatePickerPage',
   components: {
@@ -140,7 +146,7 @@ export default {
       dateA: new Date(),
       dateB: new Date(),
       dateC: new Date(),
-      dateD: new Date(),
+      dateD: utcNow,
       dateE: null,
       dateChild: null,
       dateF: new Date(),
@@ -148,7 +154,8 @@ export default {
       initialValue: dateformat(new Date(), 'yyyy-mm-dd'),
       minDate: new Date(dateformat(new Date(), 'yyyy-mm-dd') + ' ' + '09:30'),
       maxDate: new Date(dateformat(new Date(), 'yyyy-mm-dd') + ' ' + '16:15'),
-      hasError: false
+      hasError: false,
+      datePickerVisible: false
     }
   },
   methods: {
@@ -157,7 +164,7 @@ export default {
     },
     dismiss () {},
     clickControlVisible () {
-      this.$refs.datePickerControlVisible.maskClosable = false
+      this.datePickerVisible = true
     },
     valueChange (val, index) {
       console.log(val, index)
@@ -188,6 +195,12 @@ export default {
     },
     inputOk (date) {
       this.inputDate = dateformat(date, 'yyyy-mm-dd')
+    },
+    okCallback (val) {
+      this.datePickerVisible = false
+    },
+    dismissCallback () {
+      this.datePickerVisible = false
     }
   },
   created () {

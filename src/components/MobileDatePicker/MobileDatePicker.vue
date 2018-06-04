@@ -38,7 +38,7 @@ export default {
     },
     pickerPrefixCls: {
       type: String,
-      default: 'mobile-picker'
+      default: 'um-picker-col'
     },
     mode: {
       type: String,
@@ -556,3 +556,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+@import '../PickerView/style/index.less';
+@import '../Picker/style/index.less';
+</style>
