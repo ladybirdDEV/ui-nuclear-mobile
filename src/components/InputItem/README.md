@@ -25,6 +25,7 @@
 | maxLength | 最大长度 | Number | - |
 | error | 是否展现报错提示 | Boolean | false |
 | extra	| 右边注释 | String | - |
+| label	| 标签 | Slot | - |
 | labelNumber | 标签的文字个数，可用`2-7`之间的数字 | Number | `5` |
 | updatePlaceholder `不支持` | 当清除内容时，是否将清除前的内容替换到 placeholder 中	 | Boolean | false |
 | prefixListCls `暂不支持` (`web only`) | 列表 class 前缀 | String | `um-list`
