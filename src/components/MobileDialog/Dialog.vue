@@ -74,11 +74,11 @@ export default {
       this.$emit('onChange', this.currentVisible)
       if (this.currentVisible === false) {
         this.$emit('onClose', this.currentVisible)
+        document.body.removeAttribute('style')
+      } else {
+        document.body.style.overflow = 'hidden'
       }
     }
-  },
-  created () {
-    document.body.style.overflow = 'hidden'
   },
   methods: {
     maskClick (event) {
