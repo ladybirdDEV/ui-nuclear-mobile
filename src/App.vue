@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <NavBar mode="light" :leftContent="backText" :onLeftClick="handleClick">
-      首页
+    <NavBar mode="light" :onLeftClick="handleClick" v-if="$route.name !== 'home'">
+      <template slot="icon"><img src="../static/icon-home.svg" alt="" style="width:22px;"></template>
+      {{pageTitle}}
     </NavBar>
     <div v-if="invalidRoute" style="text-align:center">
       <h1>404</h1>
@@ -20,20 +21,19 @@ export default {
     NavBar
   },
   computed: {
-    backText () {
-      if (this.$route.name === 'home') {
-        return undefined
-      } else {
-        return '返回'
-      }
-    },
     invalidRoute () {
       return !this.$route.matched || this.$route.matched.length === 0
+    },
+    pageTitle () {
+      let title = this.$route.name.replace(/(-\w)/g, function (m) {
+        return m[1].toUpperCase()
+      })
+      return title.slice(0, 1).toUpperCase() + title.slice(1)
     }
   },
   methods: {
     handleClick () {
-      this.$router.go(-1)
+      this.$router.push('/')
     }
   }
 }
