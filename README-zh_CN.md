@@ -1,4 +1,4 @@
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
 <p align="center">
   <a href="https://github.com/ladybirdDEV/ui-nuclear-mobile">
@@ -8,25 +8,25 @@ English | [简体中文](./README.zh-CN.md)
 
 # UI Nuclear Mobile
 
-A configurable Mobile UI specification and Vue-based implementation.
+一套`Ant Design`的`Vue`实现
 
-## Demo
+## 演示
 
 [Live Demo](https://ladybirddev.github.io/ui-nuclear-mobile-demo/)
 
-Clone this Project and run
+下载或克隆本项目后，运行
 
 ```bash
 $ npm run dev
 ```
 
-## Installation
+## 安装
 
 ```bash
 $ npm install ui-nuclear-mobile --save
 ```
 
-## Usage
+## 使用
 
 ```javascript
 import UiNuclearMobile from 'ui-nuclear-mobile'
