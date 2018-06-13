@@ -10,6 +10,8 @@ A configurable Mobile UI specification and Vue-based implementation.
 
 ## Demo
 
+[Live Demo](https://ladybirddev.github.io/ui-nuclear-mobile-demo/)
+
 Clone this Project and run
 
 ```bash
@@ -27,7 +29,7 @@ $ npm install ui-nuclear-mobile --save
 ```javascript
 import UiNuclearMobile from 'ui-nuclear-mobile'
 import 'ui-nuclear-mobile/dist/main.css'
-  
+
 ...
 
 Vue.use(UiNuclearMobile)
