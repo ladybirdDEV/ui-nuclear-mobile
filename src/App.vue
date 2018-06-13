@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar mode="light" :onLeftClick="handleClick" v-if="$route.name !== 'home'">
-      <template slot="icon"><img src="../static/icon-home.svg" alt="" style="width:22px;"></template>
+      <template slot="icon"><img src="../static/icon-home.svg" alt="" style="width:22px;height:22px;cursor:pointer"></template>
       {{pageTitle}}
     </NavBar>
     <div v-if="invalidRoute" style="text-align:center">
