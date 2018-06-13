@@ -5,7 +5,7 @@ let dataDisBar = ['Accordion', 'Badge', 'Card', 'Carousel', 'Grid', 'Icon', 'Lis
 let feedbackBar = ['ActionSheet', 'ActivityIndicator', 'Modal', 'Progress', 'Toast']
 let gestureBar = ['PullToRefresh', 'SwipeAction']
 let combinationBar = ['ListView', 'Result']
-let otherBar = ['']
+let otherBar = ['LocaleProvider']
 let barObj = {
   Layout: layoutBar,
   Navigation: navBar,

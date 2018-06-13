@@ -11,5 +11,5 @@ features:
   details: 在不损失功能的基础上，尽量保证了单个组件的体积最小，性能最优
 - title: 简易定制
   details: 支持灵活的样式定制，简易生成多种风格，满足个性化产品需求。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+footer: MIT Licensed | Copyright © 2018-present Ladybird Studio
 ---

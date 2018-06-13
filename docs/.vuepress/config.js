@@ -29,7 +29,7 @@ function removereadme(arr, val) {
 removereadme(filelist, 'README.md');
 let sidebarNav = [
   {
-    title: 'Components',
+    title: '',
     collapsable: false,
     children: ['']
   }
@@ -46,7 +46,7 @@ function getSidebar () {
 getSidebar()
 
 module.exports = {
-  title: 'UI-NuClear-Mobile',
+  title: 'UI Nuclear Mobile',
   description: '一套基于Vue.js的移动端UI组件库',
   base: '/ui-nuclear-mobile/',
   themeConfig: {
