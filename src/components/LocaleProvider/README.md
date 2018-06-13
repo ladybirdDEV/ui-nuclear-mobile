@@ -26,7 +26,7 @@ export default {
 
 本模块仅用于组件的内建文案，若有业务文案的国际化需求，建议使用[vue-i18n](https://github.com/kazupon/vue-i18n)
 
-## API
+### props
 
 | 参数 | 说明 | 类型 | 默认值 |
 | -- | -- | -- | -- |
