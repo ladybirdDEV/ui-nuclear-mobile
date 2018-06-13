@@ -26,5 +26,3 @@ import 'ui-nuclear-mobile/dist/main.css'
 
 Vue.use(UiNuclearMobile)
 ```
-
-<StyleCom />

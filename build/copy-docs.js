@@ -11,6 +11,18 @@ for (let i in sidebarObj) {
   sidebarArr = sidebarArr.concat(sidebarObj[i])
 }
 
+fs.access(path.resolve('./introduce.md'), (err) => {
+  if (err) throw err
+  fs.readFile(path.resolve('./introduce.md'), (err, data) => {
+    if (err) throw err
+    let introContent = `${data}
+<StyleCom />`
+    fs.writeFile(path.join(targetPath, 'README.md'), introContent, (err) => {
+      if (err) throw err
+    })
+  })
+})
+
 function syncFiles (sourcePath, targetPath, fileName = '') {
   if (!fs.existsSync(targetPath)) {
     fs.mkdirSync(targetPath)
