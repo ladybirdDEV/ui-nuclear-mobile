@@ -11,12 +11,12 @@
     :onScrollChange="scrollChange"
     :className="className"
     :disabled="disabled"
-    :locale="locale"
+    :locale="currentLocale"
   ></MobileDatePicker>
 </template>
 <script>
 import {MobileDatePicker} from '@/components/MobileDatePicker'
-import defaultLocale from '@/components/MobileDatePicker/locale/en_US'
+import zhCN from '@/components/MobileDatePicker/locale/zh_CN'
 import { oneOf } from '../../utils'
 export default {
   name: 'DatePickerView',
@@ -53,10 +53,7 @@ export default {
       default: 1
     },
     locale: {
-      type: Object,
-      default: function () {
-        return defaultLocale
-      }
+      type: Object
     },
     disabled: {
       type: Boolean,
@@ -65,6 +62,14 @@ export default {
     onValueChange: Function,
     onChange: Function,
     onScrollChange: Function
+  },
+  inject: {
+    localeData: {
+      from: 'localeData',
+      default: function () {
+        return zhCN
+      }
+    }
   },
   data () {
     return {
@@ -89,6 +94,17 @@ export default {
         this.onScrollChange(date, value, index)
       }
       this.$emit('scroll-change', date, value, index)
+    }
+  },
+  computed: {
+    currentLocale () {
+      if (this.locale) {
+        return this.locale
+      } else if (this.localeData && this.localeData.unmLocale !== undefined) {
+        return this.localeData.unmLocale[this.$options.name]
+      } else {
+        return zhCN
+      }
     }
   }
 }

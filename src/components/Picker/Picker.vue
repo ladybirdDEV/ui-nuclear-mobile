@@ -47,7 +47,7 @@
         </MobilePicker>
         </MobileMultiPicker>
     </MobilePopupCascader>
-    <slot :extra="extra" name="list-item" :onClick="() => {visible = !visible}"></slot>
+    <slot :extra="extra || currentLocale.extra" name="list-item" :onClick="() => {visible = !visible}"></slot>
   </div>
 </template>
 
@@ -142,7 +142,7 @@ export default {
       maskTransitionName: 'um-fade',
       curValue: this.value || [],
       scrollValue: [],
-      extra: '请选择',
+      extra: '',
       visible: false,
       allDatas: []
     }
@@ -192,7 +192,7 @@ export default {
       if (value.length > 0) {
         this.getExtra()
       } else {
-        this.extra = '请选择'
+        this.extra = this.currentLocale.extra
       }
       this.$emit('ok', value)
     },

@@ -16,6 +16,19 @@
           <WhiteSpace size="xl" />
           <Pagination :total="5"></Pagination>
           <WhiteSpace />
+          <List>
+            <DatePicker mode="date">
+              <template slot-scope="props" slot="list-item">
+                <ListItem arrow="horizontal" :extra="props.extra">datePicker</ListItem>
+              </template>
+            </DatePicker>
+            <Picker :data="seasons" :cascade="false">
+              <template slot-scope="props" slot="list-item">
+                <ListItem arrow="horizontal" :onClick="props.onClick" :extra="props.extra">picker</ListItem>
+              </template>
+            </Picker>
+          </List>
+          <WhiteSpace />
           <InputItem type="money" placeholder="money input" />
         </div>
       </LocaleProvider>
@@ -25,6 +38,7 @@
 <script>
 import enUS from '@/components/LocaleProvider/en_US'
 import ruRU from '@/components/LocaleProvider/ru_RU'
+import DatePicker from '@/components/DatePicker'
 import Picker from '@/components/Picker'
 import Button from '@/components/Button'
 import { List, ListItem } from '@/components/List'
@@ -40,6 +54,7 @@ export default {
     Pagination,
     LocaleProvider,
     Button,
+    DatePicker,
     Picker,
     List,
     ListItem,
@@ -65,6 +80,28 @@ export default {
           label: 'Русский',
           language: ruRU
         }
+      ],
+      seasons: [
+        [
+          {
+            label: '2013',
+            value: '2013'
+          },
+          {
+            label: '2014',
+            value: '2014'
+          }
+        ],
+        [
+          {
+            label: '春',
+            value: '春'
+          },
+          {
+            label: '夏',
+            value: '夏'
+          }
+        ]
       ]
     }
   },

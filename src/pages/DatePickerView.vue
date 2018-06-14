@@ -3,7 +3,7 @@
     <WhiteSpace />
     <div class="sub-title">StartTime</div>
     <DatePickerView
-      mode="time"
+      mode="datetime"
       :minDate="new Date('2011-1-2 16:00:02')"
       :maxDate="new Date('2030-1-2 18:00:02')"
       v-model="startTime"
@@ -18,6 +18,7 @@
       :minDate="new Date('2011-1-2 16:00:02')"
       :maxDate="new Date('2030-1-2 02:00:02')"
       v-model="endTime"
+      :locale="enUS"
       :minuteStep="2"
       :onValueChange="endTimeValueChanged"
       :onChange="endTimeChangedDate"
@@ -28,6 +29,7 @@
 <script>
 import WhiteSpace from '@/components/WhiteSpace'
 import DatePickerView from '@/components/DatePickerView'
+import enUS from '@/components/MobileDatePicker/locale/en_US'
 export default {
   name: 'DatepickerViewPage',
   components: {
@@ -37,7 +39,8 @@ export default {
   data () {
     return {
       startTime: new Date('2015-3-16 9:00:05'),
-      endTime: new Date('2018-3-16 9:00:05')
+      endTime: new Date('2018-3-16 9:00:05'),
+      enUS: enUS
     }
   },
   methods: {

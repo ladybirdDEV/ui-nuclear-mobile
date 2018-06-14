@@ -42,6 +42,7 @@
 
       <DatePicker
         :onDismiss="dismiss"
+        :locale="enUS"
         mode="time"
         format="'UTC time: 'HH:MM"
         v-model="dateD">
@@ -52,7 +53,6 @@
 
       <DatePicker
         :onDismiss="dismiss"
-        :locale="localCN"
         extra=" "
         mode="datetime"
         v-model="dateE"
@@ -66,7 +66,6 @@
 
       <DatePicker
         :onDismiss="dismiss"
-        :locale="localCN"
         :onValueChange="valueChange"
         @change="change"
         mode="time"
@@ -92,7 +91,6 @@
         @input="computedDate">Input date</InputItem>
       <DatePicker
         :onDismiss="dismiss"
-        :locale="localCN"
         :onOk="inputOk"
         mode="datetime"
         extra=""
@@ -114,6 +112,7 @@ import DatePicker from '@/components/DatePicker'
 import dateformat from 'dateformat'
 import InputItem from '@/components/InputItem'
 import Button from '@/components/Button'
+import enUS from '@/components/DatePicker/locale/en_US'
 const nowTimeStamp = Date.now()
 const now = new Date(nowTimeStamp)
 // GMT is not currently observed in the UK. So use UTC now.
@@ -129,19 +128,7 @@ export default {
   },
   data () {
     return {
-      localCN: {
-        datePickerLocale: {
-          year: '年',
-          month: '月',
-          day: '日',
-          hour: '时',
-          minute: '分',
-          am: '上午',
-          pm: '下午'
-        },
-        okText: '确定',
-        dismissText: '取消'
-      },
+      enUS: enUS,
       date: new Date(),
       dateA: new Date(),
       dateB: new Date(),
