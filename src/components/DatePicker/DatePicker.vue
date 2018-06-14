@@ -5,8 +5,8 @@
       transitionName="mobile-picker-popup-slide-fade"
       maskTransitionName="mobile-picker-popup-fade"
       :onVisibleChange="visibleChange"
-      :dismissText="locale ? locale.dismissText : 'Cancel'"
-      :okText="locale ? locale.okText : 'OK'"
+      :dismissText="currentLocale.dismissText"
+      :okText="currentLocale.okText"
       v-model="visibleCopy"
       :onDismiss="dismiss"
       :onOk="ok"
@@ -18,7 +18,7 @@
         :use12Hours="use12Hours"
         :minDate="minDate"
         :maxDate="maxDate"
-        :locale="locale ? locale.datePickerLocale : {}"
+        :locale="currentLocale.datePickerLocale"
         :minuteStep="minuteStep"
         :onDateChange="dateChange"
         :onValueChange="valueChange"
@@ -26,7 +26,7 @@
         ></MobileDatePicker>
     </DatePickerPopup>
     <Feedback activeClassName="um-list-item-active" :onMouseUp="mouseUp">
-      <slot name="list-item" :extra="value ? dateformat(value, formatCopy) : extra"></slot>
+      <slot name="list-item" :extra="value ? dateformat(value, formatCopy) : (extra || currentLocale.extra)"></slot>
       <slot></slot>
     </Feedback>
   </div>
@@ -37,6 +37,7 @@ import Feedback from '@/components/Feedback/Feedback.vue'
 import {MobileDatePicker} from '@/components/MobileDatePicker'
 import {oneOf} from '../../utils'
 import dateformat from 'dateformat'
+import defaultLocale from './locale/zh_CN.js'
 export default {
   name: 'DatePicker',
   props: {
@@ -44,8 +45,7 @@ export default {
     format: String,
     value: Date,
     extra: {
-      type: String,
-      default: '请选择'
+      type: String
     },
     mode: {
       type: String,
@@ -88,6 +88,14 @@ export default {
     DatePickerPopup,
     MobileDatePicker,
     Feedback
+  },
+  inject: {
+    localeData: {
+      from: 'localeData',
+      default: function () {
+        return defaultLocale
+      }
+    }
   },
   data () {
     return {
@@ -166,6 +174,15 @@ export default {
         }
       }
       return format
+    },
+    currentLocale () {
+      if (this.locale) {
+        return this.locale
+      } else if (this.localeData && this.localeData.unmLocale !== undefined) {
+        return this.localeData.unmLocale[this.$options.name]
+      } else {
+        return defaultLocale
+      }
     }
   },
   watch: {
