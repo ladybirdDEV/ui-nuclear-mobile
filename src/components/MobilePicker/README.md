@@ -52,4 +52,5 @@ vuejs picker component for mobile
 | onDismiss | 点击取消按钮的回调函数 | Function | - |
 | onOk | 点击确认按钮的回调函数 | Function | - |
 | maskClosable | 是否开启点击遮罩关闭 | Boolean | true |
+| locale | 国际化 | Object | - |
 

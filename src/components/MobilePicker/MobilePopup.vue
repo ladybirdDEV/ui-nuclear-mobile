@@ -15,13 +15,13 @@
         <div :class="`${prefixCls}-header`">
           <Touchable :activeClassName="`${prefixCls}-item-active`" :onMouseUp="dismiss">
             <div :class="`${prefixCls}-item ${prefixCls}-header-left`">
-              {{dismissText}}
+              {{dismissText || locale.dismissText}}
             </div>
           </Touchable>
           <div :class="`${prefixCls}-item ${prefixCls}-title`">{{title}}</div>
           <Touchable :activeClassName="`${prefixCls}-item-active`" :onMouseUp="ok">
             <div :class="`${prefixCls}-item ${prefixCls}-header-right`">
-              {{okText}}
+              {{okText || locale.okText}}
             </div>
           </Touchable>
         </div>
@@ -33,6 +33,7 @@
 <script>
 import Modal from '../MobileDialog'
 import Touchable from '../Feedback/Feedback.vue'
+
 export default {
   components: {
     Modal,
@@ -44,6 +45,7 @@ export default {
   },
   props: {
     // value: [String, Array],
+    locale: Object,
     className: {
       type: String,
       default: ''
@@ -68,12 +70,12 @@ export default {
       default: ''
     },
     dismissText: {
-      type: String,
-      default: 'Dismiss'
+      type: String
+      // default: 'Dismiss'
     },
     okText: {
-      type: String,
-      default: 'Ok'
+      type: String
+      // default: 'Ok'
     },
     title: String,
     disabled: {
@@ -138,5 +140,3 @@ export default {
 <style lang="less">
 @import './style/popup.less';
 </style>
-
-

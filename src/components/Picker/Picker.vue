@@ -10,6 +10,7 @@
       :title="title"
       :onDismiss="dismiss"
       :onOk="ok"
+      :locale="currentLocale"
       :onVisibleChange="visibleChange">
       <MobileCascader
         v-if="cascade"
@@ -56,6 +57,8 @@ import treeFilter from 'array-tree-filter'
 import MobileCascader from '../MobileCascader'
 import MobilePopupCascader from '../MobilePicker/MobilePopup'
 import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../MobilePicker/'
+const localeCode = 'zh_CN'
+const defaultLocale = require(`./locale/${localeCode}.js`).default
 
 export default {
   name: 'Picker',
@@ -87,12 +90,12 @@ export default {
     itemStyle: Object,
     indicatorStyle: Object,
     okText: {
-      type: String,
-      default: '确定'
+      type: String
+      // default: '确定'
     },
     dismissText: {
-      type: String,
-      default: '取消'
+      type: String
+      // default: '取消'
     },
     onOk: Function,
     onDismiss: Function,
@@ -104,11 +107,31 @@ export default {
     cascade: {
       type: Boolean,
       default: true
-    }
+    },
+    locale: Object
   },
   model: {
     prop: 'value',
     event: 'change'
+  },
+  computed: {
+    currentLocale () {
+      if (this.locale) {
+        return this.locale
+      } else if (this.localeData && this.localeData.unmLocale !== undefined) {
+        return this.localeData.unmLocale[this.$options.name]
+      } else {
+        return defaultLocale
+      }
+    }
+  },
+  inject: {
+    localeData: {
+      from: 'localeData',
+      default: function () {
+        return defaultLocale
+      }
+    }
   },
   data () {
     return {
@@ -247,4 +270,3 @@ export default {
 @import '../PickerView/style/index.less';
 @import './style/index.less';
 </style>
-

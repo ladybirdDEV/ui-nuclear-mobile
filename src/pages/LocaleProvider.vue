@@ -2,18 +2,18 @@
   <div>
     <WhiteSpace size="lg"></WhiteSpace>
     <WingBlank>
-      <WhiteSpace />
-      <List>
-      <Picker :data="languages" :cascade="false" :onOk="changeLanguage" :value="[...locale]">
-        <template slot-scope="props" slot="list-item">
-          <ListItem arrow="horizontal" :onClick="props.onClick" :extra="props.extra">Choose language</ListItem>
-        </template>
-      </Picker>
-      </List>
-      <WhiteSpace size="xl" />
-      <WhiteSpace size="xl" />
+      <!-- <WhiteSpace /> -->
       <LocaleProvider :locale="currentLocale">
         <div>
+          <List>
+            <Picker :data="languages" :cascade="false" :onOk="changeLanguage" :value="[...locale]">
+              <template slot-scope="props" slot="list-item">
+                <ListItem arrow="horizontal" :onClick="props.onClick" :extra="props.extra">Choose language</ListItem>
+              </template>
+            </Picker>
+          </List>
+          <WhiteSpace size="xl" />
+          <WhiteSpace size="xl" />
           <Pagination :total="5"></Pagination>
           <WhiteSpace />
           <InputItem type="money" placeholder="money input" />
