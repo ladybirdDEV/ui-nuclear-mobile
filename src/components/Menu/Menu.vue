@@ -67,8 +67,7 @@
         default: 2
       },
       value: {
-        type: Array,
-        default: () => []
+        type: Array
       },
       onChange: Function,
       onOk: Function,
@@ -85,7 +84,7 @@
     data () {
       return {
         subMenuData: this.defaultData(),
-        firstLevelSelectValue: this.value[0],
+        firstLevelSelectValue: this.value ? this.value[0] : '',
         checkList: [],
         currentValue: []
       }
@@ -104,20 +103,24 @@
         }
       },
       defaultData () {
-        var subMenuData
+        let subMenuData
         if (this.level === 2) {
-          for (let i = 0; i < this.data.length; i++) {
-            if (this.data[i].value === this.value[0]) {
-              if (!this.data[i].isLeaf) {
+          if (this.value && this.value.length > 0) {
+            for (let i = 0; i < this.data.length; i++) {
+              if (this.data[i].value === this.value[0]) {
+                if (this.data[i].isLeaf) {
+                  subMenuData = []
+                }
                 subMenuData = this.data[i]
-              } else {
-                subMenuData = []
               }
             }
+          } else {
+            subMenuData = this.data[0]
           }
         } else {
           subMenuData = this.data
         }
+        this.subMenuData = subMenuData
         return subMenuData
       },
       getValue (value) {
@@ -140,6 +143,7 @@
       }
     },
     mounted () {
+      this.defaultData()
     }
   }
 </script>
