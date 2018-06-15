@@ -126,14 +126,16 @@
         // 二级
         if (this.level === 2) {
           const subMenuData = this.subMenuData.children
-          if (this.subMenuData.value === this.value[0]) {
             // 多选
+          if (this.subMenuData.value === this.value[0]) {
             if (this.multiSelect) {
               for (let j = 0; j < subMenuData.length; j++) {
-                for (let i = 0; i < this.value[1].length; i++) {
-                  if (subMenuData[j].value === this.value[1][i]) {
-                    this.checkList.push(subMenuData[j].label)
-                    this.checkListValue.push(subMenuData[j].value)
+                if (this.value[1]) {
+                  for (let i = 0; i < this.value[1].length; i++) {
+                    if (subMenuData[j].value === this.value[1][i]) {
+                      this.checkList.push(subMenuData[j].label)
+                      this.checkListValue.push(subMenuData[j].value)
+                    }
                   }
                 }
               }
@@ -179,8 +181,10 @@
       }
     },
     mounted () {
-      this.defaultCheck()
-      this.labelName = this.subMenuData.label
+      if (this.value && this.value.length > 0) {
+        this.defaultCheck()
+      }
+      this.labelName = this.subMenuData && this.subMenuData.label
       if (!this.multiSelect) {
         this.$emit('input', this.curCheckItemValue)
       } else {
