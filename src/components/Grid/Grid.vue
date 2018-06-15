@@ -62,6 +62,11 @@ export default {
   created () {
     this.splitData()
   },
+  watch: {
+    data () {
+      this.splitData()
+    }
+  },
   methods: {
     click (el, index) {
       if (this.onClick) {
