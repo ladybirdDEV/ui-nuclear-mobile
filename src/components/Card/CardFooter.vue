@@ -4,7 +4,7 @@
       <slot name="content">{{ content }}</slot>
     </div>
     <div :class="[prefixCls + '-footer-extra']">
-      <slot name="extra"></slot>
+      <slot name="extra">{{ extra }}</slot>
     </div>
   </div>
 </template>
