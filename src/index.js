@@ -15,6 +15,7 @@ const install = function (Vue) {
 
   Vue.prototype.$ActionSheet = components.ActionSheet
   Vue.prototype.$Modal = components.Modal
+  Vue.prototype.$Toast = components.Toast
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
