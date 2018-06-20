@@ -12,6 +12,8 @@ const install = function (Vue) {
   for (let key in components) {
     Vue.component(key, components[key])
   }
+
+  Vue.prototype.$ActionSheet = components.ActionSheet
 }
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
