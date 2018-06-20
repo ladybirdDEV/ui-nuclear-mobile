@@ -68,7 +68,9 @@ export default {
     },
     value: {
       type: Array,
-      default: []
+      default: () => {
+        return []
+      }
     },
     prefixCls: {
       type: String
