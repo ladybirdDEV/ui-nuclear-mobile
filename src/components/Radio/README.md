@@ -7,12 +7,17 @@
 
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-|  defaultChecked  | 初始是否选中| Boolean | 无 |
-| name | name | String | 无 |
-|  checked  | 指定当前是否选中| Boolean | 无 |
-|  disabled  | 	是否禁用 | Boolean | false |
-|  onChange  | 	change 事件触发的回调函数		 | Function | 无 |
+| value | v-model绑定的值 | String/Number | - |
+| defaultChecked | 初始是否选中| Boolean | - |
+| name | name | String | - |
+| checked | 指定当前是否选中| Boolean | - |
+| disabled | 	是否禁用 | Boolean | false |
+| onChange | 	change 事件触发的回调函数		 | Function | - |
 
+### events
+| 事件名 | 说明 | 返回值 |
+| --- | --- | --- |
+| change | 值切换时触发，与`onChange`二选一即可 | 选中的值 |
 
 ## RadioItem
 

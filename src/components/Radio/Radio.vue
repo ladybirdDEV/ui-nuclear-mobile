@@ -1,16 +1,30 @@
 <template>
-  <div class="um-checkbox">
+  <!-- <div class="um-checkbox" :for="`awesome${id}`">
     <input type="checkbox"
-            :name="name"
-            id="awesome" 
-            class="um-checkbox-input" 
-            :disabled="disabled" 
-            :checked="isChecked" 
-            :onChange="change(value)"/>
-    <Icon v-if="isChecked" class="um-checkbox-checked" type="check" :color="color">
-    </Icon>
-    <!--<label for="awesome" v-else></label>-->
-  </div>
+      class="um-checkbox-input"
+      :name="name"
+      :id="`awesome${id}`"
+      :disabled="disabled"
+      :value="value"
+      v-model="isChecked"
+      @change="change"/>
+    <label v-if="isChecked"><Icon class="um-checkbox-checked" type="check" :color="color"></Icon></label>
+    <label v-else>{{label}}</label>
+    <slot></slot>
+  </div> -->
+  <label class="um-radio-wrapper">
+    <span class="um-radio um-radio-checked" :class="{'um-radio-disabled': disabled}">
+      <input type="radio"
+        class="um-radio-input"
+        :name="name"
+        :disabled="disabled"
+        :value="value"
+        :checked="isChecked"
+        @change="change"/>
+      <span v-if="isChecked" class="um-radio-inner"></span>
+    </span>
+    <slot></slot>
+  </label>
 </template>
 <script>
   import Icon from '@/components/Icon'
@@ -20,6 +34,10 @@
       Icon
     },
     name: 'Radio',
+    model: {
+      prop: 'checkedVal',
+      event: 'input'
+    },
     props: {
       disabled: {
         type: Boolean,
@@ -30,7 +48,7 @@
         default: ''
       },
       value: {
-        type: String,
+        type: [String, Number],
         default: ''
       },
       checked: {
@@ -42,65 +60,58 @@
         default: ''
       },
       defaultChecked: {
-        type: Boolean
-      }
+        type: Boolean,
+        default: undefined
+      },
+      checkedVal: [String, Number],
+      onChange: Function
     },
     created () {
-      // console.log('test', this.checked)
     },
     data () {
       return {
-        isChecked: this.checked !== undefined ? this.checked : this.defaultChecked,
-        currentValue: this.value
+        isChecked: this.computeCheckState(),
+        currentValue: ''
       }
     },
     methods: {
-      change (value) {
-        this.$emit('onChange', value)
+      computeCheckState () {
+        if (this.checked !== undefined) {
+          return this.checked
+        } else if (this.defaultChecked !== undefined) {
+          return this.defaultChecked
+        } else {
+          return this.value === this.checkedVal
+        }
+      },
+      change () {
+        if (!this.value && !this.checkedVal) {
+          this.isChecked = !this.isChecked
+          this.$emit('input', this.isChecked)
+          if (this.onChange) {
+            this.onChange(this.isChecked)
+          }
+          this.$emit('change', this.isChecked)
+        } else {
+          this.$emit('input', this.value)
+          if (this.onChange) {
+            this.onChange(this.value)
+          }
+          this.$emit('change', this.value)
+        }
       }
     },
-    computed: {
-      color () {
-        if (this.disabled) {
-          return '#ccc'
-        } else return '#108ee9'
+    watch: {
+      checkedVal (val) {
+        this.isChecked = this.value === val
+      },
+      checked (val) {
+        this.isChecked = val
       }
     }
   }
 </script>
 
-<style>
-  .um-checkbox-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    border: 0 none;
-    appearance: none;
-  }
-  .um-checkbox-input + label::before {
-    content: '\a0'; /* non-break space */
-    display: inline-block;
-    vertical-align: .2em;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background: #fff;
-    text-indent: .15em;
-    line-height: .65;
-    border: 1px solid #ccc;
-  }
-  .um-checkbox-input[disabled] + label::before {
-    box-shadow: none;
-    color: #fff;
-  }
-  /*.um-checkbox-input[disabled] + .um-checkbox-checked ::before {*/
-  /*color: #ccc;*/
-  /*}*/
-  .um-checkbox{
-    font-size: 15px;
-  }
+<style lang="less">
+@import './style/index.less';
 </style>
