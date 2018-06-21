@@ -1,23 +1,27 @@
 <template>
   <div>
-    <ListItem :multipleLine="multipleLine"
-              :onClick="check"
-              :extra="extra"
-              :arrow="arrow"
-              :align="align"
-              :wrap="wrap"
-              :platform="platform"
-              :disabled="isDisabled">
+    <ListItem
+      :multipleLine="multipleLine"
+      :extra="extra"
+      :arrow="arrow"
+      :align="align"
+      :wrap="wrap"
+      :onClick="click"
+      :platform="platform"
+      :disabled="disabled"
+      class="um-radio-item">
       <span :class="titleColor">{{ Title }}</span>
       <ListItemBrief v-if="subtitle">{{ subtitle }}</ListItemBrief>
       <template slot="extra">
-        <Radio :label="label"
-                :name="name"
-                :value="value" 
-                :disabled="disabled"
-                :defaultChecked="defaultChecked"
-                :checked="checked"
-                @onChange="change"></Radio>
+        <Radio
+          :label="label"
+          :name="name"
+          :value="value"
+          :disabled="disabled"
+          :defaultChecked="defaultChecked"
+          :checked="currentChecked"
+          v-model="currentCheckedVal"
+          @change="change"></Radio>
       </template>
     </ListItem>
   </div>
@@ -39,20 +43,22 @@
       return {
         titleColor: this.disabled ? 'um-cbxitem-color' : '',
         currentValue: this.value,
-        isDisabled: this.disabled
+        currentCheckedVal: this.checkedVal,
+        currentChecked: this.checked
       }
     },
     methods: {
-      check () {
-        if (!this.subtitle) {
-          this.$children[0].$children[0].$children[0].isChecked = !this.$children[0].$children[0].$children[0].isChecked
-        } else {
-          this.$children[0].$children[0].$children[1].isChecked = !this.$children[0].$children[0].$children[1].isChecked
+      change (val) {
+        if (this.onChange) {
+          this.onChange(val)
         }
+        this.$emit('change', val)
       },
-      change (value) {
-        this.$emit('onChange', value)
-      }
+      click () {}
+    },
+    model: {
+      prop: 'checkedVal',
+      event: 'input'
     },
     props: {
       name: {
@@ -102,15 +108,29 @@
         default: ''
       },
       value: {
-        type: String,
+        type: [String, Number],
         default: ''
       },
       defaultChecked: {
-        type: Boolean
+        type: Boolean,
+        default: undefined
       },
       checked: {
         type: Boolean,
         default: undefined
+      },
+      checkedVal: [String, Number],
+      onChange: Function
+    },
+    watch: {
+      currentCheckedVal (val) {
+        this.$emit('input', val)
+      },
+      checked (val) {
+        this.currentChecked = val
+      },
+      checkedVal (val) {
+        this.currentCheckedVal = val
       }
     }
   }
