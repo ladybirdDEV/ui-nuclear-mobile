@@ -1,4 +1,4 @@
-import datePickerLocale from '../MobileDatePicker/locale/en_US'
+import datePickerLocale from '../../MobileDatePicker/locale/en_US'
 export default {
   okText: 'Ok',
   dismissText: 'Cancel',
