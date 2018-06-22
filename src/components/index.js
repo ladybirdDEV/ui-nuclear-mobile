@@ -44,6 +44,7 @@ import SwipeAction from './SwipeAction'
 import { Accordion, Panel } from './Accordion'
 import { TabBar, TabBarItem } from './TabBar'
 import { Popover, Item } from './Popover'
+import LocaleProvider from './LocaleProvider'
 import './style/index.less'
 
 export default{
@@ -106,6 +107,7 @@ export default{
   TabBarItem,
   Popover,
   Item,
+  LocaleProvider,
   'unm-white-space': WhiteSpace,
   'unm-wing-blank': WingBlank,
   'unm-flex': Flex,
@@ -164,5 +166,6 @@ export default{
   'unm-tab-bar': TabBar,
   'unm-tab-bar-item': TabBarItem,
   'unm-popover': Popover,
-  'unm-popover-item': Item
+  'unm-popover-item': Item,
+  'unm-locale-provider': LocaleProvider
 }
