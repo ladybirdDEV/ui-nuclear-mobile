@@ -20,6 +20,7 @@
 ### props
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
+| content | 左边内容 | Slot Default | - |
 | thumb | 缩略图 (作为 `img src`) | String / Slot `name="thumb"` | - |
 | extra | 右边内容 | String / Slot `name="extra"` | - |
 | arrow | 箭头方向(右,上,下), 可选`horizontal`,`up`,`down`,`empty`，如果是empty则存在对应的dom,但是不显示	 | String | - |
