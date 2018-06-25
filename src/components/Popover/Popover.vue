@@ -1,7 +1,7 @@
 <template>
   <div>
     <div @click="show" ref="target"><slot></slot></div>
-    <div v-show="isVisible" :style="contextStyle" v-transfer-dom style="position: absolute; top: 0; left: 0; width: 100%;">
+    <div v-show="isVisible" :style="contextStyle" v-transfer-dom data-transfer="true" style="position: absolute; top: 0; left: 0; width: 100%;">
       <div :class="prefixCls+'-mask'" v-if="mask" @click="close"></div>
       <div :class="[prefixCls, prefixCls+'-placement-'+placement]" id="um-popover" @click="stopClose($event)" :style="overlayStyle" ref="popover">
         <div :class="prefixCls+'-content'" ref="popoverContent">
