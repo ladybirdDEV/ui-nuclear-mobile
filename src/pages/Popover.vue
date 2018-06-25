@@ -5,11 +5,13 @@
       <Icon type="left" slot="icon"></Icon>
       NavBar
       <template slot="rightContent">
-        <div @click="show()"><Icon type="ellipsis" color="black"/> </div>
-        <popover :visible="isVisible" mask @on-close="isShow">
-          <Item :icon="myImg('tOtXhkIWzwotgGSeptou')" :onMouseUp="onClose">Scan</Item>
-          <Item :icon="myImg('PKAgAqZWJVNwKsAJSmXd')" :onMouseUp="onClose">My Qrcode</Item>
-          <Item :icon="myImg('uQIYTFeRrjPELImDRrPt')" :onMouseUp="onClose">Help</Item>
+        <popover :visible="isVisible" mask @close="isShow" @select="onSelect">
+          <Icon type="ellipsis" color="black"/>
+          <template slot="overlay" slot-scope="item">
+            <Item :icon="myImg('tOtXhkIWzwotgGSeptou')" @click="item.select(0)">Scan</Item>
+            <Item :icon="myImg('PKAgAqZWJVNwKsAJSmXd')" @click="item.select(1)">My Qrcode</Item>
+            <Item :icon="myImg('uQIYTFeRrjPELImDRrPt')" @click="item.select(2)">Help</Item>
+          </template>
         </popover>
       </template>
     </NavBar>
@@ -42,8 +44,8 @@
       isShow (value) {
         this.isVisible = value
       },
-      onClose () {
-        this.isVisible = false
+      onSelect (index) {
+        console.log('onSelect', index)
       },
       myImg (src) {
         return `<img src="https://gw.alipayobjects.com/zos/rmsportal/${src}.svg" class="um-icon um-icon-xs" alt="" />`
