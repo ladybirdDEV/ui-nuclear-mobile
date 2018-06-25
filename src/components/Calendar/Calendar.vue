@@ -9,7 +9,7 @@
     :renderShortcut="renderShortcut"
     :renderHeader="renderHeader"
     :showShortcut="showShortcut"
-    :title="title"
+    :title="title || locale.title"
     :type="type"
     :visible="visible"
     :defaultDate="defaultDate"
@@ -71,8 +71,7 @@ export default {
       default: false
     },
     title: {
-      type: String,
-      default: locale.title
+      type: String
     },
     type: {
       type: String,

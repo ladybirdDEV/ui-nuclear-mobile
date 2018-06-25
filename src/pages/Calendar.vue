@@ -4,7 +4,7 @@
       <ListItem>
         {{en ? 'Chinese' : '中文'}}
         <template slot="extra">
-          <uSwitch :onClick="() => en = !en"></uSwitch>
+          <uSwitch :onClick="() => en = !en" checked></uSwitch>
         </template>
       </ListItem>
       <ListItem arrow="horizontal"

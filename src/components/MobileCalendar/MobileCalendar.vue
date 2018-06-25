@@ -5,7 +5,7 @@
     </transition>
     <transition :name="enterDirection === 'horizontal' ? 'slideH' : 'slideV'">
       <AnimateWrapper className="content" :visible="visible" v-if="visible">
-        <Header :title="title"
+        <Header :title="title || locale.title"
           :showClear="!!startDate"
           :onCancel="doCancel"
           :onClear="doClear"
@@ -102,8 +102,7 @@ export default {
       default: false
     },
     title: {
-      type: String,
-      default: locale.title
+      type: String
     },
     type: {
       type: String,
