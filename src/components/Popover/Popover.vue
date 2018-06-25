@@ -19,7 +19,7 @@
 
 <script>
   import { oneOf } from '../../utils'
-  import Feedback from '@/components/Feedback/Feedback'
+  import Feedback from '../Feedback/Feedback'
   import TransferDom from '../../directives/transfer-dom'
   const prefixCls = 'um-popover'
 
@@ -70,6 +70,9 @@
       isVisible (val) {
         if (val) {
           this.computePosition()
+        }
+        if (this.onVisibleChange) {
+          this.onVisibleChange(val)
         }
       }
     },
@@ -136,7 +139,7 @@
               popover.style.left = `${left - popoverContent.clientWidth + targetWidth}px`
               break
             default:
-              console.warning('props "placement" should be one of these values - ["left", "right", "top", "bottom", "topLeft", "topRight", "bottomLeft", "bottomRight"]')
+              console.warn('props "placement" should be one of these values - ["left", "right", "top", "bottom", "topLeft", "topRight", "bottomLeft", "bottomRight"]')
               break
           }
         })

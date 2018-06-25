@@ -38,11 +38,8 @@
       }
     },
     methods: {
-      show () {
-        this.isVisible = true
-      },
       isShow (value) {
-        this.isVisible = value
+        console.log('close popover')
       },
       onSelect (index) {
         console.log('onSelect', index)
