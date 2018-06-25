@@ -1,5 +1,5 @@
 <template>
-  <div :class="wrapItemCls" v-on="events">
+  <div :class="wrapItemCls" v-on="events" @click="clickAction">
     <div class="um-popover-item-container">
       <span class="um-popover-item-icon" v-if="isIcon"><Icon :type="icon" /></span>
       <span class="um-popover-item-icon" v-else v-html="icon"></span>
@@ -14,6 +14,7 @@
   const prefixItemCls = 'um-popover-item'
 
   export default {
+    name: 'popoverItem',
     mixins: [Feedback],
     components: {
       Icon
@@ -47,6 +48,11 @@
       itemStyle: Object
     },
     methods: {
+      clickAction () {
+        if (this.disabled) return
+        this.$emit('click')
+        // this.$parent.select(44)
+      }
     }
   }
 </script>
