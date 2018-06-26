@@ -1,15 +1,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 到根目录下执行
-
-# 生成静态文件
-npm run docs:build
-
-# 进入生成文件夹
 cd docs/.vuepress/dist
-
-pwd
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
