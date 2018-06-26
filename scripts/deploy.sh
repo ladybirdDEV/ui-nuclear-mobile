@@ -2,7 +2,6 @@
 set -e
 
 # 到根目录下执行
-cd ..
 
 # 生成静态文件
 npm run docs:build
