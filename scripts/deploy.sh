@@ -8,6 +8,9 @@ npm run docs:build
 
 # 进入生成文件夹
 cd docs/.vuepress/dist
+
+pwd
+
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
