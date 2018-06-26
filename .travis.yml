@@ -1,0 +1,5 @@
+language: node_js
+before-script:
+  - npm install
+scripts:
+  - bash ./scripts/deploy.sh
