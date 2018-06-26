@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - 8.2.1
+before-script:
+  - npm install
+scripts:
+  - bash ./scripts/deploy.sh
