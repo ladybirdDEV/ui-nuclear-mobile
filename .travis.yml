@@ -8,3 +8,5 @@ before-script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 scripts:
   - bash ./scripts/deploy.sh
+deploy:
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
