@@ -5,6 +5,7 @@ addons:
 node_js:
   - 8.2.1
 before-script:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
   - npm install
 scripts:
   - bash ./scripts/deploy.sh
