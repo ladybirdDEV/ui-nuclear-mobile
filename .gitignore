@@ -18,4 +18,3 @@ selenium-debug.log
 *.sln
 /docs/.vuepress/dist/
 /docs/components/*
-deploy.sh
