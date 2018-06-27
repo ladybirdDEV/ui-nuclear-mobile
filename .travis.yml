@@ -1,13 +1,9 @@
 language: node_js
 sudo: required
 node_js:
-- 8.2.1
+  - 8.2.1
 script:
-- bash ./scripts/deploy.sh
-deploy:
-  skip-cleanup: true
-  provider: pages
-  github-token: "$GITHUB_TOKEN"
+  - bash ./scripts/deploy.sh
 cache:
   directories:
   - node_modules
