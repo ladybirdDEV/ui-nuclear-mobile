@@ -1,6 +1,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+ls docs/.vuepress
+
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
