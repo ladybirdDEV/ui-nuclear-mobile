@@ -3,7 +3,7 @@ set -e
 
 # npm run docs:build
 node build/copy-docs.js
-# vuepress build docs
+vuepress build docs
 ls docs/.vuepress
 
 cd docs/.vuepress/dist
