@@ -1,6 +1,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+yarn add vuepress@^0.8.4
+
 # npm run docs:build
 node build/copy-docs.js
 
