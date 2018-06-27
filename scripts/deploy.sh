@@ -16,6 +16,8 @@ cd docs/.vuepress/dist
 # echo 'www.example.com' > CNAME
 echo "Starting to update gh-pages************"
 echo "Starting to git-init************"
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis"
 git init
 echo "Starting to git-add************"
 git add -A
