@@ -9,7 +9,7 @@
       <CheckboxItem Title="Paris" extra="extra content"></CheckboxItem>
       <CheckboxItem Title="Liverpool" disabled defaultChecked subtitle="Disable options"></CheckboxItem>
     </List>
-    <AgreeItem>Agree 
+    <AgreeItem>Agree
       <a @click="onClick">agreement</a></AgreeItem>
   </div>
 </template>
@@ -51,7 +51,3 @@
     }
   }
 </script>
-
-<style>
-
-</style>
