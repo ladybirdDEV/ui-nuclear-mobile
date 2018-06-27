@@ -7,6 +7,6 @@ deploy:
   provider: script
   script: bash ./scripts/deploy.sh
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-cache:
-  directories:
-    - "node_modules"
+# cache:
+  # directories:
+    # - "node_modules"
