@@ -4,9 +4,9 @@ node_js:
   - 8.2.1
 deploy:
   skip-cleanup: true
-  provider: script
+  provider: pages
   script: bash ./scripts/deploy.sh
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-# cache:
-#   directories:
-#     - "node_modules"
+cache:
+  directories:
+    - "node_modules"
