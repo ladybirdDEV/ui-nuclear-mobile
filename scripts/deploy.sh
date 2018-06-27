@@ -27,7 +27,7 @@ git commit -m 'chore: deployed site by Travis CI'
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
-git push -f git@github.com:ladybirdDEV/ui-nuclear-mobile.git master:gh-pages
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/vueComponent/ui-nuclear-mobile.git" master:gh-pages
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 echo "Done!************"
