@@ -1,6 +1,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+npm run docs:build
+
 ls docs/.vuepress
 
 cd docs/.vuepress/dist
