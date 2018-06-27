@@ -1,14 +1,10 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+# 保证正确的vuepress依赖，用yarn重新安装一遍vuepress
 yarn add vuepress@^0.8.4
 
-# npm run docs:build
-node build/copy-docs.js
-
-vuepress -V
-vuepress build docs
-ls docs/.vuepress
+npm run docs:build
 
 cd docs/.vuepress/dist
 
@@ -17,7 +13,7 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'docs: deploy by deploy.sh'
+git commit -m 'chore: deployed site by Travis CI'
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
