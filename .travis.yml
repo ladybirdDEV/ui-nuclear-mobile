@@ -6,6 +6,7 @@ before_script:
 - yarn add vuepress@^0.8.4
 script:
 - bash ./scripts/deploy.sh
+- bash ./scripts/deploy-demo.sh
 cache:
   directories:
   - node_modules
