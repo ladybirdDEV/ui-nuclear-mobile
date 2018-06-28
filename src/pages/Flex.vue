@@ -2,7 +2,7 @@
   <div>
     <WingBlank>
       <div class="sub-title">Basic</div>
-      <Flex direction="column">
+      <Flex>
         <FlexItem>
           <PlaceHolder />
         </FlexItem>
