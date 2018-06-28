@@ -94,6 +94,7 @@ export default {
       if (this.onClick) {
         this.onClick(ev)
       }
+      this.$emit('click')
     }
   },
   props: {
