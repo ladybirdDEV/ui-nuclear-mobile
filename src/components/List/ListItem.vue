@@ -28,11 +28,15 @@ export default {
       RippleClicked: false,
       prefixCls: prefixCls,
       isExtra: false,
-      isThumb: false,
-      activeClassName: `${prefixCls}-item-active`
+      isThumb: false
     }
   },
   computed: {
+    activeClassName () {
+      if (this.onClick) {
+        return `${prefixCls}-item-active`
+      }
+    },
     wrapCls () {
       return {
         [`${prefixCls}-item`]: true,
@@ -94,7 +98,9 @@ export default {
       if (this.onClick) {
         this.onClick(ev)
       }
-      this.$emit('click')
+      if (!this.disabled) {
+        this.$emit('click')
+      }
     }
   },
   props: {
