@@ -18,7 +18,7 @@
             multipleLine
           >Category</ListItem>
           <ListItem
-            v-for="index in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]"
+            v-for="index in 15"
             :key="index"
             thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
           >Category{{index}}</ListItem>
