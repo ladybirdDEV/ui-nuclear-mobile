@@ -32,6 +32,11 @@
 | activeStyle `不支持` (`web only`)	 | 自定义active的样式	| Object | - |
 | platform (`web only`) | 设定组件的平台特有样式, 可选值为 `android`, `ios`， 默认为 `ios` | String | - |
 
+### events
+| 事件名 | 说明 | 返回值 |
+| --- | --- | --- |
+| click | ListItem被点击 | - |
+
 ## ListItemBrief
 
 辅助说明，提供一个slot
