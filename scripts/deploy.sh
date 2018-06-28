@@ -4,7 +4,7 @@ set -e
 if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
 # 保证正确的vuepress依赖，用yarn重新安装一遍vuepress
-yarn add vuepress@^0.8.4
+# yarn add vuepress@^0.8.4
 
 echo "Starting to build docs************"
 
