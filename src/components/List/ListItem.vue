@@ -1,27 +1,25 @@
 <template>
-  <Feedback activeClassName="um-list-item-active" :disabled="disabled || !onClick" :onMouseUp="click">
-    <div :class="wrapCls">
-      <div :class="`${prefixCls}-thumb`" v-if="isThumb">
-        <slot name="thumb"><img :src="thumb"></slot>
-      </div>
-      <div :class="lineCls">
-        <div :class="`${prefixCls}-content`">
-          <slot></slot>
-        </div>
-        <div :class="`${prefixCls}-extra`" v-if="isExtra"><slot name="extra">{{ extra }}</slot></div>
-        <div :class="arrowCls" aria-hidden="true" v-if="arrow"></div>
-      </div>
-      <div :class="rippleCls" :style="coverRippleStyle"></div>
+  <div :class="wrapCls" v-feedback="{ disabled: disabled, activeClass: activeClassName }" @click="click">
+    <div :class="`${prefixCls}-thumb`" v-if="isThumb">
+      <slot name="thumb"><img :src="thumb"></slot>
     </div>
-  </Feedback>
+    <div :class="lineCls">
+      <div :class="`${prefixCls}-content`">
+        <slot></slot>
+      </div>
+      <div :class="`${prefixCls}-extra`" v-if="isExtra"><slot name="extra">{{ extra }}</slot></div>
+      <div :class="arrowCls" aria-hidden="true" v-if="arrow"></div>
+    </div>
+    <div :class="rippleCls" :style="coverRippleStyle"></div>
+  </div>
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Feedback from '@/components/Feedback/Feedback.vue'
+import Feedback from '@/directives/feedback'
 const prefixCls = 'um-list'
 export default {
   name: 'Item',
-  components: {
+  directives: {
     Feedback
   },
   data () {
@@ -30,7 +28,8 @@ export default {
       RippleClicked: false,
       prefixCls: prefixCls,
       isExtra: false,
-      isThumb: false
+      isThumb: false,
+      activeClassName: `${prefixCls}-item-active`
     }
   },
   computed: {

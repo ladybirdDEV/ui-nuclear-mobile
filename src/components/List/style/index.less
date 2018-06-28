@@ -95,6 +95,10 @@
     }
   }
 
+  &.@{listPrefixCls}-item-active {
+    background-color: @fill-tap;
+  }
+
   &&-disabled {
     .@{listPrefixCls}-line {
       .@{listPrefixCls}-content,
@@ -234,11 +238,6 @@
   }
 }
 
-.@{listPrefixCls}-item-active {
-  .@{listPrefixCls}-item {
-    background-color: @fill-tap;
-  }
-}
 @keyframes ripple {
   100% {
     opacity: 0;

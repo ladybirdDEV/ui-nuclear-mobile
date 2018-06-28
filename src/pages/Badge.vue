@@ -63,14 +63,11 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .corner-badge {
   height: 50px;
   width: 200px;
 }
-
-</style>
-<style>
 .special-badge.um-list-item .um-list-line {
   padding-right: 0;
 }
