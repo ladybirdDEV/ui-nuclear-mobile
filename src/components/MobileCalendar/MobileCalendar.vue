@@ -56,7 +56,7 @@
 import TimePicker from './TimePicker'
 import DatePicker from './DatePicker'
 import ConfirmPanel from './calendar/ConfirmPanel'
-import ShortcutPanel from './calendar/ShortcutPanel'
+import ShortcutPanel from './calendar/ShortCutPanel'
 import AnimateWrapper from './calendar/AnimateWrapper'
 import Header from './calendar/Header'
 import { mergeDateTime } from './util/index'
