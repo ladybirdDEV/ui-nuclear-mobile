@@ -11,19 +11,16 @@
       ref="drawer"
       v-model="open"
       enableDragHandle
-      docked
-    >
+      docked>
       <template slot="sidebar">
         <List>
           <ListItem
             thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-            multipleLine
-          >Category</ListItem>
+            multipleLine>Category</ListItem>
           <ListItem
             v-for="index in 15"
             :key="index"
-            thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-          >Category{{index}}</ListItem>
+            thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png">Category{{index}}</ListItem>
         </List>
       </template>
       Click upper-left corner

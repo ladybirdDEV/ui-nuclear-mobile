@@ -10,8 +10,10 @@
       </ListItem>
       <ListItem arrow="horizontal" multipleLine platform="android" :onClick="()=>{}">
         ListItem （Android）
-        <ListItemBrief>There may have water ripple effect of
-          <br /> material if you set the click event.</ListItemBrief>
+        <ListItemBrief>
+          There may have water ripple effect of
+          <br /> material if you set the click event.
+        </ListItemBrief>
       </ListItem>
       <ListItem arrow="horizontal" multipleLine thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png" :onClick="()=>{}">
         Title
@@ -68,13 +70,11 @@
           :error="hasError"
           @onChange="validateAccount"
           @onErrorClick="onErrorClick"
-          v-model="account"
-        >Account</InputItem>
+          v-model="account">Account</InputItem>
         <InputItem
           placeholder="please input password"
           type="password"
-          v-model="password"
-        >Password</InputItem>
+          v-model="password">Password</InputItem>
         <ListItem>Confirm Infomation
           <template slot="extra">
             <uSwitch checked></uSwitch>

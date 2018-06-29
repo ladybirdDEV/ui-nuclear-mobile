@@ -25,7 +25,7 @@
       <CardFooter content="footer content">
         <div slot="extra">extra footer content</div>
       </CardFooter>
-  </Card>
+    </Card>
   </div>
 </template>
 <script>

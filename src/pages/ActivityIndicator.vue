@@ -31,7 +31,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 p {
   color: #888;
 }
