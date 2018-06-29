@@ -57,6 +57,10 @@ module.exports = {
       {
         text: '组件',
         link: '../components/'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/ladybirdDEV/ui-nuclear-mobile/'
       }
     ],
     sidebar: {
