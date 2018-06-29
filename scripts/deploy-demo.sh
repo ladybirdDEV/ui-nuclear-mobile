@@ -4,6 +4,11 @@ if [[ $TRAVIS_BRANCH == "master" && $TRAVIS_PULL_REQUEST == "false" ]]; then
 
 echo -e "starting build demo\n"
 
+rm -rf dist
+
+git config --global user.email "ladybirdstudio@qq.com"
+git config --global user.name "ladybirdstudio"
+
 npm run build
 
 echo -e "demo page genarated\n"
@@ -12,14 +17,14 @@ cd dist
 
 echo $PWD
 
+ls
+
 echo -e "git init"
 
-git config --global user.email "ladybirdstudio@qq.com"
-git config --global user.name "ladybirdstudio"
 git init
 echo -e "Starting to git-add \n"
 
-git add -A
+git add -f .
 echo -e "Starting to git-commit\n"
 git commit -m 'chore: deployed demo page  by Travis CI'
 
