@@ -3,24 +3,23 @@
     <WhiteSpace></WhiteSpace>
     <h3>基本</h3>
     <h4 style="color: #888;">Simplest</h4>
-    <SegmentedControl :values="segSimplest" 
-                      :onChange="change">
-    </SegmentedControl>
+    <SegmentedControl
+      :values="segSimplest"
+      :onChange="change"></SegmentedControl>
     <WhiteSpace></WhiteSpace>
     <h4 style="color: #888;">disabled</h4>
     <SegmentedControl :values="segDisabled" disabled></SegmentedControl>
      <h4 style="color: #888;">SelectedIndex</h4>
-    <SegmentedControl :values="segSelected" 
-                      :selectedIndex=1
-                      :onChange="change">
-    </SegmentedControl>
+    <SegmentedControl
+      :values="segSelected"
+      :selectedIndex=1
+      :onChange="change"></SegmentedControl>
     <h4 style="color: #888;">Custom</h4>
-    <SegmentedControl :values="segSelected"
-                      :selectedIndex=2
-                      :tintColor='tintColor'
-                      :customStyle="{ height: '40px', width: '250px'}">
-
-    </SegmentedControl>
+    <SegmentedControl
+      :values="segSelected"
+      :selectedIndex=2
+      :tintColor='tintColor'
+      :customStyle="{ height: '40px', width: '250px'}"></SegmentedControl>
   </WingBlank>
 </template>
 

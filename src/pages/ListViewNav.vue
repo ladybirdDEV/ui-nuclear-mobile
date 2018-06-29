@@ -3,7 +3,7 @@
     <WhiteSpace></WhiteSpace>
     <Button :onClick="listView">ListView</Button>
     <WhiteSpace> </WhiteSpace>
-    <Button :onClick="indexList">索引列表（标题吸顶)</Button>
+    <Button :onClick="indexList">索引列表（标题吸顶）</Button>
   </WingBlank>
 </template>
 

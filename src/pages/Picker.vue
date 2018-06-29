@@ -48,19 +48,19 @@
       </Picker>
     </List>
     <Picker
-        title="选择地区"
-        :data="district"
-        v-model="pickerValue"
-        :onChange="onChange">
-        <template slot-scope="props" slot="list-item">
-          <div style="background-color: #fff; padding-left: 15px;" @click="props.onClick">
-            <div class="test">
-              <div style="flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Customized children</div>
-              <div style="text-align: right; color: #888; margin-right: 15px;">{{props.extra}}</div>
-            </div>
+      title="选择地区"
+      :data="district"
+      v-model="pickerValue"
+      :onChange="onChange">
+      <template slot-scope="props" slot="list-item">
+        <div style="background-color: #fff; padding-left: 15px;" @click="props.onClick">
+          <div class="test">
+            <div style="flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Customized children</div>
+            <div style="text-align: right; color: #888; margin-right: 15px;">{{props.extra}}</div>
           </div>
-        </template>
-      </Picker>
+        </div>
+      </template>
+    </Picker>
   </div>
 </template>
 
