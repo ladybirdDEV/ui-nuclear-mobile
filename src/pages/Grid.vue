@@ -52,15 +52,12 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
 .sub-title {
   color: #888;
   font-size: 14px;
   padding: 15px 0 9px 15px;
 }
-
-</style>
-<style>
 .not-square-grid .um-grid-icon {
   width: 40px;
   height: 60px;

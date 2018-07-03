@@ -19,8 +19,7 @@
     </ListItem>
     <ListItem class="special-badge">
       <template slot="extra">
-        <Badge text="促">
-        </Badge>
+        <Badge text="促"></Badge>
       </template>
       Custom corner
     </ListItem>
@@ -40,14 +39,16 @@
       Marketing:
       <Badge text="券" :styles="{ marginLeft: '8px', padding: '0 3px', backgroundColor: '#f19736', borderRadius: '2px' }" />
       <Badge text="NEW" :styles="{ marginLeft: '8px', padding: '0 3px', backgroundColor: '#21b68a', borderRadius: '2px' }" />
-      <Badge text="自动缴费" :styles="{
-                marginLeft: '8px',
-                padding: '0 3px',
-                backgroundColor: '#fff',
-                borderRadius: '2px',
-                color: '#f19736',
-                border: '1px solid #f19736',
-              }" />
+      <Badge
+        text="自动缴费"
+        :styles="{
+          marginLeft: '8px',
+          padding: '0 3px',
+          backgroundColor: '#fff',
+          borderRadius: '2px',
+          color: '#f19736',
+          border: '1px solid #f19736',
+        }" />
     </ListItem>
   </List>
 </template>

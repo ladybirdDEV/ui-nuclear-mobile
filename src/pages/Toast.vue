@@ -1,18 +1,18 @@
 <template>
-    <WingBlank>
-      <WhiteSpace></WhiteSpace>
-        <Button @click.native="textonly">text only</Button>
-      <WhiteSpace></WhiteSpace>
-      <Button @click.native="withoutmask">without mask</Button>
-      <WhiteSpace></WhiteSpace>
-      <Button @click.native="cumstomicon">cumstom icon</Button>
-      <WhiteSpace></WhiteSpace>
-      <Button @click.native="toastsuccess">success</Button>
-      <WhiteSpace></WhiteSpace>
-      <Button @click.native="toastfail">fail</Button>
-      <WhiteSpace></WhiteSpace>
-      <Button @click.native="toastloading">loading</Button>
-    </WingBlank>
+  <WingBlank>
+    <WhiteSpace />
+    <Button @click.native="textonly">text only</Button>
+    <WhiteSpace />
+    <Button @click.native="withoutmask">without mask</Button>
+    <WhiteSpace />
+    <Button @click.native="cumstomicon">cumstom icon</Button>
+    <WhiteSpace />
+    <Button @click.native="toastsuccess">success</Button>
+    <WhiteSpace />
+    <Button @click.native="toastfail">fail</Button>
+    <WhiteSpace />
+    <Button @click.native="toastloading">loading</Button>
+  </WingBlank>
 </template>
 
 <script>

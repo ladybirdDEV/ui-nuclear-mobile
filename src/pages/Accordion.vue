@@ -10,10 +10,10 @@
             <ListItem>content 3</ListItem>
           </List>
         </Panel>
-        <Panel header="Title 2" class="pad"  name="2">
+        <Panel header="Title 2" class="pad" name="2">
           this is panel content2 or other
         </Panel>
-        <Panel header="Title 3" class="pad"  name="3">
+        <Panel header="Title 3" class="pad" name="3">
           text text text text text text text text
         </Panel>
       </Accordion>
@@ -28,16 +28,15 @@
             <ListItem>content 3</ListItem>
           </List>
         </Panel>
-        <Panel header="Title 2" class="pad"  name="2">
+        <Panel header="Title 2" class="pad" name="2">
           this is panel content2 or other
         </Panel>
-        <Panel header="Title 3" class="pad"  name="3">
+        <Panel header="Title 3" class="pad" name="3">
           text text text text text text text text
         </Panel>
       </Accordion>
     </div>
   </div>
-
 </template>
 
 <script>

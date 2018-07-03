@@ -1,15 +1,17 @@
 <template>
   <div>
     <List renderHeader="Customize to focus">
-      <TextareaItem title="标题"
-                    placeholder="auto focus in Alipay client"
-                    autoHeight ></TextareaItem>
-      <TextareaItem title="标题"
-                    placeholder="click the button below to focus"
-                    ref='textarea'
-                    autoHeight
-                    :onBlur='onBlur'
-                    :onFocus='onFocus'></TextareaItem>
+      <TextareaItem
+        title="标题"
+        placeholder="auto focus in Alipay client"
+        autoHeight></TextareaItem>
+      <TextareaItem
+        title="标题"
+        placeholder="click the button below to focus"
+        ref="textarea"
+        autoHeight
+        :onBlur="onBlur"
+        :onFocus="onFocus"></TextareaItem>
       <ListItem>
         <div class="click-btn" @click="btnClick">click to focus</div>
       </ListItem>
@@ -23,48 +25,43 @@
     </List> -->
     <List renderHeader="Auto / Fixed height">
       <TextareaItem title="高度自适应" autoHeight/>
-      <TextareaItem :rows=3 placeholder="fixed number of lines"/>
+      <TextareaItem :rows="3" placeholder="fixed number of lines"/>
     </List>
 
     <List renderHeader="show clear">
       <TextareaItem clear title="标题" placeholder="displayed clear while typing"/>
     </List>
 
-    <List renderHeader="Custom title（text / image / empty)">
-          <TextareaItem
-            title=""
-            placeholder="title can be customized"
-            >
-              <img src="https://zos.alipayobjects.com/rmsportal/DfkJHaJGgMghpXdqNaKF.png"/>
-          </TextareaItem>
+    <List renderHeader="Custom title（text / image / empty）">
+      <TextareaItem
+        title=""
+        placeholder="title can be customized">
+        <img src="https://zos.alipayobjects.com/rmsportal/DfkJHaJGgMghpXdqNaKF.png"/>
+      </TextareaItem>
     </List>
 
-     <List renderHeader='Limited value length'>
-          <TextareaItem
-            placeholder="can enter up to 5 characters"
-            :count=5
-          />
+    <List renderHeader="Limited value length">
+      <TextareaItem
+        placeholder="can enter up to 5 characters"
+        :count="5"/>
     </List>
 
-    <List renderHeader='Count'>
-          <TextareaItem
-            defaultValue="计数功能，我的意见是..."
-            :rows=5
-            :count=100
-          />
+    <List renderHeader="Count">
+      <TextareaItem
+        defaultValue="计数功能，我的意见是..."
+        :rows="5"
+        :count="100"/>
     </List>
 
     <List renderHeader="'Not editable / Disabled'">
-          <TextareaItem
-            value="not editable"
-            title="姓名"
-            :editable=false
-          />
-          <TextareaItem
-            value="disabled style"
-            title="姓名"
-            disabled
-          />
+      <TextareaItem
+        value="not editable"
+        title="姓名"
+        :editable="false"/>
+      <TextareaItem
+        value="disabled style"
+        title="姓名"
+        disabled/>
     </List>
   </div>
 </template>

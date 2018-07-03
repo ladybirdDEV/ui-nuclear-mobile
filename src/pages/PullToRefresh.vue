@@ -3,24 +3,21 @@
     <WingBlank>
       <h3>拉动刷新</h3>
     </WingBlank>
-    <Button :style="{ marginBottom: '15px' }"
-            :onClick="btnClick">
+    <Button
+      style="margin-bottom: 15px;"
+      :onClick="btnClick">
       direction: {{down ? 'down' : 'up'}}
     </Button>
-   <PullToRefresh :onRefresh='onRefresh'
-                  :direction="down ? 'down' : 'up'"
-                  :indicator="indicator"
-                  :refreshing="refreshing">
-     <Icon slot="loadingIcon" type="loading" :style="{ marginRight: '8px', marginTop: '3px' }"></Icon>
-
-     <div :style="{ textAlign: 'center', padding: '10px' }"
-          v-for="(value, index) in items"
-          :key=index
-          slot="scrollContent">
-          pull up
-          {{ index }}
-     </div>
-   </PullToRefresh>
+    <PullToRefresh
+      :onRefresh='onRefresh'
+      :direction="down ? 'down' : 'up'"
+      :indicator="indicator"
+      :refreshing="refreshing">
+      <Icon slot="loadingIcon" type="loading" style="margin-right: 8px; margin-top: 3px;"></Icon>
+      <div style="text-align: center; padding: 10px;" v-for="(value, index) in items" :key="index" slot="scrollContent">
+        pull up{{ index }}
+      </div>
+    </PullToRefresh>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-<ImagePicker :files="files"></ImagePicker>
+  <ImagePicker :files="files"></ImagePicker>
 </template>
 
 <script>
