@@ -15,18 +15,15 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Icon from '@/components/Icon'
-import Feedback from '@/directives/feedback'
-// import Feedback from '@/components/Feedback/Feedback'
+import Icon from '../Icon'
+import Feedback from '../../directives/feedback'
 const prefixCls = 'um-button'
 export default {
   name: 'Button',
-  // mixins: [Feedback],
   directives: {
     Feedback
   },
   components: {
-    // Feedback,
     Icon
   },
   computed: {
