@@ -8,8 +8,7 @@
             :max="10"
             :min="1"
             showNumber
-            v-model="value"
-          ></Stepper>
+            v-model="value"></Stepper>
         </template>
         Show number value
       </ListItem>
@@ -21,8 +20,7 @@
             :min="1"
             showNumber
             :defaultValue="3"
-            disabled
-          ></Stepper>
+            disabled></Stepper>
         </template>
         Disabled
       </ListItem>

@@ -1,51 +1,51 @@
 <template>
   <div>
     <Tabs :tabs="tabs" :initialPage="1" @onTabClick="(obj, index) => log(obj, index)" @onChange="(obj, index) => log(obj, index)">
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of first tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of second tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of third tab
       </div>
     </Tabs>
     <WhiteSpace />
     <Tabs :tabs="tabs2" :initialPage="1" tabBarPosition="bottom">
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of first tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of second tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of third tab
       </div>
     </Tabs>
     <WhiteSpace />
     <h2>无动画</h2>
     <Tabs :tabs="tabs2" :initialPage="1" :animated="false">
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
         Content of first tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
         Content of second tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
         Content of third tab
       </div>
     </Tabs>
     <h2>固定高度</h2>
     <div style="height:200px;">
       <Tabs :tabs="tabs2" :initialPage="1">
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of first tab
         </div>
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of second tab
         </div>
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of third tab
         </div>
       </Tabs>
@@ -53,44 +53,44 @@
     <h2>垂直样式</h2>
     <div style="height:200px;">
       <Tabs :tabs="tabs3" :initialPage="1" tabBarPosition="left" tabDirection="vertical">
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of first tab
         </div>
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of second tab
         </div>
-        <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }">
+        <div style="display: flex; align-items: center; justify-content: center; height: 250px; background-color: #fff;">
           Content of third tab
         </div>
       </Tabs>
     </div>
     <h2>超出界面宽度，多于5个标签</h2>
     <Tabs :tabs="tabs4">
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 1st tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 2nd tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 3rd tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 4th tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 5th tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 6th tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 7th tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 8th tab
       </div>
-      <div :style="{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }">
+      <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of 9th tab
       </div>
     </Tabs>
