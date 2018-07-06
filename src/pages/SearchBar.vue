@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import SearchBar from '@/components/SearchBar'
+  import SearchBar from '@/components/search-bar'
   import WingBlank from '@/components/WingBlank'
   import WhiteSpace from '@/components/WhiteSpace'
   import Button from '@/components/Button'
