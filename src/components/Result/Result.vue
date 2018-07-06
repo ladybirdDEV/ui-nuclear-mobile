@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-  import Button from '../Button'
+  import Button from '../button'
   import Icon from '../Icon'
 
   export default {

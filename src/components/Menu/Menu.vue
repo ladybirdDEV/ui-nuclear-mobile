@@ -36,7 +36,7 @@
   import {List, ListItem} from '../List'
   import {RadioItem, Radio} from '../Radio'
   import SubMenu from './SubMenu'
-  import Button from '../Button'
+  import Button from '../button'
   import { oneOf } from '../../utils'
 
   export default {

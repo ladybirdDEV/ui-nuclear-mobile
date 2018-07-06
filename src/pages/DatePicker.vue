@@ -111,7 +111,7 @@ import {List, ListItem} from '@/components/List'
 import DatePicker from '@/components/DatePicker'
 import dateformat from 'dateformat'
 import InputItem from '@/components/InputItem'
-import Button from '@/components/Button'
+import Button from '@/components/button'
 import enUS from '@/components/DatePicker/locale/en_US'
 const nowTimeStamp = Date.now()
 const now = new Date(nowTimeStamp)

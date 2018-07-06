@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Button from '@/components/Button'
+import Button from '@/components/button'
 import {MobilePicker, MobilePickerItem} from '@/components/MobilePicker'
 let count = 0
 const len = 10

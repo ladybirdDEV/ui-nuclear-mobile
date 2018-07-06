@@ -51,7 +51,7 @@
 
 <script>
   import { List, ListItem, ListItemBrief } from '../List'
-  import Button from '../Button'
+  import Button from '../button'
   import Feedback from '../Feedback/Feedback.vue'
 
   export default {

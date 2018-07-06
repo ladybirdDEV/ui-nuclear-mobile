@@ -25,7 +25,7 @@
   import PullToRefresh from '@/components/PullToRefresh'
   import Icon from '@/components/Icon'
   import WhiteSpace from '@/components/white-space'
-  import Button from '@/components/Button'
+  import Button from '@/components/button'
   import WingBlank from '@/components/wing-blank'
 
   export default {

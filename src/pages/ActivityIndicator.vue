@@ -12,7 +12,7 @@
 
 <script>
   import WingBlank from '@/components/wing-blank'
-  import Button from '@/components/Button'
+  import Button from '@/components/button'
   import WhiteSpace from '@/components/white-space'
   import ActionSheet from '@/components/action-sheet'
   import ActivityIndicator from '@/components/activity-indicator'

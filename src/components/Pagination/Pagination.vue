@@ -25,7 +25,7 @@
 <script>
 import { oneOf } from '../../utils'
 import { Flex, FlexItem } from '../Flex'
-import Button from '../Button'
+import Button from '../button'
 const prefixCls = 'um-pagination'
 const localeCode = 'zh_CN'
 const defaultLocale = require(`./locale/${localeCode}.js`).default

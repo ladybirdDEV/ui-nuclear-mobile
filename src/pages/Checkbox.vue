@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import Button from '@/components/Button'
+  import Button from '@/components/button'
   import { Checkbox, CheckboxItem, AgreeItem } from '@/components/Checkbox'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
