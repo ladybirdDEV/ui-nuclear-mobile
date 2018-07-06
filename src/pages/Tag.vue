@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import Tag from '@/components/Tag'
+  import Tag from '@/components/tag'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
 
