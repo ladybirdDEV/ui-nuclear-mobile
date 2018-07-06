@@ -27,7 +27,7 @@
 </template>
 <script>
 import TransferDom from '../../directives/transfer-dom'
-import KeyboardItem from './KeyboardItem'
+import KeyboardItem from './keyboard-item'
 const prefixCls = 'um-number-keyboard'
 const localeCode = 'zh_CN'
 const defaultLocale = require(`./locale/${localeCode}.js`).default

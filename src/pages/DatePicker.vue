@@ -110,7 +110,7 @@
 import {List, ListItem} from '@/components/List'
 import DatePicker from '@/components/date-picker'
 import dateformat from 'dateformat'
-import InputItem from '@/components/InputItem'
+import InputItem from '@/components/input-item'
 import Button from '@/components/button'
 import enUS from '@/components/date-picker/locale/en_US'
 const nowTimeStamp = Date.now()

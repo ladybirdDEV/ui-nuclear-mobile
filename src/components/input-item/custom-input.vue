@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import CustomKeyboard from './CustomKeyboard'
+import CustomKeyboard from './custom-keyboard'
 const prefixCls = 'um-number-keyboard'
 export default {
   name: 'CustomInput',

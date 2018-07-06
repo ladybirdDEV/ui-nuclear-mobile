@@ -46,7 +46,7 @@ import LocaleProvider from '@/components/LocaleProvider'
 import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/white-space'
 import Pagination from '@/components/Pagination'
-import InputItem from '@/components/InputItem'
+import InputItem from '@/components/input-item'
 export default {
   components: {
     WingBlank,
