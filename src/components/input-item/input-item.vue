@@ -21,7 +21,7 @@
 <script>
 import { oneOf } from '../../utils'
 import Feedback from '../Feedback/Feedback'
-import CustomInput from './CustomInput'
+import CustomInput from './custom-input'
 const prefixCls = 'um-input'
 var Clear = {
   template: '<div :class="`${prefixCls}-clear`" @click="clear"></div>',// eslint-disable-line

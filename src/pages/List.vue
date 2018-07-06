@@ -101,7 +101,7 @@
 </template>
 <script>
 import { List, ListItem, ListItemBrief } from '@/components/List'
-import InputItem from '@/components/InputItem'
+import InputItem from '@/components/input-item'
 import Stepper from '@/components/Stepper'
 import uSwitch from '@/components/Switch'
 import Range from '@/components/Range'
