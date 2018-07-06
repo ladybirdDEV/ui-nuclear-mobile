@@ -37,7 +37,7 @@
 <script>
   import SearchBar from '@/components/search-bar'
   import WingBlank from '@/components/wing-blank'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import Button from '@/components/Button'
 
   export default {

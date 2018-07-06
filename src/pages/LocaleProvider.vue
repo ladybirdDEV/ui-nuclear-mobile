@@ -44,7 +44,7 @@ import Button from '@/components/Button'
 import { List, ListItem } from '@/components/List'
 import LocaleProvider from '@/components/LocaleProvider'
 import WingBlank from '@/components/wing-blank'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import Pagination from '@/components/Pagination'
 import InputItem from '@/components/InputItem'
 export default {

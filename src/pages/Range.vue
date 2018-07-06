@@ -19,7 +19,7 @@
 </template>
 <script>
 import Range from '@/components/Range'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 export default {
   components: {

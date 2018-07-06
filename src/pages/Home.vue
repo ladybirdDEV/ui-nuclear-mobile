@@ -23,7 +23,7 @@
 </template>
 <script>
 import Button from '@/components/Button'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 import { List, ListItem } from '@/components/List'
 import Icon from '@/components/Icon'

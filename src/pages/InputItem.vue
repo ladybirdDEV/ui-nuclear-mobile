@@ -114,7 +114,7 @@
 <script>
 import { List, ListItem } from '@/components/List'
 import InputItem from '@/components/InputItem'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import Toast from '@/components/Toast'
 export default {
   components: {

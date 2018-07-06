@@ -43,7 +43,7 @@
   import {Accordion, Panel} from '@/components/Accordion'
   import {List, ListItem} from '@/components/List'
   import WingBlank from '@/components/wing-blank'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
 
   export default {
     components: {

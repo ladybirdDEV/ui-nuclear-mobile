@@ -91,7 +91,7 @@
   import Menu from '@/components/Menu'
   import Icon from '@/components/Icon'
   import WingBlank from '@/components/wing-blank'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import ActivityIndicator from '@/components/ActivityIndicator'
 
   export default {

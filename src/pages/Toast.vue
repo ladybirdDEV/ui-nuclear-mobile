@@ -19,7 +19,7 @@
   import Toast from '@/components/Toast'
   import WingBlank from '@/components/wing-blank'
   import Button from '@/components/Button'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
 
   export default{
     components: {

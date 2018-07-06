@@ -27,7 +27,7 @@
   import Modal from '@/components/Modal'
   import WingBlank from '@/components/wing-blank'
   import Button from '@/components/Button'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import Toast from '@/components/Toast'
 
   export default{

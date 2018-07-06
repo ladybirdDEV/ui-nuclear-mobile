@@ -90,7 +90,7 @@
 <script>
 import { Flex, FlexItem } from '@/components/Flex'
 import PlaceHolder from '@/components/PlaceHolder'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 export default {
   components: {

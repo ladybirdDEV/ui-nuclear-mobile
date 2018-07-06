@@ -14,7 +14,7 @@
 <script>
   import WingBlank from '@/components/wing-blank'
   import Button from '@/components/Button'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import ActionSheet from '@/components/action-sheet'
   import Toast from '@/components/Toast'
 

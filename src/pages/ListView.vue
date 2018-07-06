@@ -15,7 +15,7 @@
 
 <script>
 import { ListView, IndexList } from '@/components/ListView'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 
 export default {
   components: {
