@@ -1,0 +1,76 @@
+.um-badge {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.um-badge-text {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: -6PX;
+  height: 18PX;
+  line-height: 18PX;
+  min-width: 9PX;
+  border-radius: 12PX;
+  padding: 0 5PX;
+  text-align: center;
+  font-size: 12PX;
+  color: #fff;
+  background-color: #ff5b05;
+  white-space: nowrap;
+  transform: translateX(-45%);
+  transform-origin: -10% center;
+  z-index: 10;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimSun, sans-serif;
+}
+.um-badge-text a {
+  color: #fff;
+}
+.um-badge-text p {
+  margin: 0;
+  padding: 0;
+}
+.um-badge-hot .um-badge-text {
+  background-color: #f96268;
+}
+.um-badge-dot {
+  position: absolute;
+  transform: translateX(-50%);
+  transform-origin: 0 center;
+  top: -4PX;
+  height: 8PX;
+  width: 8PX;
+  border-radius: 100%;
+  background: #ff5b05;
+  z-index: 10;
+}
+.um-badge-dot-large {
+  height: 16PX;
+  width: 16PX;
+}
+.um-badge-not-a-wrapper .um-badge-text,
+.um-badge-not-a-wrapper .um-badge-dot {
+  top: auto;
+  display: block;
+  position: relative;
+  transform: translateX(0);
+}
+.um-badge-corner {
+  width: 80PX;
+  padding: 8PX;
+  position: absolute;
+  right: -32PX;
+  top: 8PX;
+  background-color: #ff5b05;
+  color: #fff;
+  white-space: nowrap;
+  transform: rotate(45deg);
+  text-align: center;
+  font-size: 15PX;
+}
+.um-badge-corner-wrapper {
+  overflow: hidden;
+}
