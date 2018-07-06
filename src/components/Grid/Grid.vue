@@ -38,10 +38,10 @@
   </div>
 </template>
 <script>
-import Render from '@/components/Base/render'
-import { Flex, FlexItem } from '@/components/Flex'
-import Carousel from '@/components/Carousel'
-import Feedback from '@/components/Feedback/Feedback.vue'
+import Render from '../Base/render'
+import { Flex, FlexItem } from '../Flex'
+import Carousel from '../Carousel'
+import Feedback from '../Feedback/Feedback.vue'
 const prefixCls = 'um-grid'
 export default {
   name: 'Grid',

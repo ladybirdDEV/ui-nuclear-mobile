@@ -11,8 +11,8 @@
 </template>
 <script>
 import NP from 'number-precision'
-import Icon from '@/components/Icon'
-import Feedback from '@/components/Feedback/Feedback.js'
+import Icon from '../Icon'
+import Feedback from '../Feedback/Feedback.js'
 const prefixCls = 'um-stepper'
 var Handler = {
   template: '<span unselectable="unselectable" role="button" :aria-label="labelType" :class="handlerCls" @click="onClick"><Icon :type="iconType" size="xxs"></Icon></span>',// eslint-disable-line

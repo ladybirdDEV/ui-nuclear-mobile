@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import Badge from '@/components/Badge'
+import Badge from '../Badge'
 const prefixCls = 'um-tab-bar'
 export default {
   name: 'TabBarItem',

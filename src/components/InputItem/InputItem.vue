@@ -20,7 +20,7 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Feedback from '@/components/Feedback/Feedback'
+import Feedback from '../Feedback/Feedback'
 import CustomInput from './CustomInput'
 const prefixCls = 'um-input'
 var Clear = {

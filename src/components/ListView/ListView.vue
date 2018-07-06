@@ -36,7 +36,7 @@
 
 <script>
   import BScroll from 'better-scroll'
-  import Icon from '@/components/Icon'
+  import Icon from '../Icon'
 
   export default {
     components: {

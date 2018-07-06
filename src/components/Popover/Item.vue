@@ -8,8 +8,8 @@
   </div>
 </template>
 <script>
-  import Feedback from '@/components/Feedback/Feedback'
-  import Icon from '@/components/Icon'
+  import Feedback from '../Feedback/Feedback'
+  import Icon from '../Icon'
   import { oneOf } from '../../utils'
   const prefixItemCls = 'um-popover-item'
 
