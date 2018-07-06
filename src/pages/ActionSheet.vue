@@ -15,7 +15,7 @@
   import WingBlank from '@/components/WingBlank'
   import Button from '@/components/Button'
   import WhiteSpace from '@/components/WhiteSpace'
-  import ActionSheet from '@/components/ActionSheet'
+  import ActionSheet from '@/components/action-sheet'
   import Toast from '@/components/Toast'
 
   export default{
