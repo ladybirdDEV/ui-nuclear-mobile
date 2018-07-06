@@ -40,7 +40,7 @@
 <script>
 import Render from '../base/render'
 import { Flex, FlexItem } from '../Flex'
-import Carousel from '../Carousel'
+import Carousel from '../carousel'
 import Feedback from '../Feedback/Feedback.vue'
 const prefixCls = 'um-grid'
 export default {
