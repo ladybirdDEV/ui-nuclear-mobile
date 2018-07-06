@@ -16,7 +16,7 @@
   import Button from '@/components/Button'
   import WhiteSpace from '@/components/white-space'
   import ActionSheet from '@/components/action-sheet'
-  import Toast from '@/components/Toast'
+  import Toast from '@/components/toast'
 
   export default{
     components: {
