@@ -29,7 +29,7 @@
   </div>
 </template>
 <script>
-import { Card, CardHeader, CardBody, CardFooter } from '@/components/Card'
+import { Card, CardHeader, CardBody, CardFooter } from '@/components/card'
 import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/white-space'
 export default {
