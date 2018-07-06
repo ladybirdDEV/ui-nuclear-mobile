@@ -28,7 +28,7 @@
 </template>
 <script>
 import NoticeBar from '@/components/NoticeBar'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import Icon from '@/components/Icon'
 export default {
   components: {

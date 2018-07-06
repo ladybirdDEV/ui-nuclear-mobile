@@ -8,7 +8,7 @@
 </template>
 <script>
 import PickerView from '@/components/PickerView'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import city from '@/components/MobileCascader/data'
 export default {
   name: 'PickerViewPage',

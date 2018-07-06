@@ -90,8 +90,8 @@
   import NavBar from '@/components/NavBar'
   import Menu from '@/components/Menu'
   import Icon from '@/components/Icon'
-  import WingBlank from '@/components/WingBlank'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WingBlank from '@/components/wing-blank'
+  import WhiteSpace from '@/components/white-space'
   import ActivityIndicator from '@/components/ActivityIndicator'
 
   export default {

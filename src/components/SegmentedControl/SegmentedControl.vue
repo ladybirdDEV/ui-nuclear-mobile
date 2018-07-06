@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import WingBlank from '../WingBlank'
+  import WingBlank from '../wing-blank'
   import Feedback from '../Feedback/Feedback.vue'
   import SegControlItem from '../SegmentedControl/SegControlItem.vue'
 

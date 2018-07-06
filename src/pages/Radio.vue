@@ -57,8 +57,8 @@
 
 <script>
   import { Radio, RadioItem } from '@/components/Radio'
-  import WingBlank from '@/components/WingBlank'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WingBlank from '@/components/wing-blank'
+  import WhiteSpace from '@/components/white-space'
   import { List, ListItem, ListItemBrief } from '@/components/List'
   import { Flex, FlexItem } from '@/components/Flex'
 

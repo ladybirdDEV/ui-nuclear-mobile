@@ -99,7 +99,7 @@
 <script>
 import Tabs from '@/components/Tabs'
 import Badge from '@/components/Badge'
-import WhiteSpace from '@/components/WhiteSpace'
+import WhiteSpace from '@/components/white-space'
 import Sticky from 'vue-sticky-position'
 export default {
   components: {

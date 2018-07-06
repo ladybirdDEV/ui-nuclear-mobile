@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import Icon from '@/components/Icon'
   import NavBar from '@/components/NavBar'
   import { Popover, Item } from '@/components/Popover'

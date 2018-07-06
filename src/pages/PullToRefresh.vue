@@ -24,9 +24,9 @@
 <script>
   import PullToRefresh from '@/components/PullToRefresh'
   import Icon from '@/components/Icon'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WhiteSpace from '@/components/white-space'
   import Button from '@/components/Button'
-  import WingBlank from '@/components/WingBlank'
+  import WingBlank from '@/components/wing-blank'
 
   export default {
     components: {
