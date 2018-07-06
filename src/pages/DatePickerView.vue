@@ -28,7 +28,7 @@
 </template>
 <script>
 import WhiteSpace from '@/components/white-space'
-import DatePickerView from '@/components/DatePickerView'
+import DatePickerView from '@/components/date-picker-view'
 import enUS from '@/components/MobileDatePicker/locale/en_US'
 export default {
   name: 'DatepickerViewPage',
