@@ -1,36 +1,42 @@
 <template>
-  <div style="height: 100%">
-    <div class="um-modal-wrapper" v-if="!popup">
-      <transition name="modal-bounce">
-        <div class="um-modal" v-show='visible'>
-          <div class="um-modal-header" v-if="title !== ''">
-            <div class="um-modal-title">{{ title }}</div>
-          </div>
-
-          <div class="um-modal-content" v-if="message !== ''">
-            <div class="um-modal-message" v-html="message"></div>
-            <div class="um-modal-input" v-if="showInput">
-              <input v-model="inputValue" :type="type" :placeholder="inputPlaceholder[0]" ref="input">
-              <div class="um-modal-errormsg" v-show="showError">{{ editorErrorMessage }}</div>
+  <div>
+    <template v-if="!popup">
+      <transition name="um-zoom">
+        <div class="um-modal-wrapper" v-if='visible'>
+          <div class="um-modal">
+            <div class="um-modal-header" v-if="title !== ''">
+              <div class="um-modal-title">{{ title }}</div>
             </div>
-          </div>
 
-          <div :class="wrapBtnCls">
-              <button :class="wrapClass"
-                      @click="handleAction(item)"
-                      :key="index"
-                      v-for="(item, index) in btnGroup">
+            <div class="um-modal-content" v-if="message !== ''">
+              <div class="um-modal-message" v-html="message"></div>
+              <div class="um-modal-input" v-if="showInput">
+                <input v-model="inputValue" :type="type" :placeholder="inputPlaceholder[0]" ref="input">
+                <div class="um-modal-errormsg" v-show="showError">{{ editorErrorMessage }}</div>
+              </div>
+            </div>
+
+            <div :class="wrapBtnCls">
+              <button
+                :class="wrapClass"
+                @click="handleAction(item)"
+                :key="index"
+                v-for="(item, index) in btnGroup">
                 <Feedback activeClassName="um-modal-active">
                   <div class="um-modal-button-mask">
                     {{ btnGroup[index].text }}
                   </div>
                 </Feedback>
               </button>
+            </div>
           </div>
         </div>
       </transition>
-    </div>
-    <div v-if="popup" :class="popupClass">
+      <transition name="um-fade">
+        <div class="um-modal-mask" v-if='visible'></div>
+      </transition>
+    </template>
+    <div v-else :class="popupClass">
       <List renderHeader="委托买入">
         <ListItem v-for="(item, index) in popItem" :key="index">
           {{ popItem[index].text }}
@@ -40,9 +46,6 @@
         </ListItem>
       </List>
     </div>
-    <transition name="mask">
-      <div class="um-modal-mask" v-show='visible'></div>
-    </transition>
   </div>
 </template>
 
@@ -89,6 +92,13 @@
     watch: {
       defaultValue: function (v) {
         this.inputValue = v
+      },
+      visible (val) {
+        if (val) {
+          document.body.style.overflow = 'hidden'
+        } else {
+          document.body.style = ''
+        }
       }
     },
     methods: {
@@ -132,6 +142,17 @@
   .um-modal-active {
     background-color: #ddd;
   }
+  .um-modal-wrapper {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .um-modal-slide-up {
     z-index: 2;
     position: fixed;
@@ -148,11 +169,6 @@
     /*transition: .2s*/
   }
   .um-modal {
-    z-index: 2;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
     background-color: #fff;
     width: 75%;
     border-radius: 6px;
@@ -163,29 +179,29 @@
     transition: .2s
   }
   .um-modal-header {
-      padding: 15px 0 0;
-    }
+    padding: 15px 0 0;
+  }
   .um-modal-content {
-      padding: 10px 20px 15px;
-      border-bottom: 1px solid #ddd;
-      min-height: 36px;
-      position: relative;
-    }
-    .um-modal-button-mask {
-      height: 48px;
-      padding-top: 4px;
-    }
+    padding: 10px 20px 15px;
+    border-bottom: 1px solid #ddd;
+    min-height: 36px;
+    position: relative;
+  }
+  .um-modal-button-mask {
+    height: 48px;
+    padding-top: 4px;
+  }
   .um-modal-input {
     padding-top: 4px;
   }
   .um-modal-input input {
-        height: 28px;
-        border: 1px solid #dedede;
-        border-radius: 5px;
-        padding: 4px 5px;
-        width: 100%;
-        outline: none;
-      }
+    height: 28px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    padding: 4px 5px;
+    width: 100%;
+    outline: none;
+  }
   .um-modal-input input::placeholder {
     font-size: 14px;
     color: #ccc;
@@ -195,8 +211,8 @@
     border-color: #108ee9;
   }
   .um-modal-input input:focus {
-       border-color: #108ee9;
-     }
+     border-color: #108ee9;
+   }
   .um-modal-errormsg {
     color: red;
     font-size: 12px;
@@ -298,12 +314,6 @@
     outline: none;
     padding: 0px;
   }
-  .modal-bounce-enter {
-    opacity: 0;
-  }
-  .modal-bounce-leave-active {
-    opacity: 0;
-  }
   .um-modal-footer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -319,8 +329,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #000000;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, .6);
   }
 </style>
 
