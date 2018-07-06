@@ -38,7 +38,7 @@
   </div>
 </template>
 <script>
-import Render from '../Base/render'
+import Render from '../base/render'
 import { Flex, FlexItem } from '../Flex'
 import Carousel from '../Carousel'
 import Feedback from '../Feedback/Feedback.vue'
