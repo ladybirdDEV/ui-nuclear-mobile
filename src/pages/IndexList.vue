@@ -10,7 +10,7 @@
 <script>
 import { IndexList } from '@/components/ListView'
 import WhiteSpace from '@/components/WhiteSpace'
-import SearchBar from '@/components/SearchBar'
+import SearchBar from '@/components/search-bar'
 
 export default {
   components: {
