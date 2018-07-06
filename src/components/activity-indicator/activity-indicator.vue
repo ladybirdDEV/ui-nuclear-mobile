@@ -13,7 +13,7 @@
     components: {
       Icon
     },
-    name: 'ActivityIndicator',
+    name: 'activity-indicator',
     props: {
       animating: {
         type: Boolean,
@@ -56,7 +56,7 @@
   .um-activity-indicator-horizontal {
     display: flex;
     align-items: center
-  }       
+  }
   .um-activity-indicator-vertical {
     display: flex;
     flex-direction: column
