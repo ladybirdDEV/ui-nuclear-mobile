@@ -53,7 +53,7 @@
   </List>
 </template>
 <script>
-import Badge from '@/components/Badge'
+import Badge from '@/components/badge'
 import { List, ListItem, ListItemBrief } from '@/components/List'
 export default {
   components: {
