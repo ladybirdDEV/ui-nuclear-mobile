@@ -36,6 +36,15 @@ let showNextMsg = function () {
   Vue.nextTick(() => {
     instance.visible = true
   })
+  const watcher = instance.$watch('visible', function (val) {
+    if (!val) {
+      setTimeout(() => {
+        document.body.removeChild(instance.$el)
+        // cancel watcher
+        watcher()
+      }, 200)
+    }
+  })
 }
 
 let Modal = function (options) {
