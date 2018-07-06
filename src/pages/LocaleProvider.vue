@@ -38,7 +38,7 @@
 <script>
 import enUS from '@/components/LocaleProvider/en_US'
 import ruRU from '@/components/LocaleProvider/ru_RU'
-import DatePicker from '@/components/DatePicker'
+import DatePicker from '@/components/date-picker'
 import Picker from '@/components/Picker'
 import Button from '@/components/button'
 import { List, ListItem } from '@/components/List'

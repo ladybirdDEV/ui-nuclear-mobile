@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import ImagePicker from '@/components/ImagePicker'
+  import ImagePicker from '@/components/image-picker'
   export default {
     components: {
       ImagePicker
