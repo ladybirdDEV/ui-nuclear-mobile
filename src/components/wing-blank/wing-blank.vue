@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  nume: 'Wing-Blank',
+  nume: 'WingBlank',
   computed: {
     wrapCls () {
       return {

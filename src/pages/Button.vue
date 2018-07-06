@@ -45,7 +45,7 @@
 </template>
 <script>
 import Button from '@/components/Button'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/WhiteSpace'
 import { List, ListItem, ListItemBrief } from '@/components/List'
 export default {

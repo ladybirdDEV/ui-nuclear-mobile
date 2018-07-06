@@ -67,7 +67,7 @@
   </WingBlank>
 </template>
 <script>
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/WhiteSpace'
 import {Steps, Step} from '@/components/Steps'
 export default {

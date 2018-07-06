@@ -26,7 +26,7 @@
 <script>
   import SegmentedControl from '@/components/SegmentedControl'
   import WhiteSpace from '@/components/WhiteSpace'
-  import WingBlank from '@/components/WingBlank'
+  import WingBlank from '@/components/wing-blank'
 
   export default {
     components: {

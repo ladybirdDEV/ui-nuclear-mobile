@@ -24,7 +24,7 @@
 <script>
 import Button from '@/components/Button'
 import WhiteSpace from '@/components/WhiteSpace'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 import { List, ListItem } from '@/components/List'
 import Icon from '@/components/Icon'
 export default {

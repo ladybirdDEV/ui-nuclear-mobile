@@ -17,7 +17,7 @@
 <script>
   import Button from '@/components/Button'
   import { Checkbox, CheckboxItem, AgreeItem } from '@/components/Checkbox'
-  import WingBlank from '@/components/WingBlank'
+  import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/WhiteSpace'
   import { Flex, FlexItem } from '@/components/Flex'
   import { List, ListItem, ListItemBrief } from '@/components/List'

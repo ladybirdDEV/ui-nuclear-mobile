@@ -9,7 +9,7 @@
 
 <script>
 import Button from '@/components/Button'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/WhiteSpace'
 
 export default {

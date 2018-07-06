@@ -30,7 +30,7 @@
 </template>
 <script>
 import { Card, CardHeader, CardBody, CardFooter } from '@/components/Card'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/WhiteSpace'
 export default {
   components: {

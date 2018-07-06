@@ -18,7 +18,7 @@
 </template>
 <script>
 import Carousel from '@/components/Carousel'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 export default {
   components: {
     Carousel,

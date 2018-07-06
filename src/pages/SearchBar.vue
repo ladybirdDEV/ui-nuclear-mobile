@@ -36,7 +36,7 @@
 
 <script>
   import SearchBar from '@/components/search-bar'
-  import WingBlank from '@/components/WingBlank'
+  import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/WhiteSpace'
   import Button from '@/components/Button'
 

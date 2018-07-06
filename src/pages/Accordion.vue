@@ -42,7 +42,7 @@
 <script>
   import {Accordion, Panel} from '@/components/Accordion'
   import {List, ListItem} from '@/components/List'
-  import WingBlank from '@/components/WingBlank'
+  import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/WhiteSpace'
 
   export default {

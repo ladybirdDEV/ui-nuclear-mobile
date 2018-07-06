@@ -15,7 +15,7 @@
 <script>
 import PlaceHolder from '@/components/PlaceHolder'
 import WhiteSpace from '@/components/WhiteSpace'
-import WingBlank from '@/components/WingBlank'
+import WingBlank from '@/components/wing-blank'
 export default {
   components: {
     PlaceHolder,
