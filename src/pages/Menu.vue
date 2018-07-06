@@ -92,7 +92,7 @@
   import Icon from '@/components/Icon'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
-  import ActivityIndicator from '@/components/ActivityIndicator'
+  import ActivityIndicator from '@/components/activity-indicator'
 
   export default {
     components: {

@@ -15,7 +15,7 @@
   import Button from '@/components/Button'
   import WhiteSpace from '@/components/white-space'
   import ActionSheet from '@/components/action-sheet'
-  import ActivityIndicator from '@/components/ActivityIndicator'
+  import ActivityIndicator from '@/components/activity-indicator'
 
   export default{
     components: {
