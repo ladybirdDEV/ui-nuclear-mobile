@@ -11,7 +11,7 @@
   </MobileMultiPicker>
 </template>
 <script>
-import {MobileMultiPicker, MobilePicker, MobilePickerItem} from '@/components/MobilePicker'
+import {MobileMultiPicker, MobilePicker, MobilePickerItem} from '../MobilePicker'
 import defaultLocale from './locale/en_US'
 import { oneOf } from '../../utils'
 const DATETIME = 'datetime'

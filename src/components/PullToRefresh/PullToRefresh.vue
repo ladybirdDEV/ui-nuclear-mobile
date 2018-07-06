@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import MobilePullToRefresh from '@/components/MobilePullToRefresh'
+  import MobilePullToRefresh from '../MobilePullToRefresh'
 
   export default {
     name: 'PullToRefresh',

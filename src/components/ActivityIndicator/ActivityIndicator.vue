@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-  import Icon from '@/components/Icon'
+  import Icon from '../Icon'
   // const prefixCls = 'um-activity-indicator'
 
   export default {

@@ -15,7 +15,7 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Feedback from '@/directives/feedback'
+import Feedback from '../../directives/feedback'
 const prefixCls = 'um-list'
 export default {
   name: 'Item',

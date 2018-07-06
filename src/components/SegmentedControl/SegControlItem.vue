@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Feedback from '@/components/Feedback/Feedback.js'
+import Feedback from '../Feedback/Feedback.js'
 
 export default {
   name: 'SegControlItem',

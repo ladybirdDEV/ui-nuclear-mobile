@@ -50,9 +50,9 @@
 </template>
 
 <script>
-  import { List, ListItem, ListItemBrief } from '@/components/List'
-  import Button from '@/components/Button'
-  import Feedback from '@/components/Feedback/Feedback.vue'
+  import { List, ListItem, ListItemBrief } from '../List'
+  import Button from '../Button'
+  import Feedback from '../Feedback/Feedback.vue'
 
   export default {
     components: {

@@ -25,7 +25,7 @@
   </div>
 </template>
 <script>
-import Render from '@/components/Base/render'
+import Render from '../Base/render'
 import { oneOf } from '../../utils'
 const prefixCls = 'um-tabs'
 export default {

@@ -43,9 +43,9 @@
 </template>
 
 <script>
-import { List, ListItem, ListItemBrief } from '@/components/List'
+import { List, ListItem, ListItemBrief } from '../List'
 import ListView from './ListView'
-import Feedback from '@/components/Feedback/Feedback.vue'
+import Feedback from '../Feedback/Feedback.vue'
 
 const TITLE_HEIGHT = 50
 const SUBTITLE_HEIGHT = 40

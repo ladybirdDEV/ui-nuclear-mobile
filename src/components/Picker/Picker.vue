@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import {List, ListItem} from '@/components/List'
+import {List, ListItem} from '../List'
 import treeFilter from 'array-tree-filter'
 import MobileCascader from '../MobileCascader'
 import MobilePopupCascader from '../MobilePicker/MobilePopup'

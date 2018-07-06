@@ -13,9 +13,9 @@
 </template>
 
 <script>
-  import WingBlank from '@/components/WingBlank'
-  import Feedback from '@/components/Feedback/Feedback.vue'
-  import SegControlItem from '@/components/SegmentedControl/SegControlItem.vue'
+  import WingBlank from '../WingBlank'
+  import Feedback from '../Feedback/Feedback.vue'
+  import SegControlItem from '../SegmentedControl/SegControlItem.vue'
 
   const prefixCls = 'um-segment'
 

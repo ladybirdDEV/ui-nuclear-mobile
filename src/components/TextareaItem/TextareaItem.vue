@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import Feedback from '@/components/Feedback/Feedback.vue'
+  import Feedback from '../Feedback/Feedback.vue'
   const prefixCls = 'um-textarea'
   const prefixListCls = 'um-list'
 

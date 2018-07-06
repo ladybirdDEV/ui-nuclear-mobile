@@ -29,7 +29,7 @@
 
 <script>
   import Radio from './Radio'
-  import { List, ListItem, ListItemBrief } from '@/components/List'
+  import { List, ListItem, ListItemBrief } from '../List'
 
   export default {
     name: 'RadioItem',

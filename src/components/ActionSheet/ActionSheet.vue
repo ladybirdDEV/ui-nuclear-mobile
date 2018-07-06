@@ -53,7 +53,7 @@
 </template>
 
 <script>
-  import Feedback from '@/components/Feedback/Feedback.vue'
+  import Feedback from '../Feedback/Feedback.vue'
 
   const prefixCls = 'um-action-sheet'
   const prefixClsShare = 'um-action-sheet-share'

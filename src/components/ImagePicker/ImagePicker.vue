@@ -28,9 +28,9 @@
 </template>
 
 <script>
-  import { Flex, FlexItem } from '@/components/Flex'
-  import Icon from '@/components/Icon'
-  import Feedback from '@/components/Feedback/Feedback.vue'
+  import { Flex, FlexItem } from '../Flex'
+  import Icon from '../Icon'
+  import Feedback from '../Feedback/Feedback.vue'
 
   export default {
     components: {
