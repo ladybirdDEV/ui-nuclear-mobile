@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import ActionSheetVue from './ActionSheet.vue'
+import ActionSheetVue from './action-sheet.vue'
 
 const ActionSheetVueConstructor = Vue.extend(ActionSheetVue)
 
