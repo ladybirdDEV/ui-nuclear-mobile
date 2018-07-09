@@ -24,7 +24,7 @@
 
 <script>
 import PopupPicker from '../MobilePicker/MobilePopup'
-import MobileCascader from './MobileCascader'
+import MobileCascader from './mobile-cascader'
 
 export default {
   components: {

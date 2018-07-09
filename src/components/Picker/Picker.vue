@@ -54,7 +54,7 @@
 <script>
 import {List, ListItem} from '../List'
 import treeFilter from 'array-tree-filter'
-import MobileCascader from '../MobileCascader'
+import MobileCascader from '../mobile-cascader'
 import MobilePopupCascader from '../MobilePicker/MobilePopup'
 import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../MobilePicker/'
 const localeCode = 'zh_CN'
