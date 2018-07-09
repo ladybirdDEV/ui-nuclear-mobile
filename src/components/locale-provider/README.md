@@ -11,7 +11,7 @@ LocaleProvider 使用 Vue 的 [provider/inject](https://cn.vuejs.org/v2/api/#pro
 ```html
 <LocaleProvider :locale="enUS"><component></component></LocaleProvider>
 <script>
-import enUS from '@/components/LocaleProvider/en_US'
+import enUS from '@/components/locale-provider/en_US'
 export default {
   data () {
     return {
@@ -30,4 +30,4 @@ export default {
 
 | 参数 | 说明 | 类型 | 默认值 |
 | -- | -- | -- | -- |
-| locale | 语言包配置，可到 `@/components/LocaleProvider/` 目录下找 | Obejct | - |
+| locale | 语言包配置，可到 `@/components/locale-provider/` 目录下找 | Obejct | - |

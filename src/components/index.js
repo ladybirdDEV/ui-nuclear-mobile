@@ -44,7 +44,7 @@ import SwipeAction from './SwipeAction'
 import { Accordion, Panel } from './accordion'
 import { TabBar, TabBarItem } from './TabBar'
 import { Popover, Item } from './Popover'
-import LocaleProvider from './LocaleProvider'
+import LocaleProvider from './locale-provider'
 import './style/index.less'
 
 export default{

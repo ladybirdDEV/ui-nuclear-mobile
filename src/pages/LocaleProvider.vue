@@ -36,13 +36,13 @@
   </div>
 </template>
 <script>
-import enUS from '@/components/LocaleProvider/en_US'
-import ruRU from '@/components/LocaleProvider/ru_RU'
+import enUS from '@/components/locale-provider/en_US'
+import ruRU from '@/components/locale-provider/ru_RU'
 import DatePicker from '@/components/date-picker'
 import Picker from '@/components/Picker'
 import Button from '@/components/button'
 import { List, ListItem } from '@/components/List'
-import LocaleProvider from '@/components/LocaleProvider'
+import LocaleProvider from '@/components/locale-provider'
 import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/white-space'
 import Pagination from '@/components/Pagination'
