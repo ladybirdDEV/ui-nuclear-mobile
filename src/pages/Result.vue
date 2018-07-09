@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import Result from '@/components/Result'
+  import Result from '@/components/result'
   import Icon from '@/components/icon'
   import WhiteSpace from '@/components/white-space'
   import WingBlank from '@/components/wing-blank'
