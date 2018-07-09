@@ -29,7 +29,7 @@
 </template>
 <script>
 import { List, ListItem } from '@/components/list'
-import Stepper from '@/components/Stepper'
+import Stepper from '@/components/stepper'
 export default {
   components: {
     Stepper,
