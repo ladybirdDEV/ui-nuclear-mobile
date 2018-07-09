@@ -5,7 +5,7 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Feedback from '../Feedback/Feedback'
+import Feedback from '../feedback/feedback'
 const prefixCls = 'um-number-keyboard'
 export default {
   name: 'KeyboardItem',

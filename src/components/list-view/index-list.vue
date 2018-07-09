@@ -1,9 +1,9 @@
 <template>
   <div class="um-index-list">
     <ListView ref="indexList"
-              :probe-type="probeType"
-              :data="data"
-              :click="true"
+              :probe-type="probeType" 
+              :data="data" 
+              :click="true" 
               @scroll="scroll">
       <div class="um-index-list-content" ref="content">
         <div class="um-index-list-title" v-if="title" ref="title" @click="titleClick">
@@ -28,9 +28,9 @@
     </ListView>
     <div class="um-index-list-nav" @touchstart="onShortcutTouchStart" @touchmove.stop.prevent="onShortcutTouchMove">
       <ul>
-        <li v-for="(item, index) in shortcutList"
-            :key='index'
-            :data-index="index"
+        <li v-for="(item, index) in shortcutList" 
+            :key='index' 
+            :data-index="index" 
             class="um-index-shortcut-active">
           {{item}}
         </li>
@@ -44,8 +44,8 @@
 
 <script>
 import { List, ListItem, ListItemBrief } from '../List'
-import ListView from './list-view'
-import Feedback from '../Feedback/Feedback.vue'
+import ListView from './ListView'
+import Feedback from '../feedback/feedback.vue'
 
 const TITLE_HEIGHT = 50
 const SUBTITLE_HEIGHT = 40

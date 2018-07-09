@@ -41,7 +41,7 @@
 import Render from '../base/render'
 import { Flex, FlexItem } from '../Flex'
 import Carousel from '../carousel'
-import Feedback from '../Feedback/Feedback.vue'
+import Feedback from '../feedback/feedback.vue'
 const prefixCls = 'um-grid'
 export default {
   name: 'Grid',

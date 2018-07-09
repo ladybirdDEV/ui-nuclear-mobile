@@ -19,7 +19,7 @@
 
 <script>
   import { oneOf } from '../../utils'
-  import Feedback from '../Feedback/Feedback'
+  import Feedback from '../feedback/feedback'
   import TransferDom from '../../directives/transfer-dom'
   const prefixCls = 'um-popover'
 

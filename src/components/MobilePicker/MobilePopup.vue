@@ -32,7 +32,7 @@
 
 <script>
 import Modal from '../MobileDialog'
-import Touchable from '../Feedback/Feedback.vue'
+import Touchable from '../feedback/feedback.vue'
 
 export default {
   components: {

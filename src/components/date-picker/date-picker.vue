@@ -33,7 +33,7 @@
 </template>
 <script>
 import DatePickerPopup from '../MobilePicker/MobilePopup'
-import Feedback from '../Feedback/Feedback.vue'
+import Feedback from '../feedback/feedback.vue'
 import {MobileDatePicker} from '../MobileDatePicker'
 import {oneOf} from '../../utils'
 import dateformat from 'dateformat'
