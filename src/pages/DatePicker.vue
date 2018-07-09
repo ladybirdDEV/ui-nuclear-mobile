@@ -107,7 +107,7 @@
   </div>
 </template>
 <script>
-import {List, ListItem} from '@/components/List'
+import {List, ListItem} from '@/components/list'
 import DatePicker from '@/components/date-picker'
 import dateformat from 'dateformat'
 import InputItem from '@/components/input-item'

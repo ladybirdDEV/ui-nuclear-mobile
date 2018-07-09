@@ -24,7 +24,7 @@
 
 <script>
   import Checkbox from './checkbox'
-  import { List, ListItem, ListItemBrief } from '../List'
+  import { List, ListItem, ListItemBrief } from '../list'
 
   export default {
     name: 'CheckboxItem',

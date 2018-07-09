@@ -1,4 +1,4 @@
-import List from './List'
-import ListItem from './ListItem'
-import ListItemBrief from './ListItemBrief'
+import List from './list'
+import ListItem from './list-item'
+import ListItemBrief from './list-item-brief'
 export { List, ListItem, ListItemBrief }

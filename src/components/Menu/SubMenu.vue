@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import {List, ListItem} from '../List'
+  import {List, ListItem} from '../list'
   import {RadioItem, Radio} from '../Radio'
   import Icon from '../icon'
   import { oneOf } from '../../utils'
