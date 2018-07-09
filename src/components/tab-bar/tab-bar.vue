@@ -1,5 +1,5 @@
 <script>
-import Tabs from '../Tabs'
+import Tabs from '../tabs'
 const prefixCls = 'um-tab-bar'
 export default {
   name: 'TabBar',

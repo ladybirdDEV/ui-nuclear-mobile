@@ -97,7 +97,7 @@
   </div>
 </template>
 <script>
-import Tabs from '@/components/Tabs'
+import Tabs from '@/components/tabs'
 import Badge from '@/components/badge'
 import WhiteSpace from '@/components/white-space'
 import Sticky from 'vue-sticky-position'
