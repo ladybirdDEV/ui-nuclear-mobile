@@ -1,6 +1,6 @@
 import WhiteSpace from './white-space'
 import WingBlank from './wing-blank'
-import { Flex, FlexItem } from './Flex'
+import { Flex, FlexItem } from './flex'
 import Pagination from './Pagination'
 import NavBar from './NavBar'
 import Button from './button'

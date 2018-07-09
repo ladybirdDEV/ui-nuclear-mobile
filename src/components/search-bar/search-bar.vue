@@ -29,7 +29,7 @@
 </template>
 <script>
   import Icon from '../Icon'
-  import Feedback from '../Feedback'
+  import Feedback from '../feedback'
 
   const prefixCls = 'um-search'
 
