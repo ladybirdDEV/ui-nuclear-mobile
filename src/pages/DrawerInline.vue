@@ -29,7 +29,7 @@
 </template>
 <script>
 import Icon from '@/components/icon'
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/nav-bar'
 import Drawer from '@/components/drawer'
 import { List, ListItem } from '@/components/list'
 export default {

@@ -87,7 +87,7 @@
 </template>
 
 <script>
-  import NavBar from '@/components/NavBar'
+  import NavBar from '@/components/nav-bar'
   import Menu from '@/components/menu'
   import Icon from '@/components/icon'
   import WingBlank from '@/components/wing-blank'

@@ -13,7 +13,7 @@
 </template>
 <script>
 import Icon from '@/components/icon'
-import NavBar from '@/components/NavBar'
+import NavBar from '@/components/nav-bar'
 export default {
   name: 'app',
   components: {

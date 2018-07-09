@@ -21,7 +21,7 @@
 <script>
   import WhiteSpace from '@/components/white-space'
   import Icon from '@/components/icon'
-  import NavBar from '@/components/NavBar'
+  import NavBar from '@/components/nav-bar'
   import { Popover, Item } from '@/components/Popover'
 
   export default {
