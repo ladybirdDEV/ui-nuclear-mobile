@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { ListView, IndexList } from '@/components/ListView'
+import { ListView, IndexList } from '@/components/list-view'
 import WhiteSpace from '@/components/white-space'
 
 export default {
