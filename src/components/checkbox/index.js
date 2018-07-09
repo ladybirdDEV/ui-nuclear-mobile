@@ -1,4 +1,4 @@
-import Checkbox from './Checkbox'
-import CheckboxItem from './CheckboxItem'
-import AgreeItem from './AgreeItem'
+import Checkbox from './checkbox'
+import CheckboxItem from './checkbox-item'
+import AgreeItem from './agree-item'
 export { CheckboxItem, Checkbox, AgreeItem }

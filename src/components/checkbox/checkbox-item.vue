@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import Checkbox from './Checkbox'
+  import Checkbox from './checkbox'
   import { List, ListItem, ListItemBrief } from '../List'
 
   export default {
