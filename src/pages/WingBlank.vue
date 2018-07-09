@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import PlaceHolder from '@/components/PlaceHolder'
+import PlaceHolder from '@/components/place-holder'
 import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 export default {
