@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import MobileCascader from '../../components/MobileCascader'
-import cityData from '@/components/MobileCascader/data'
+import MobileCascader from '../../components/mobile-cascader'
+import cityData from '@/components/mobile-cascader/data'
 
 export default {
   components: {
