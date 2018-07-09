@@ -22,7 +22,7 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Marquee from './Marquee'
+import Marquee from './marquee'
 import Icon from '../icon'
 const prefixCls = 'um-notice-bar'
 export default {
