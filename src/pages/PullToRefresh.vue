@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import PullToRefresh from '@/components/PullToRefresh'
+  import PullToRefresh from '@/components/pull-to-refresh'
   import Icon from '@/components/icon'
   import WhiteSpace from '@/components/white-space'
   import Button from '@/components/button'
