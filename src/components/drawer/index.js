@@ -1,2 +1,2 @@
-import Drawer from './Drawer'
+import Drawer from './drawer'
 export default Drawer
