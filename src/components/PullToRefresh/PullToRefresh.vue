@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import MobilePullToRefresh from '../MobilePullToRefresh'
+  import MobilePullToRefresh from '../mobile-pull-to-refresh'
 
   export default {
     name: 'PullToRefresh',
