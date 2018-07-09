@@ -8,7 +8,7 @@
 </template>
 <script>
 import Icon from '@/components/Icon'
-import Grid from '@/components/Grid'
+import Grid from '@/components/grid'
 export default {
   components: {
     Icon,

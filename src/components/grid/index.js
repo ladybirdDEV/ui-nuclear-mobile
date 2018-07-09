@@ -1,2 +1,2 @@
-import Grid from './Grid'
+import Grid from './grid'
 export default Grid

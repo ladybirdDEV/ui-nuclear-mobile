@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import Grid from '@/components/Grid'
+import Grid from '@/components/grid'
 export default {
   components: {
     Grid
