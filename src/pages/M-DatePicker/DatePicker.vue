@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import {MobileDatePicker} from '@/components/MobileDatePicker'
+import {MobileDatePicker} from '@/components/mobile-date-picker'
 import {minDate, maxDate, now, format} from './util'
 const date = new Date(2017, 2, 31, 15, 1, 1)
 
