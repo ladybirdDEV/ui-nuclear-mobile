@@ -163,6 +163,7 @@
     background-color: #fff;
     width: 100%;
     font-size: 16px;
+    user-select: none;
     -webkit-user-select: none;
     /*overflow: hidden;*/
     /*backface-visibility: hidden;*/
@@ -173,6 +174,7 @@
     width: 75%;
     border-radius: 6px;
     font-size: 16px;
+    user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
     backface-visibility: hidden;
