@@ -1,3 +1,3 @@
-import locale from '../../MobileCalendar/locale/zh_CN'
+import locale from '../../mobile-calendar/locale/zh_CN'
 
 export default locale

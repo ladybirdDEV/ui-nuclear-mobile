@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import MobileCalendar from '../components/MobileCalendar/index'
+import MobileCalendar from '../components/mobile-calendar/index'
 const now = new Date()
 const ONE_DAY = 24 * 3600 * 1000
 const extra = {

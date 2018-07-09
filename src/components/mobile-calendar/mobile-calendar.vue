@@ -53,12 +53,12 @@
 </template>
 
 <script>
-import TimePicker from './TimePicker'
-import DatePicker from './DatePicker'
-import ConfirmPanel from './calendar/ConfirmPanel'
-import ShortcutPanel from './calendar/ShortCutPanel'
-import AnimateWrapper from './calendar/AnimateWrapper'
-import Header from './calendar/Header'
+import TimePicker from './time-picker'
+import DatePicker from './date-picker'
+import ConfirmPanel from './calendar/confirm-panel'
+import ShortcutPanel from './calendar/short-cut-panel'
+import AnimateWrapper from './calendar/animate-wrapper'
+import Header from './calendar/header'
 import { mergeDateTime } from './util/index'
 import { oneOf } from '../../utils/index'
 import locale from './locale/zh_CN'
