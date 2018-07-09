@@ -558,5 +558,5 @@ export default {
 </script>
 <style lang="less">
 @import '../PickerView/style/index.less';
-@import '../Picker/style/index.less';
+@import '../picker/style/index.less';
 </style>
