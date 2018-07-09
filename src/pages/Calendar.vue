@@ -36,8 +36,8 @@
 import { List, ListItem } from '@/components/List'
 import uSwitch from '@/components/Switch'
 import Calendar from '@/components/calendar'
-import enUS from '@/components/Calendar/locale/en_US'
-import zhCN from '@/components/Calendar/locale/zh_CN'
+import enUS from '@/components/calendar/locale/en_US'
+import zhCN from '@/components/calendar/locale/zh_CN'
 const extra = {
   '2017/07/15': { info: 'Disable', disable: true }
 }
