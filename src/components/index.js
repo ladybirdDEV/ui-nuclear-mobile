@@ -43,7 +43,7 @@ import Calendar from './calendar'
 import SwipeAction from './SwipeAction'
 import { Accordion, Panel } from './accordion'
 import { TabBar, TabBarItem } from './TabBar'
-import { Popover, Item } from './Popover'
+import { Popover, Item } from './popover'
 import LocaleProvider from './locale-provider'
 import './style/index.less'
 

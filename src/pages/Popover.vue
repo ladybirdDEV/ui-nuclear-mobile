@@ -22,7 +22,7 @@
   import WhiteSpace from '@/components/white-space'
   import Icon from '@/components/icon'
   import NavBar from '@/components/nav-bar'
-  import { Popover, Item } from '@/components/Popover'
+  import { Popover, Item } from '@/components/popover'
 
   export default {
     components: {
