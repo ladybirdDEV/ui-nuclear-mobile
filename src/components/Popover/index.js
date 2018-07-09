@@ -1,3 +1,3 @@
-import Popover from './Popover'
-import Item from './Item'
+import Popover from './popover'
+import Item from './item'
 export { Popover, Item }
