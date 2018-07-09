@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import {MobileDatePicker} from '@/components/MobileDatePicker'
+import {MobileDatePicker} from '@/components/mobile-date-picker'
 import {minDate, maxDate, now, format} from './util'
 now.setHours(15)
 now.setMinutes(39)

@@ -15,8 +15,8 @@
   ></MobileDatePicker>
 </template>
 <script>
-import {MobileDatePicker} from '../MobileDatePicker'
-import zhCN from '../MobileDatePicker/locale/zh_CN'
+import {MobileDatePicker} from '../mobile-date-picker'
+import zhCN from '../mobile-date-picker/locale/zh_CN'
 import { oneOf } from '../../utils'
 export default {
   name: 'DatePickerView',

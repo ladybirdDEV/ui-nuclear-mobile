@@ -1,4 +1,4 @@
-import datePickerLocale from '../../MobileDatePicker/locale/zh_CN'
+import datePickerLocale from '../../mobile-date-picker/locale/zh_CN'
 export default {
   okText: '确定',
   dismissText: '取消',

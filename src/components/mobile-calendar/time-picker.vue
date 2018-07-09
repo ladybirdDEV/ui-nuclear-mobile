@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {MobileDatePicker} from '../MobileDatePicker/index'
+import {MobileDatePicker} from '../mobile-date-picker/index'
 // import { Models } from './date/DataTypes'
 import locale from './locale/zh_CN'
 

@@ -34,7 +34,7 @@
 <script>
 import DatePickerPopup from '../MobilePicker/MobilePopup'
 import Feedback from '../feedback/feedback.vue'
-import {MobileDatePicker} from '../MobileDatePicker'
+import {MobileDatePicker} from '../mobile-date-picker'
 import {oneOf} from '../../utils'
 import dateformat from 'dateformat'
 import defaultLocale from './locale/zh_CN.js'
