@@ -104,7 +104,7 @@ import { List, ListItem, ListItemBrief } from '@/components/list'
 import InputItem from '@/components/input-item'
 import Stepper from '@/components/Stepper'
 import uSwitch from '@/components/Switch'
-import Range from '@/components/Range'
+import Range from '@/components/range'
 import Button from '@/components/button'
 export default {
   components: {

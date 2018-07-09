@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import Range from '@/components/Range'
+import Range from '@/components/range'
 import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 export default {

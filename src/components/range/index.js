@@ -1,2 +1,2 @@
-import Range from './Range'
+import Range from './range'
 export default Range
