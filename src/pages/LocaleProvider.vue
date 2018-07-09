@@ -38,7 +38,7 @@
 import enUS from '@/components/locale-provider/en_US'
 import ruRU from '@/components/locale-provider/ru_RU'
 import DatePicker from '@/components/date-picker'
-import Picker from '@/components/Picker'
+import Picker from '@/components/picker'
 import Button from '@/components/button'
 import { List, ListItem } from '@/components/list'
 import LocaleProvider from '@/components/locale-provider'
