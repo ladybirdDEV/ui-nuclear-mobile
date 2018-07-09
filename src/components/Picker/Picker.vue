@@ -55,8 +55,8 @@
 import {List, ListItem} from '../list'
 import treeFilter from 'array-tree-filter'
 import MobileCascader from '../mobile-cascader'
-import MobilePopupCascader from '../MobilePicker/MobilePopup'
-import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../MobilePicker/'
+import MobilePopupCascader from '../mobile-picker/mobile-popup'
+import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../mobile-picker/'
 const localeCode = 'zh_CN'
 const defaultLocale = require(`./locale/${localeCode}.js`).default
 

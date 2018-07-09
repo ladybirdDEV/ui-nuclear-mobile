@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MultiPickerMixin from './MobileMultiPickerMixin'
+import MultiPickerMixin from './mobile-multi-picker-mixin'
 export default {
   mixins: [MultiPickerMixin],
   name: 'multi-picker',

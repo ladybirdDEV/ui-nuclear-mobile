@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import PopupPicker from '../MobilePicker/MobilePopup'
+import PopupPicker from '../mobile-picker/mobile-popup'
 import MobileCascader from './mobile-cascader'
 
 export default {

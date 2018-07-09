@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../MobilePicker'
+import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '../mobile-picker'
 import arrayTreeFilter from 'array-tree-filter'
 
 export default {

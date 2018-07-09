@@ -44,7 +44,7 @@
   </div>
 </template>
 <script>
-import { MobilePicker, MobilePickerItem, MobileMultiPicker } from '../MobilePicker'
+import { MobilePicker, MobilePickerItem, MobileMultiPicker } from '../mobile-picker'
 import MobileCascader from '../mobile-cascader'
 export default {
   name: 'PickerView',

@@ -32,7 +32,7 @@
   </div>
 </template>
 <script>
-import DatePickerPopup from '../MobilePicker/MobilePopup'
+import DatePickerPopup from '../mobile-picker/mobile-popup'
 import Feedback from '../feedback/feedback.vue'
 import {MobileDatePicker} from '../mobile-date-picker'
 import {oneOf} from '../../utils'

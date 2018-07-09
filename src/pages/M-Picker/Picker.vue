@@ -16,7 +16,7 @@
 
 <script>
 import Button from '@/components/button'
-import {MobilePicker, MobilePickerItem} from '@/components/MobilePicker'
+import {MobilePicker, MobilePickerItem} from '@/components/mobile-picker'
 let count = 0
 const len = 10
 

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import PickerMixin from './MobilePickerMixin'
+import PickerMixin from './mobile-picker-mixin'
 
 export default {
   mixins: [PickerMixin],
