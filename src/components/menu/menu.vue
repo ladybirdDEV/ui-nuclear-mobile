@@ -35,7 +35,7 @@
   import {Flex, FlexItem} from '../flex'
   import {List, ListItem} from '../list'
   import {RadioItem, Radio} from '../Radio'
-  import SubMenu from './SubMenu'
+  import SubMenu from './sub-menu'
   import Button from '../button'
   import { oneOf } from '../../utils'
 
