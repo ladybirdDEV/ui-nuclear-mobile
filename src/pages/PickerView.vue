@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import PickerView from '@/components/PickerView'
+import PickerView from '@/components/picker-view'
 import WhiteSpace from '@/components/white-space'
 import city from '@/components/mobile-cascader/data'
 export default {
