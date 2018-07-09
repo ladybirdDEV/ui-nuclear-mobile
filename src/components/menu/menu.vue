@@ -34,7 +34,7 @@
 <script>
   import {Flex, FlexItem} from '../flex'
   import {List, ListItem} from '../list'
-  import {RadioItem, Radio} from '../Radio'
+  import {RadioItem, Radio} from '../radio'
   import SubMenu from './sub-menu'
   import Button from '../button'
   import { oneOf } from '../../utils'
