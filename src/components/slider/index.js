@@ -1,2 +1,2 @@
-import Slider from './Slider'
+import Slider from './slider'
 export default Slider

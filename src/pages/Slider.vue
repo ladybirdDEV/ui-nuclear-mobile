@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-import Slider from '@/components/Slider'
+import Slider from '@/components/slider'
 import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
 export default {
