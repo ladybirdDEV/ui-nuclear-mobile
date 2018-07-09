@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import MobileCalendar from '../MobileCalendar/index'
+import MobileCalendar from '../mobile-calendar/index'
 import locale from './locale/zh_CN'
 import { oneOf } from '../../utils'
 const prefixCls = 'um-calendar'

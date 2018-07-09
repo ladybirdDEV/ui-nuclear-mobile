@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import WeekPanel from './date/WeekPanel'
-import SingleMonth from './date/SingleMonth'
+import WeekPanel from './date/week-panel'
+import SingleMonth from './date/single-month'
 import { oneOf } from '../../utils'
-import DatePickerBase from './DatePickerBase'
+import DatePickerBase from './date-picker-base'
 import locale from './locale/zh_CN'
 
 export default {
