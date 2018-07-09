@@ -11,7 +11,7 @@
 </template>
 <script>
 import NP from 'number-precision'
-import Icon from '../Icon'
+import Icon from '../icon'
 import Feedback from '../feedback/feedback.js'
 const prefixCls = 'um-stepper'
 var Handler = {

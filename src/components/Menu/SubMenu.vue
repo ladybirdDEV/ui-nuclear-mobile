@@ -25,7 +25,7 @@
 <script>
   import {List, ListItem} from '../List'
   import {RadioItem, Radio} from '../Radio'
-  import Icon from '../Icon'
+  import Icon from '../icon'
   import { oneOf } from '../../utils'
 
   export default {

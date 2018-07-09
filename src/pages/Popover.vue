@@ -20,7 +20,7 @@
 
 <script>
   import WhiteSpace from '@/components/white-space'
-  import Icon from '@/components/Icon'
+  import Icon from '@/components/icon'
   import NavBar from '@/components/NavBar'
   import { Popover, Item } from '@/components/Popover'
 

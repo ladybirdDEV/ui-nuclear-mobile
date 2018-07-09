@@ -15,7 +15,7 @@
 </template>
 <script>
 import Emitter from '../../mixins/emitter'
-import Icon from '../Icon'
+import Icon from '../icon'
 import { oneOf } from '../../utils'
 const prefixCls = 'um-steps-item'
 export default {

@@ -23,7 +23,7 @@
 <script>
 import { oneOf } from '../../utils'
 import Marquee from './Marquee'
-import Icon from '../Icon'
+import Icon from '../icon'
 const prefixCls = 'um-notice-bar'
 export default {
   name: 'NoticeBar',

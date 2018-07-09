@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Icon from '../Icon'
+import Icon from '../icon'
 const prefixCls = 'mobile-pull-to-refresh'
 export default {
   name: 'MobilePullToRefresh',

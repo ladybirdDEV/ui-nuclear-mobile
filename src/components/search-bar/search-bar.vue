@@ -28,7 +28,7 @@
   </form>
 </template>
 <script>
-  import Icon from '../Icon'
+  import Icon from '../icon'
   import Feedback from '../feedback'
 
   const prefixCls = 'um-search'

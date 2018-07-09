@@ -48,7 +48,7 @@
 
 <script>
   import Result from '@/components/Result'
-  import Icon from '@/components/Icon'
+  import Icon from '@/components/icon'
   import WhiteSpace from '@/components/white-space'
   import WingBlank from '@/components/wing-blank'
 

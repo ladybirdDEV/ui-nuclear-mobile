@@ -15,7 +15,7 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import Icon from '../Icon'
+import Icon from '../icon'
 import Feedback from '../../directives/feedback'
 const prefixCls = 'um-button'
 export default {

@@ -1,6 +1,6 @@
 <script>
 import { oneOf } from '../../utils'
-import loadSprite from './loadSprite'
+import loadSprite from './load-sprite'
 export default {
   name: 'Icon',
   render (h) {

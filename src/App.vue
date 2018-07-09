@@ -12,7 +12,7 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/Icon'
+import Icon from '@/components/icon'
 import NavBar from '@/components/NavBar'
 export default {
   name: 'app',

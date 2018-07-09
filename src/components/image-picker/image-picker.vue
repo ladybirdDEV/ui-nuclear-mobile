@@ -29,7 +29,7 @@
 
 <script>
   import { Flex, FlexItem } from '../flex'
-  import Icon from '../Icon'
+  import Icon from '../icon'
   import Feedback from '../feedback/feedback.vue'
 
   export default {
