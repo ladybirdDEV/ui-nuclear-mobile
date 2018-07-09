@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import Modal from '@/components/Modal'
+  import Modal from '@/components/modal'
   import WingBlank from '@/components/wing-blank'
   import Button from '@/components/button'
   import WhiteSpace from '@/components/white-space'

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import modalvue from './Modal.vue'
+import modalvue from './modal.vue'
 
 let ModalConstructor = Vue.extend(modalvue)
 
