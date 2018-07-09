@@ -88,7 +88,7 @@
 
 <script>
   import NavBar from '@/components/NavBar'
-  import Menu from '@/components/Menu'
+  import Menu from '@/components/menu'
   import Icon from '@/components/icon'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
