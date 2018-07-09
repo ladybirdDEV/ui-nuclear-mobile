@@ -24,7 +24,7 @@
 </template>
 
 <script>
-  import SegmentedControl from '@/components/SegmentedControl'
+  import SegmentedControl from '@/components/segmented-control'
   import WhiteSpace from '@/components/white-space'
   import WingBlank from '@/components/wing-blank'
 
