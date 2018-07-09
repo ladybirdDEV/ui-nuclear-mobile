@@ -60,7 +60,7 @@
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
   import { List, ListItem, ListItemBrief } from '@/components/List'
-  import { Flex, FlexItem } from '@/components/Flex'
+  import { Flex, FlexItem } from '@/components/flex'
 
   export default {
     components: {

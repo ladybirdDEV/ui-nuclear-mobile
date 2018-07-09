@@ -88,7 +88,7 @@
   </div>
 </template>
 <script>
-import { Flex, FlexItem } from '@/components/Flex'
+import { Flex, FlexItem } from '@/components/flex'
 import PlaceHolder from '@/components/PlaceHolder'
 import WhiteSpace from '@/components/white-space'
 import WingBlank from '@/components/wing-blank'
