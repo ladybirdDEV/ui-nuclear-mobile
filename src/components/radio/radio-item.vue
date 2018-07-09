@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import Radio from './Radio'
+  import Radio from './radio'
   import { List, ListItem, ListItemBrief } from '../list'
 
   export default {

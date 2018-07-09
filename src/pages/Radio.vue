@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import { Radio, RadioItem } from '@/components/Radio'
+  import { Radio, RadioItem } from '@/components/radio'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
   import { List, ListItem, ListItemBrief } from '@/components/list'

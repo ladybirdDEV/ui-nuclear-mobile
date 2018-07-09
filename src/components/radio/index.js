@@ -1,3 +1,3 @@
-import Radio from './Radio'
-import RadioItem from './RadioItem'
+import Radio from './radio'
+import RadioItem from './radio-item'
 export { RadioItem, Radio }
