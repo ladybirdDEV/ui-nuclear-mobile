@@ -24,7 +24,7 @@
 
 <script>
 import MobilePopup from '@/components/mobile-picker/mobile-popup'
-import DemoPicker from './picker'
+import DemoPicker from './Picker'
 export default {
   components: {
     MobilePopup,
