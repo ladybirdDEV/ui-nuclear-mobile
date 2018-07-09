@@ -23,7 +23,7 @@
 
 <script>
   import PullToRefresh from '@/components/PullToRefresh'
-  import Icon from '@/components/Icon'
+  import Icon from '@/components/icon'
   import WhiteSpace from '@/components/white-space'
   import Button from '@/components/button'
   import WingBlank from '@/components/wing-blank'

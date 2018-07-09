@@ -13,7 +13,7 @@
 </template>
 <script>
   import Button from '../button'
-  import Icon from '../Icon'
+  import Icon from '../icon'
 
   export default {
     components: {

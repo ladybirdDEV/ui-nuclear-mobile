@@ -89,7 +89,7 @@
 <script>
   import NavBar from '@/components/NavBar'
   import Menu from '@/components/Menu'
-  import Icon from '@/components/Icon'
+  import Icon from '@/components/icon'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
   import ActivityIndicator from '@/components/activity-indicator'

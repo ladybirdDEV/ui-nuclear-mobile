@@ -26,7 +26,7 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/Icon'
+import Icon from '@/components/icon'
 import NavBar from '@/components/NavBar'
 import Drawer from '@/components/drawer'
 import { List, ListItem } from '@/components/List'
