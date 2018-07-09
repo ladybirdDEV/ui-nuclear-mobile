@@ -52,7 +52,7 @@
 <script>
   import { List, ListItem, ListItemBrief } from '../List'
   import Button from '../button'
-  import Feedback from '../Feedback/Feedback.vue'
+  import Feedback from '../feedback/feedback.vue'
 
   export default {
     components: {

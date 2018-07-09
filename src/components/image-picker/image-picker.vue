@@ -30,7 +30,7 @@
 <script>
   import { Flex, FlexItem } from '../Flex'
   import Icon from '../Icon'
-  import Feedback from '../Feedback/Feedback.vue'
+  import Feedback from '../feedback/feedback.vue'
 
   export default {
     components: {

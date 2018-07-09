@@ -45,7 +45,7 @@
 <script>
 import { List, ListItem, ListItemBrief } from '../List'
 import ListView from './ListView'
-import Feedback from '../Feedback/Feedback.vue'
+import Feedback from '../feedback/feedback.vue'
 
 const TITLE_HEIGHT = 50
 const SUBTITLE_HEIGHT = 40
