@@ -112,7 +112,7 @@
   </div>
 </template>
 <script>
-import { List, ListItem } from '@/components/List'
+import { List, ListItem } from '@/components/list'
 import InputItem from '@/components/input-item'
 import WhiteSpace from '@/components/white-space'
 import Toast from '@/components/toast'

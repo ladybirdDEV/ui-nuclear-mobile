@@ -66,7 +66,7 @@
 
 <script>
   import Picker from '@/components/Picker'
-  import {List, ListItem} from '@/components/List'
+  import {List, ListItem} from '@/components/list'
   import cityData from '@/components/Picker/cityData.js'
   const provinces = cityData.map((item) => {
     return {

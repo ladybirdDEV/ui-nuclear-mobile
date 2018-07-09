@@ -33,7 +33,7 @@
 </template>
 <script>
   import {Flex, FlexItem} from '../flex'
-  import {List, ListItem} from '../List'
+  import {List, ListItem} from '../list'
   import {RadioItem, Radio} from '../Radio'
   import SubMenu from './SubMenu'
   import Button from '../button'

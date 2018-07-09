@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { List, ListItem, ListItemBrief } from '../List'
+import { List, ListItem, ListItemBrief } from '../list'
 import ListView from './list-view'
 import Feedback from '../feedback/feedback.vue'
 
