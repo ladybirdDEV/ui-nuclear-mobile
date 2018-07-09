@@ -49,7 +49,7 @@
 </template>
 <script>
 import { List, ListItem } from '@/components/list'
-import uSwitch from '@/components/Switch'
+import uSwitch from '@/components/switch'
 export default {
   components: {
     List,

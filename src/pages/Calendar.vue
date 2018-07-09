@@ -34,7 +34,7 @@
 </template>
 <script>
 import { List, ListItem } from '@/components/list'
-import uSwitch from '@/components/Switch'
+import uSwitch from '@/components/switch'
 import Calendar from '@/components/calendar'
 import enUS from '@/components/calendar/locale/en_US'
 import zhCN from '@/components/calendar/locale/zh_CN'
