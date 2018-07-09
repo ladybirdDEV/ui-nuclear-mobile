@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Modal from '../MobileDialog'
+import Modal from '../mobile-dialog'
 import Touchable from '../feedback/feedback.vue'
 
 export default {
