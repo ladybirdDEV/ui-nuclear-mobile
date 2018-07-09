@@ -28,7 +28,7 @@
 <script>
 import Icon from '@/components/Icon'
 import NavBar from '@/components/NavBar'
-import Drawer from '@/components/Drawer'
+import Drawer from '@/components/drawer'
 import { List, ListItem } from '@/components/List'
 export default {
   components: {
