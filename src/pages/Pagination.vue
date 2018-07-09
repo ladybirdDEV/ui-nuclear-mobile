@@ -7,7 +7,7 @@
   <Pagination :total="5" class="custom-pagination-with-icon" :current="1">
     <span slot="prevText" class="arrow-align"><Icon type="left"></Icon>上一步</span>
     <span slot="nextText" class="arrow-align">下一步<Icon type="right"></Icon></span>
-  </Pagination>
+  </pagination>
 
   <p class="sub-title">Hide number</p>
   <Pagination simple :total="5" :current="1" :locale="locale" />
@@ -20,8 +20,8 @@
 </div>
 </template>
 <script>
-import Icon from '@/components/Icon'
-import Pagination from '@/components/Pagination'
+import Icon from '@/components/icon'
+import Pagination from '@/components/pagination'
 
 export default {
   components: {

@@ -67,8 +67,8 @@
 </template>
 
 <script>
-  import TextareaItem from '@/components/TextareaItem'
-  import { List, ListItem, ListItemBrief } from '@/components/List'
+  import TextareaItem from '@/components/textarea-item'
+  import { List, ListItem, ListItemBrief } from '@/components/list'
 
   export default {
     components: {

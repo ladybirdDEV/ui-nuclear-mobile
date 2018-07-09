@@ -4,17 +4,17 @@
       <h3>基本</h3>
     </WingBlank>
     <WhiteSpace size="lg"></WhiteSpace>
-    <Progress :percent=20 :unfilled=false></Progress>
+    <Progress :percent=20 :unfilled=false></progress>
     <WhiteSpace size="lg"></WhiteSpace>
     <WhiteSpace size="lg"></WhiteSpace>
-    <Progress :percent=60></Progress>
+    <Progress :percent=60></progress>
   </div>
 </template>
 
 <script>
-  import Progress from '@/components/Progress'
-  import WhiteSpace from '@/components/WhiteSpace'
-  import WingBlank from '@/components/WingBlank'
+  import Progress from '@/components/progress'
+  import WhiteSpace from '@/components/white-space'
+  import WingBlank from '@/components/wing-blank'
 
   export default {
     components: {

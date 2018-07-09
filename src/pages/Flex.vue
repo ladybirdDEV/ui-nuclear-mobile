@@ -88,10 +88,10 @@
   </div>
 </template>
 <script>
-import { Flex, FlexItem } from '@/components/Flex'
-import PlaceHolder from '@/components/PlaceHolder'
-import WhiteSpace from '@/components/WhiteSpace'
-import WingBlank from '@/components/WingBlank'
+import { Flex, FlexItem } from '@/components/flex'
+import PlaceHolder from '@/components/place-holder'
+import WhiteSpace from '@/components/white-space'
+import WingBlank from '@/components/wing-blank'
 export default {
   components: {
     Flex,

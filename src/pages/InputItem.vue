@@ -112,10 +112,10 @@
   </div>
 </template>
 <script>
-import { List, ListItem } from '@/components/List'
-import InputItem from '@/components/InputItem'
-import WhiteSpace from '@/components/WhiteSpace'
-import Toast from '@/components/Toast'
+import { List, ListItem } from '@/components/list'
+import InputItem from '@/components/input-item'
+import WhiteSpace from '@/components/white-space'
+import Toast from '@/components/toast'
 export default {
   components: {
     List,

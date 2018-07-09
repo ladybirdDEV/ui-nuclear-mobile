@@ -11,11 +11,11 @@
 </template>
 
 <script>
-  import WingBlank from '@/components/WingBlank'
-  import Button from '@/components/Button'
-  import WhiteSpace from '@/components/WhiteSpace'
+  import WingBlank from '@/components/wing-blank'
+  import Button from '@/components/button'
+  import WhiteSpace from '@/components/white-space'
   import ActionSheet from '@/components/action-sheet'
-  import ActivityIndicator from '@/components/ActivityIndicator'
+  import ActivityIndicator from '@/components/activity-indicator'
 
   export default{
     components: {

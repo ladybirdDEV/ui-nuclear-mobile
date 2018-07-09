@@ -22,11 +22,11 @@
 </template>
 
 <script>
-  import PullToRefresh from '@/components/PullToRefresh'
-  import Icon from '@/components/Icon'
-  import WhiteSpace from '@/components/WhiteSpace'
-  import Button from '@/components/Button'
-  import WingBlank from '@/components/WingBlank'
+  import PullToRefresh from '@/components/pull-to-refresh'
+  import Icon from '@/components/icon'
+  import WhiteSpace from '@/components/white-space'
+  import Button from '@/components/button'
+  import WingBlank from '@/components/wing-blank'
 
   export default {
     components: {

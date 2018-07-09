@@ -19,10 +19,10 @@
 </template>
 
 <script>
-  import WhiteSpace from '@/components/WhiteSpace'
-  import Icon from '@/components/Icon'
-  import NavBar from '@/components/NavBar'
-  import { Popover, Item } from '@/components/Popover'
+  import WhiteSpace from '@/components/white-space'
+  import Icon from '@/components/icon'
+  import NavBar from '@/components/nav-bar'
+  import { Popover, Item } from '@/components/popover'
 
   export default {
     components: {

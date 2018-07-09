@@ -25,7 +25,7 @@
   </div>
 </template>
 <script>
-import MobileDialog from '@/components/MobileDialog'
+import MobileDialog from '@/components/mobile-dialog'
 export default {
   components: {
     MobileDialog

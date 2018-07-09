@@ -7,8 +7,8 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/Icon'
-import Grid from '@/components/Grid'
+import Icon from '@/components/icon'
+import Grid from '@/components/grid'
 export default {
   components: {
     Icon,

@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '@/components/MobilePicker'
+import {MobilePicker, MobilePickerItem, MobileMultiPicker} from '@/components/mobile-picker'
 
 export default {
   components: {

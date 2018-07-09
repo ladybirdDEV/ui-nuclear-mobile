@@ -18,9 +18,9 @@
   </div>
 </template>
 <script>
-import Slider from '@/components/Slider'
-import WhiteSpace from '@/components/WhiteSpace'
-import WingBlank from '@/components/WingBlank'
+import Slider from '@/components/slider'
+import WhiteSpace from '@/components/white-space'
+import WingBlank from '@/components/wing-blank'
 export default {
   components: {
     Slider,

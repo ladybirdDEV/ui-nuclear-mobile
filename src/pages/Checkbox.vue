@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  import Button from '@/components/Button'
-  import { Checkbox, CheckboxItem, AgreeItem } from '@/components/Checkbox'
-  import WingBlank from '@/components/WingBlank'
-  import WhiteSpace from '@/components/WhiteSpace'
-  import { Flex, FlexItem } from '@/components/Flex'
-  import { List, ListItem, ListItemBrief } from '@/components/List'
+  import Button from '@/components/button'
+  import { Checkbox, CheckboxItem, AgreeItem } from '@/components/checkbox'
+  import WingBlank from '@/components/wing-blank'
+  import WhiteSpace from '@/components/white-space'
+  import { Flex, FlexItem } from '@/components/flex'
+  import { List, ListItem, ListItemBrief } from '@/components/list'
 
   export default {
     components: {

@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import Button from '@/components/Button'
-import WingBlank from '@/components/WingBlank'
-import WhiteSpace from '@/components/WhiteSpace'
+import Button from '@/components/button'
+import WingBlank from '@/components/wing-blank'
+import WhiteSpace from '@/components/white-space'
 
 export default {
   components: {

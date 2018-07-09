@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import { IndexList } from '@/components/ListView'
-import WhiteSpace from '@/components/WhiteSpace'
+import { IndexList } from '@/components/list-view'
+import WhiteSpace from '@/components/white-space'
 import SearchBar from '@/components/search-bar'
 
 export default {

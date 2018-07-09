@@ -14,7 +14,6 @@
           </List>
           <WhiteSpace size="xl" />
           <WhiteSpace size="xl" />
-          <Pagination :total="5"></Pagination>
           <WhiteSpace />
           <List>
             <DatePicker mode="date">
@@ -36,17 +35,17 @@
   </div>
 </template>
 <script>
-import enUS from '@/components/LocaleProvider/en_US'
-import ruRU from '@/components/LocaleProvider/ru_RU'
-import DatePicker from '@/components/DatePicker'
-import Picker from '@/components/Picker'
-import Button from '@/components/Button'
-import { List, ListItem } from '@/components/List'
-import LocaleProvider from '@/components/LocaleProvider'
-import WingBlank from '@/components/WingBlank'
-import WhiteSpace from '@/components/WhiteSpace'
-import Pagination from '@/components/Pagination'
-import InputItem from '@/components/InputItem'
+import enUS from '@/components/locale-provider/en_US'
+import ruRU from '@/components/locale-provider/ru_RU'
+import DatePicker from '@/components/date-picker'
+import Picker from '@/components/picker'
+import Button from '@/components/button'
+import { List, ListItem } from '@/components/list'
+import LocaleProvider from '@/components/locale-provider'
+import WingBlank from '@/components/wing-blank'
+import WhiteSpace from '@/components/white-space'
+import Pagination from '@/components/pagination'
+import InputItem from '@/components/input-item'
 export default {
   components: {
     WingBlank,

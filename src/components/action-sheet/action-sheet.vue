@@ -18,7 +18,7 @@
                   {{ btnGroup[index].text }}
               </Feedback>
             </div>
-            
+
           </div>
         </div>
 
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-  import Feedback from '../Feedback/Feedback.vue'
+  import Feedback from '../feedback/feedback.vue'
 
   const prefixCls = 'um-action-sheet'
   const prefixClsShare = 'um-action-sheet-share'

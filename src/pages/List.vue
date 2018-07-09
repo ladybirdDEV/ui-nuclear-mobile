@@ -100,12 +100,12 @@
   </div>
 </template>
 <script>
-import { List, ListItem, ListItemBrief } from '@/components/List'
-import InputItem from '@/components/InputItem'
-import Stepper from '@/components/Stepper'
-import uSwitch from '@/components/Switch'
-import Range from '@/components/Range'
-import Button from '@/components/Button'
+import { List, ListItem, ListItemBrief } from '@/components/list'
+import InputItem from '@/components/input-item'
+import Stepper from '@/components/stepper'
+import uSwitch from '@/components/switch'
+import Range from '@/components/range'
+import Button from '@/components/button'
 export default {
   components: {
     List,

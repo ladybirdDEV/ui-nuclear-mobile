@@ -24,11 +24,11 @@
 </template>
 
 <script>
-  import Modal from '@/components/Modal'
-  import WingBlank from '@/components/WingBlank'
-  import Button from '@/components/Button'
-  import WhiteSpace from '@/components/WhiteSpace'
-  import Toast from '@/components/Toast'
+  import Modal from '@/components/modal'
+  import WingBlank from '@/components/wing-blank'
+  import Button from '@/components/button'
+  import WhiteSpace from '@/components/white-space'
+  import Toast from '@/components/toast'
 
   export default{
     components: {

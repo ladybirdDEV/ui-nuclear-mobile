@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import PopupCascader from '@/components/MobileCascader/MobilePopup.vue'
+import PopupCascader from '@/components/mobile-cascader/mobile-popup.vue'
 import arrayTreeFilter from 'array-tree-filter'
-import cityData from '@/components/MobileCascader/data'
+import cityData from '@/components/mobile-cascader/data'
 
 export default {
   components: {

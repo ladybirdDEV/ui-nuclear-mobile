@@ -18,8 +18,8 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/Icon'
-import NavBar from '@/components/NavBar'
+import Icon from '@/components/icon'
+import NavBar from '@/components/nav-bar'
 export default{
   components: {
     NavBar,

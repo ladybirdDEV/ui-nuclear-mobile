@@ -107,12 +107,12 @@
   </div>
 </template>
 <script>
-import {List, ListItem} from '@/components/List'
-import DatePicker from '@/components/DatePicker'
+import {List, ListItem} from '@/components/list'
+import DatePicker from '@/components/date-picker'
 import dateformat from 'dateformat'
-import InputItem from '@/components/InputItem'
-import Button from '@/components/Button'
-import enUS from '@/components/DatePicker/locale/en_US'
+import InputItem from '@/components/input-item'
+import Button from '@/components/button'
+import enUS from '@/components/date-picker/locale/en_US'
 const nowTimeStamp = Date.now()
 const now = new Date(nowTimeStamp)
 // GMT is not currently observed in the UK. So use UTC now.
