@@ -9,7 +9,7 @@
 </template>
 <script>
   import Feedback from '../feedback/feedback'
-  import Icon from '../Icon'
+  import Icon from '../icon'
   import { oneOf } from '../../utils'
   const prefixItemCls = 'um-popover-item'
 
