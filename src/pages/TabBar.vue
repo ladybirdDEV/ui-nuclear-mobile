@@ -1,5 +1,6 @@
 <script>
-import { TabBar, TabBarItem } from '@/components/tab-bar'
+import TabBar from '@/components/tab-bar'
+import TabBarItem from '@/components/tab-bar-item'
 export default {
   components: {
     TabBar,
