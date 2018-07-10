@@ -47,7 +47,8 @@ import PullToRefresh from './pull-to-refresh'
 import { ListView, IndexList } from './list-view'
 import Calendar from './calendar'
 import SwipeAction from './swipe-action'
-import { Accordion, Panel } from './accordion'
+import Accordion from './accordion'
+import AccordionPanel from './accordion-panel'
 import TabBar from './tab-bar'
 import TabBarItem from './tab-bar-item'
 import Popover from './popover'
@@ -110,7 +111,7 @@ export default {
   Calendar,
   SwipeAction,
   Accordion,
-  Panel,
+  AccordionPanel,
   TabBar,
   TabBarItem,
   Popover,
