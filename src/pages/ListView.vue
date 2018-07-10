@@ -14,14 +14,13 @@
 </template>
 
 <script>
-import { ListView, IndexList } from '@/components/list-view'
+import ListView from '@/components/list-view'
 import WhiteSpace from '@/components/white-space'
 
 export default {
   components: {
     ListView,
-    WhiteSpace,
-    IndexList
+    WhiteSpace
   },
   data () {
     return {
