@@ -32,7 +32,8 @@
   </Flex>
 </template>
 <script>
-  import {Flex, FlexItem} from '../flex'
+  import Flex from '../flex'
+  import FlexItem from '../flex-item'
   import {List, ListItem} from '../list'
   import {RadioItem, Radio} from '../radio'
   import SubMenu from './sub-menu'

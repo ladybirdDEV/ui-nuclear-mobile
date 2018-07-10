@@ -24,7 +24,8 @@
 </template>
 <script>
 import { oneOf } from '../../utils'
-import { Flex, FlexItem } from '../flex'
+import Flex from '../flex'
+import FlexItem from '../flex-item'
 import Button from '../button'
 const prefixCls = 'um-pagination'
 const localeCode = 'zh_CN'

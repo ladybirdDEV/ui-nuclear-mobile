@@ -19,7 +19,8 @@
   import { Checkbox, CheckboxItem, AgreeItem } from '@/components/checkbox'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
-  import { Flex, FlexItem } from '@/components/flex'
+  import Flex from '@/components/flex'
+  import FlexItem from '@/components/flex-item'
   import { List, ListItem, ListItemBrief } from '@/components/list'
 
   export default {

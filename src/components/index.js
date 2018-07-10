@@ -1,6 +1,7 @@
 import WhiteSpace from './white-space'
 import WingBlank from './wing-blank'
-import { Flex, FlexItem } from './flex'
+import Flex from './flex'
+import FlexItem from './flex-item'
 import Pagination from './pagination'
 import NavBar from './nav-bar'
 import Button from './button'
@@ -8,7 +9,8 @@ import uSwitch from './switch'
 import Slider from './slider'
 import Range from './range'
 import Tag from './tag'
-import { Steps, Step } from './steps'
+import Steps from './steps'
+import Step from './step'
 import NoticeBar from './notice-bar'
 import Icon from './icon'
 import Grid from './grid'
@@ -49,7 +51,7 @@ import PopoverItem from './popover-item'
 import LocaleProvider from './locale-provider'
 import './style/index.less'
 
-export default{
+export default {
   WhiteSpace,
   WingBlank,
   Flex,
