@@ -10,7 +10,12 @@ let sidebarArr = []
 for (let i in sidebarObj) {
   sidebarArr = sidebarArr.concat(sidebarObj[i])
 }
-
+let componentsArr = []
+sidebarArr.map((name)=> {
+  name = name.replace(/([A-Z])/g,"-$1").toLowerCase().substring(1)
+  componentsArr.push(name)
+})
+/* 生成site的README.md */
 fs.access(path.resolve('./introduce.md'), (err) => {
   if (err) throw err
   fs.readFile(path.resolve('./introduce.md'), (err, data) => {
@@ -49,18 +54,20 @@ function syncFiles (sourcePath, targetPath, fileName = '') {
         let data2 = data.substring(index, data.length)
         let vueContent = ''
 
-        if (sidebarArr.indexOf(fileName) !== -1) {
-          vueContent = fs.readFileSync(path.join(pages, `${fileName}.vue`), 'utf-8')
+        let pageName = ''
+        fileName.split('-').map(i => {
+          pageName += i.substring(0, 1).toUpperCase() + i.substring(1)
+        })
+        if (componentsArr.indexOf(fileName) !== -1) {
+          vueContent = fs.readFileSync(path.join(pages, `${pageName}.vue`), 'utf-8')
         }
-        let urlName = fileName.replace(/([A-Z])/g,"-$1").toLowerCase()
-        urlName = urlName.substring(1, urlName.length)
         let vueContentMd = '#### Code Example\n```vue\n' + vueContent + '\n```'
         mdContent = `${data1}
 ${vueContentMd}
 ${data2}
-<Demo url="https://ladybirddev.github.io/ui-nuclear-mobile-demo/#/${urlName}" />`
-        if (fileName.indexOf('Mobile') === -1) { // 移除mobile组件
-          fs.writeFile(path.join(targetPath, `${fileName}.md`), mdContent, () => {})
+<Demo url="https://ladybirddev.github.io/ui-nuclear-mobile-demo/#/${fileName}" />`
+        if (fileName.indexOf('mobile-') === -1) { // 移除mobile组件
+          fs.writeFile(path.join(targetPath, `${pageName}.md`), mdContent, () => {})
         }
 
       })
