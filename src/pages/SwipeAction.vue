@@ -22,7 +22,8 @@
 </template>
 <script>
 import SwipeAction from '@/components/swipe-action'
-import {List, ListItem} from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 export default {
   components: {
     SwipeAction,

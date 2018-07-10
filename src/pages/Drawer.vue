@@ -29,7 +29,8 @@
 import Icon from '@/components/icon'
 import NavBar from '@/components/nav-bar'
 import Drawer from '@/components/drawer'
-import { List, ListItem } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 export default {
   components: {
     NavBar,

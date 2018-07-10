@@ -29,7 +29,9 @@
 
 <script>
   import Radio from './radio'
-  import { List, ListItem, ListItemBrief } from '../list'
+  import List from '../list'
+  import ListItem from '../list-item'
+  import ListItemBrief from '../list-item-brief'
 
   export default {
     name: 'RadioItem',

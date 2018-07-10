@@ -33,7 +33,8 @@
   </div>
 </template>
 <script>
-import { List, ListItem } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 import uSwitch from '@/components/switch'
 import Calendar from '@/components/calendar'
 import enUS from '@/components/calendar/locale/en_US'

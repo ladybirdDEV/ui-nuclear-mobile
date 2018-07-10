@@ -60,7 +60,9 @@
   import RadioItem from '@/components/radio-item'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
-  import { List, ListItem, ListItemBrief } from '@/components/list'
+  import List from '@/components/list'
+  import ListItem from '@/components/list-item'
+  import ListItemBrief from '@/components/list-item-brief'
   import Flex from '@/components/flex'
   import FlexItem from '@/components/flex-item'
 

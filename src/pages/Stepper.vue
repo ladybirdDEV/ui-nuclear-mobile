@@ -28,7 +28,8 @@
   </div>
 </template>
 <script>
-import { List, ListItem } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 import Stepper from '@/components/stepper'
 export default {
   components: {

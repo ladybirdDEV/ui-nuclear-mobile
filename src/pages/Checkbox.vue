@@ -23,7 +23,8 @@
   import WhiteSpace from '@/components/white-space'
   import Flex from '@/components/flex'
   import FlexItem from '@/components/flex-item'
-  import { List, ListItem, ListItemBrief } from '@/components/list'
+  import List from '@/components/list'
+  import ListItem from '@/components/list-item'
 
   export default {
     components: {
@@ -32,7 +33,6 @@
       Checkbox,
       List,
       ListItem,
-      ListItemBrief,
       CheckboxItem,
       Button,
       AgreeItem,

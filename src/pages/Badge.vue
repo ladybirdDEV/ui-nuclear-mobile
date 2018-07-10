@@ -54,13 +54,13 @@
 </template>
 <script>
 import Badge from '@/components/badge'
-import { List, ListItem, ListItemBrief } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 export default {
   components: {
     Badge,
     List,
-    ListItem,
-    ListItemBrief
+    ListItem
   }
 }
 </script>
