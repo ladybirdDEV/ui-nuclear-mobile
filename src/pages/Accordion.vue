@@ -40,7 +40,7 @@
 </template>
 
 <script>
-  import {Accordion, Panel} from '@/components/Accordion'
+  import {Accordion, Panel} from '@/components/accordion'
   import {List, ListItem} from '@/components/list'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
