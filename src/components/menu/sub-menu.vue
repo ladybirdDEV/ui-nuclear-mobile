@@ -24,7 +24,8 @@
 
 <script>
   import {List, ListItem} from '../list'
-  import {RadioItem, Radio} from '../radio'
+  import Radio from '../radio'
+  import RadioItem from '../radio-item'
   import Icon from '../icon'
   import { oneOf } from '../../utils'
 
