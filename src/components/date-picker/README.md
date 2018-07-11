@@ -34,3 +34,6 @@
 | value-change | value值改变对应的event，接收参数`(value, index)`，`value`-Array类型、`index`-操作的列的索引 |
 | ok | 点击选中（确定）的event，接收参数`(value)`-Array类型 |
 | dismiss | 点击取消的event |
+
+
+注意：日期字符串在不同浏览器有不同的实现，例如 new Date('2017-1-1') 在 Safari 上是 Invalid Date，而在 Chrome 上是能正常解析的。

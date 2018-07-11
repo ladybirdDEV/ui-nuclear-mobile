@@ -49,11 +49,11 @@ var webpackConfig = merge(baseWebpackConfig, {
       commonjs2: 'vue-sticky-position',
       amd: 'vue-sticky-position'
     },
-    'vue-touch': {
-      root: 'vue-touch',
-      commonjs: 'vue-touch',
-      commonjs2: 'vue-touch',
-      amd: 'vue-touch'
+    'dateformat': {
+      root: 'dateformat',
+      commonjs: 'dateformat',
+      commonjs2: 'dateformat',
+      amd: 'dateformat'
     }
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
