@@ -40,3 +40,11 @@ import 'ui-nuclear-mobile/dist/main.css'
 
 Vue.use(UiNuclearMobile)
 ```
+
+## 联系我们
+
+欢迎加入我们的微信群
+
+<p align="center">
+  <img width="230" src="https://raw.githubusercontent.com/ladybirdDEV/ui-nuclear-mobile/master/wechat-group.png">
+</p>
