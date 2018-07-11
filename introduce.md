@@ -49,7 +49,7 @@ Vue.use(UiNuclearMobile)
 // .babelrc or babel-loader option
 {
   "plugins": [
-    ["import", { "libraryName": "vue-antd-ui", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+    ["import", { "libraryName": "ui-nuclear-mobile", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
   ]
 }
 ```
