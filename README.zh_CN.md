@@ -46,5 +46,5 @@ Vue.use(UiNuclearMobile)
 欢迎加入我们的微信群
 
 <p align="center">
-  <img width="230" src="https://raw.githubusercontent.com/ladybirdDEV/ui-nuclear-mobile/master/wechat-group.png">
+  <img width="230" src="https://raw.githubusercontent.com/ladybirdDEV/ui-nuclear-mobile/master/wechat-group.jpg">
 </p>
