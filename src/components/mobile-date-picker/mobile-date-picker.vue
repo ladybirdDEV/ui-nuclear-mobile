@@ -62,13 +62,13 @@ export default {
     minDate: {
       type: Date,
       default: function () {
-        return new Date('2000-1-1')
+        return new Date('2000/1/1')
       }
     },
     maxDate: {
       type: Date,
       default: function () {
-        return new Date('2030-1-1')
+        return new Date('2030/1/1')
       }
     },
     date: {

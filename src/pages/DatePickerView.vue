@@ -4,8 +4,8 @@
     <div class="sub-title">StartTime</div>
     <DatePickerView
       mode="datetime"
-      :minDate="new Date('2011-1-2 16:00:02')"
-      :maxDate="new Date('2030-1-2 18:00:02')"
+      :minDate="new Date('2011/1/2 16:00:02')"
+      :maxDate="new Date('2030/1/2 18:00:02')"
       v-model="startTime"
       :minuteStep="2"
       :onValueChange="startTimeValueChanged"
@@ -15,8 +15,8 @@
     <div class="sub-title">EndTime</div>
     <DatePickerView
       mode="datetime"
-      :minDate="new Date('2011-1-2 16:00:02')"
-      :maxDate="new Date('2030-1-2 02:00:02')"
+      :minDate="new Date('2011/1/2 16:00:02')"
+      :maxDate="new Date('2030/1/2 02:00:02')"
       v-model="endTime"
       :locale="enUS"
       :minuteStep="2"
@@ -38,8 +38,8 @@ export default {
   },
   data () {
     return {
-      startTime: new Date('2015-3-16 9:00:05'),
-      endTime: new Date('2018-3-16 9:00:05'),
+      startTime: new Date('2015/3/16 9:00:05'),
+      endTime: new Date('2018/3/16 9:00:05'),
       enUS: enUS
     }
   },
