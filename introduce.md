@@ -49,10 +49,15 @@ Vue.use(UiNuclearMobile)
 // .babelrc or babel-loader option
 {
   "plugins": [
-    ["import", { "libraryName": "ui-nuclear-mobile", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
-  ]
+      ["import", {
+        "libraryName": "ui-nuclear-mobile",
+        "libraryDirectory": "src/components"
+      }]
+    ]
 }
 ```
+> 提醒:按需引用仍然需要导入样式，即在 main.js 或根组件执行 import 'ui-nuclear-mobile/dist/main.css'
+
 
 然后只需从 ui-nuclear-mobile 引入模块即可，无需单独引入样式。
 
