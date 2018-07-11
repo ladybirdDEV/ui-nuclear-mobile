@@ -175,10 +175,10 @@ export default {
   'unm-calendar': Calendar,
   'unm-swipe-action': SwipeAction,
   'unm-accordion': Accordion,
-  'unm-panel': Panel,
+  'unm-panel': AccordionPanel,
   'unm-tab-bar': TabBar,
   'unm-tab-bar-item': TabBarItem,
   'unm-popover': Popover,
-  'unm-popover-item': Item,
+  'unm-popover-item': PopoverItem,
   'unm-locale-provider': LocaleProvider
 }

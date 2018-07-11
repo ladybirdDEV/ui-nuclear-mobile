@@ -49,12 +49,27 @@ Vue.use(UiNuclearMobile)
 // .babelrc or babel-loader option
 {
   "plugins": [
-    ["import", { "libraryName": "ui-nuclear-mobile", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+    ["import", {
+      "libraryName": "ui-nuclear-mobile",
+      "libraryDirectory": "src/components"
+    }]
   ]
 }
 ```
+> 提醒:按需引用仍然需要导入样式，即在 main.js 或根组件执行 import 'ui-nuclear-mobile/dist/main.css'
+
 
 然后只需从 ui-nuclear-mobile 引入模块即可，无需单独引入样式。
+
+> 提醒: 使用需加载模式时，`Babel`并不会对`node_modules`下的文件进行处理，这将导致 `npm run dev` 的结果在 `safari` 浏览器上显示错误，需要在 `~/build/webpack.base.conf.js`中 `babel-loader`部分做如下配置
+
+```javascript
+{
+  test: /\.js$/,
+  loader: 'babel-loader',
+  include: [resolve('src'), resolve('test'), resolve('node_modules/ui-nuclear-mobile/src')]
+},
+```
 
 ## 如何贡献
 
