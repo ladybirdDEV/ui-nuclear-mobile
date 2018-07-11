@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { IndexList } from '@/components/list-view'
+import IndexList from '@/components/index-list'
 import WhiteSpace from '@/components/white-space'
 import SearchBar from '@/components/search-bar'
 

@@ -56,11 +56,15 @@
 </template>
 
 <script>
-  import { Radio, RadioItem } from '@/components/radio'
+  import Radio from '@/components/radio'
+  import RadioItem from '@/components/radio-item'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
-  import { List, ListItem, ListItemBrief } from '@/components/list'
-  import { Flex, FlexItem } from '@/components/flex'
+  import List from '@/components/list'
+  import ListItem from '@/components/list-item'
+  import ListItemBrief from '@/components/list-item-brief'
+  import Flex from '@/components/flex'
+  import FlexItem from '@/components/flex-item'
 
   export default {
     components: {

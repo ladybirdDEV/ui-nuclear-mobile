@@ -28,7 +28,8 @@
 </template>
 
 <script>
-  import { Flex, FlexItem } from '../flex'
+  import Flex from '../flex'
+  import FlexItem from '../flex-item'
   import Icon from '../icon'
   import Feedback from '../feedback/feedback.vue'
 

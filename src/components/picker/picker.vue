@@ -52,7 +52,8 @@
 </template>
 
 <script>
-import {List, ListItem} from '../list'
+import List from '../list'
+import ListItem from '../list-item'
 import treeFilter from 'array-tree-filter'
 import MobileCascader from '../mobile-cascader'
 import MobilePopupCascader from '../mobile-picker/mobile-popup'

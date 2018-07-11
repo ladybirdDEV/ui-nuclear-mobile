@@ -1,6 +1,7 @@
 import WhiteSpace from './white-space'
 import WingBlank from './wing-blank'
-import { Flex, FlexItem } from './flex'
+import Flex from './flex'
+import FlexItem from './flex-item'
 import Pagination from './pagination'
 import NavBar from './nav-bar'
 import Button from './button'
@@ -8,11 +9,15 @@ import uSwitch from './switch'
 import Slider from './slider'
 import Range from './range'
 import Tag from './tag'
-import { Steps, Step } from './steps'
+import Steps from './steps'
+import Step from './step'
 import NoticeBar from './notice-bar'
 import Icon from './icon'
 import Grid from './grid'
-import { Card, CardHeader, CardBody, CardFooter } from './card'
+import Card from './card'
+import CardHeader from './card-header'
+import CardBody from './card-body'
+import CardFooter from './card-footer'
 import Carousel from './carousel'
 import Badge from './badge'
 import Toast from './toast'
@@ -21,11 +26,15 @@ import ActivityIndicator from './activity-indicator'
 import ActionSheet from './action-sheet'
 import Result from './result'
 import Tabs from './tabs'
-import { CheckboxItem, Checkbox } from './checkbox'
-import { RadioItem, Radio } from './radio'
+import Checkbox from './checkbox'
+import CheckboxItem from './checkbox-item'
+import Radio from './radio'
+import RadioItem from './radio-item'
 import Modal from './modal'
 import ImagePicker from './image-picker'
-import { List, ListItem, ListItemBrief } from './list'
+import List from './list'
+import ListItem from './list-item'
+import ListItemBrief from './list-item-brief'
 import Stepper from './stepper'
 import TextareaItem from './textarea-item'
 import InputItem from './input-item'
@@ -38,16 +47,20 @@ import DatePickerView from './date-picker-view'
 import Picker from './picker'
 import PickerView from './picker-view'
 import PullToRefresh from './pull-to-refresh'
-import { ListView, IndexList } from './list-view'
+import ListView from './list-view'
+import IndexList from './index-list'
 import Calendar from './calendar'
 import SwipeAction from './swipe-action'
-import { Accordion, Panel } from './accordion'
-import { TabBar, TabBarItem } from './tab-bar'
-import { Popover, Item } from './popover'
+import Accordion from './accordion'
+import AccordionPanel from './accordion-panel'
+import TabBar from './tab-bar'
+import TabBarItem from './tab-bar-item'
+import Popover from './popover'
+import PopoverItem from './popover-item'
 import LocaleProvider from './locale-provider'
 import './style/index.less'
 
-export default{
+export default {
   WhiteSpace,
   WingBlank,
   Flex,
@@ -102,11 +115,11 @@ export default{
   Calendar,
   SwipeAction,
   Accordion,
-  Panel,
+  AccordionPanel,
   TabBar,
   TabBarItem,
   Popover,
-  Item,
+  PopoverItem,
   LocaleProvider,
   'unm-white-space': WhiteSpace,
   'unm-wing-blank': WingBlank,

@@ -16,11 +16,15 @@
 
 <script>
   import Button from '@/components/button'
-  import { Checkbox, CheckboxItem, AgreeItem } from '@/components/checkbox'
+  import Checkbox from '@/components/checkbox'
+  import CheckboxItem from '@/components/checkbox-item'
+  import AgreeItem from '@/components/agree-item'
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
-  import { Flex, FlexItem } from '@/components/flex'
-  import { List, ListItem, ListItemBrief } from '@/components/list'
+  import Flex from '@/components/flex'
+  import FlexItem from '@/components/flex-item'
+  import List from '@/components/list'
+  import ListItem from '@/components/list-item'
 
   export default {
     components: {
@@ -29,7 +33,6 @@
       Checkbox,
       List,
       ListItem,
-      ListItemBrief,
       CheckboxItem,
       Button,
       AgreeItem,

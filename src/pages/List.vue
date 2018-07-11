@@ -100,7 +100,9 @@
   </div>
 </template>
 <script>
-import { List, ListItem, ListItemBrief } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
+import ListItemBrief from '@/components/list-item-brief'
 import InputItem from '@/components/input-item'
 import Stepper from '@/components/stepper'
 import uSwitch from '@/components/switch'

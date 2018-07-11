@@ -32,9 +32,12 @@
   </Flex>
 </template>
 <script>
-  import {Flex, FlexItem} from '../flex'
-  import {List, ListItem} from '../list'
-  import {RadioItem, Radio} from '../radio'
+  import Flex from '../flex'
+  import FlexItem from '../flex-item'
+  import List from '../list'
+  import ListItem from '../list-item'
+  import Radio from '../radio'
+  import RadioItem from '../radio-item'
   import SubMenu from './sub-menu'
   import Button from '../button'
   import { oneOf } from '../../utils'

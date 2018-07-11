@@ -50,7 +50,9 @@
 </template>
 
 <script>
-  import { List, ListItem, ListItemBrief } from '../list'
+  import List from '../list'
+  import ListItem from '../list-item'
+  import ListItemBrief from '../list-item-brief'
   import Button from '../button'
   import Feedback from '../feedback/feedback.vue'
 

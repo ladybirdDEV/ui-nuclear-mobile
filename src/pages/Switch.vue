@@ -48,7 +48,8 @@
   </div>
 </template>
 <script>
-import { List, ListItem } from '@/components/list'
+import List from '@/components/list'
+import ListItem from '@/components/list-item'
 import uSwitch from '@/components/switch'
 export default {
   components: {

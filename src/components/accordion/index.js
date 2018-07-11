@@ -1,3 +1,5 @@
 import Accordion from './accordion'
 import Panel from './panel'
-export {Accordion, Panel}
+
+Accordion.Panel = Panel
+export default Accordion
