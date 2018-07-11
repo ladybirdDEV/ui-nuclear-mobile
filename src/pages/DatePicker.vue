@@ -139,8 +139,8 @@ export default {
       dateF: new Date(),
       inputDate: dateformat(new Date(), 'yyyy-mm-dd'),
       initialValue: dateformat(new Date(), 'yyyy-mm-dd'),
-      minDate: new Date(dateformat(new Date(), 'yyyy-mm-dd') + ' ' + '09:30'),
-      maxDate: new Date(dateformat(new Date(), 'yyyy-mm-dd') + ' ' + '16:15'),
+      minDate: new Date(dateformat(new Date(), 'yyyy/mm/dd') + ' ' + '09:30'),
+      maxDate: new Date(dateformat(new Date(), 'yyyy/mm/dd') + ' ' + '16:15'),
       hasError: false,
       datePickerVisible: false
     }
@@ -173,7 +173,7 @@ export default {
       let date = new Date()
       this.hasError = false
       try {
-        let dateString = `${dateformat(new Date(this.inputDate), 'yyyy-mm-dd')} ${dateformat(new Date(), 'HH:MM')}`
+        let dateString = `${dateformat(new Date(this.inputDate), 'yyyy/mm/dd')} ${dateformat(new Date(), 'HH:MM')}`
         date = new Date(dateString)
       } catch (e) {
         this.hasError = true

@@ -61,13 +61,13 @@ export default {
     minDate: {
       type: Date,
       default: () => {
-        return new Date('2000-1-1')
+        return new Date('2000/1/1')
       }
     },
     maxDate: {
       type: Date,
       default: () => {
-        return new Date('2030-1-1')
+        return new Date('2030/1/1')
       }
     },
     minuteStep: {
@@ -126,7 +126,7 @@ export default {
     visibleChange (visible) {
       if (visible) {
         if (this.mode === 'time') {
-          this.date = new Date(dateformat(new Date(), 'yyyy-mm-dd') + ' ' + dateformat(this.date, 'HH:MM'))
+          this.date = new Date(dateformat(new Date(), 'yyyy/mm/dd') + ' ' + dateformat(this.date, 'HH:MM'))
         }
       }
     },
@@ -188,6 +188,9 @@ export default {
   watch: {
     visible (val) {
       this.visibleCopy = val
+    },
+    value (val) {
+      this.date = val || new Date()
     }
   }
 }
