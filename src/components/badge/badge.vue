@@ -16,7 +16,9 @@ export default {
   },
   computed: {
     currentText () {
-      if (this.text > this.overflowCount) {
+      if (this.dot) {
+        return null
+      } else if (this.text > this.overflowCount) {
         return this.overflowCount + '+'
       } else {
         return this.text
