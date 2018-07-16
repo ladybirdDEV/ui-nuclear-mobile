@@ -11,17 +11,12 @@
 
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-|  imgUrl  | 插图 url	| string | 无 |
-|  iconClass  | icon类型	| string | 无 |
-|  iconColor | icon颜色	| string | 无 |
-|  title | title 文案	| string | 无 |
-|  message | message 文案	| string | 无 |
-|  buttonText | 按钮文案		| string | 无 |
-|  buttonType | 请参考 button 的配置	| string | 无 |
-
-
-### events
-
-| 事件名 | 说明 | 返回值 |
-| --- | --- | --- |
+|  imgUrl  | 插图 url	| string | - |
+|  iconClass  | icon类型	| string | - |
+|  iconColor | icon颜色	| string | - |
+|  title | title 文案	| string | - |
+|  message | message 文案	| string | - |
+|  buttonText | 按钮文案		| string | - |
+|  buttonType | 请参考 button 的配置	| string | - |
 |  onButtonClick | 按钮回调函数	 | (e: Object): void |
+
