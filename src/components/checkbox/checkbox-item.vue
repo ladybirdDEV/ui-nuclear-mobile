@@ -1,24 +1,27 @@
 <template>
   <div>
-      <ListItem :multipleLine="multipleLine"
-                :onClick="check"
-                :extra="extra"
-                :arrow="arrow"
-                :align="align"
-                :wrap="wrap"
-                :platform="platform"
-                :disabled="isDisabled">
-        <template slot="thumb">
-          <Checkbox :label="label" 
-                    :disabled="disabled" 
-                    :checked="checked"
-                    :defaultChecked="defaultChecked"
-                    @onChange="change"
-                    :name="name"></Checkbox>
-        </template>
-        <span :class="titleColor">{{ Title }}</span>
-        <ListItemBrief v-if="subtitle">{{ subtitle }}</ListItemBrief>
-      </ListItem>
+    <ListItem
+      :multipleLine="multipleLine"
+      :onClick="check"
+      :extra="extra"
+      :arrow="arrow"
+      :align="align"
+      :wrap="wrap"
+      :platform="platform"
+      :disabled="isDisabled">
+      <template slot="thumb">
+        <Checkbox
+          :label="label"
+          :disabled="disabled"
+          :checked="checked"
+          :defaultChecked="defaultChecked"
+          @onChange="change"
+          :name="name"
+          ref="checkbox"></Checkbox>
+      </template>
+      <span :class="titleColor">{{ Title }}</span>
+      <ListItemBrief v-if="subtitle">{{ subtitle }}</ListItemBrief>
+    </ListItem>
   </div>
 </template>
 
@@ -44,7 +47,7 @@
     },
     methods: {
       check () {
-        this.$children[0].$children[0].$children[0].isChecked = !this.$children[0].$children[0].$children[0].isChecked
+        this.$refs.checkbox.isChecked = !this.$refs.checkbox.isChecked
       },
       change (value) {
         this.$emit('onChange')
