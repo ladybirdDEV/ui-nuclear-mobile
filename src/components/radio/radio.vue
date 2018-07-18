@@ -48,8 +48,7 @@
         default: ''
       },
       value: {
-        type: [String, Number],
-        default: ''
+        type: [String, Number]
       },
       checked: {
         type: Boolean,
@@ -63,7 +62,7 @@
         type: Boolean,
         default: undefined
       },
-      checkedVal: [String, Number],
+      checkedVal: [String, Number, Boolean],
       onChange: Function
     },
     created () {
@@ -85,7 +84,7 @@
         }
       },
       change () {
-        if (!this.value && !this.checkedVal) {
+        if (this.value === undefined && !this.checkedVal) {
           this.isChecked = !this.isChecked
           this.$emit('input', this.isChecked)
           if (this.onChange) {

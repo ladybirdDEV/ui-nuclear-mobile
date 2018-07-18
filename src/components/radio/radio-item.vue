@@ -110,8 +110,7 @@
         default: ''
       },
       value: {
-        type: [String, Number],
-        default: ''
+        type: [String, Number]
       },
       defaultChecked: {
         type: Boolean,
@@ -121,7 +120,7 @@
         type: Boolean,
         default: undefined
       },
-      checkedVal: [String, Number],
+      checkedVal: [String, Number, Boolean],
       onChange: Function
     },
     watch: {
