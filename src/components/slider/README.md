@@ -7,7 +7,7 @@
 | min | 最小值 | Number | 0 |
 | max | 最大值 | Number | 100 |
 | step | 步长，取值必须大于 0，并且可被 (max - min) 整除。 | Number | 1 |
-| value | 设置当前取值。 | Array | - |
+| value | 设置当前取值。 | Number | - |
 | defaultValue | 设置初始取值。 | Number | 0 |
 | disabled | 值为 true 时，滑块为禁用状态 | Boolean | false |
 | marks `未实现` | 刻度标记 | - | - |
