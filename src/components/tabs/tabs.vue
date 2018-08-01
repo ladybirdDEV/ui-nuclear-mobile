@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapCls">
     <div v-if="!beforeAfter" :class="[`${prefixCls}-content-wrap`,animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-finger:touch-start="touchStart" v-finger:touch-move="touchMove" v-finger:touch-end="touchEnd">
-      <render :render="renderPane"></render>
+      <render v-if="renderPane" :render="renderPane"></render>
     </div>
     <div :class="`${prefixCls}-tab-bar-wrap`">
       <render :render="renderTabBar" v-if="renderTabBar"></render>
@@ -20,7 +20,7 @@
       </template>
     </div>
     <div v-if="beforeAfter" :class="[`${prefixCls}-content-wrap`, animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-finger:touch-start="touchStart" v-finger:touch-move="touchMove" v-finger:touch-end="touchEnd">
-      <render :render="renderPane"></render>
+      <render v-if="renderPane" :render="renderPane"></render>
     </div>
   </div>
 </template>
@@ -149,7 +149,9 @@ export default {
   },
   created () {
     const children = this.getChildren()
-    this.actives.length = children.length
+    if (children) {
+      this.actives.length = children.length
+    }
     this.actives.fill(false)
     this.actives[0] = true
   },
@@ -204,22 +206,30 @@ export default {
       this.$emit('onTabClick', this.tabs[index], index)
     },
     getChildren () {
-      return this.$slots.default.filter(vnode => vnode.tag)
+      if (this.$slots.default) {
+        return this.$slots.default.filter(vnode => vnode.tag)
+      } else {
+        return false
+      }
     },
     renderPane () {
       const children = this.getChildren()
-      const child = children.map((node, index) => {
-        let contentWrapCls = {
-          [`${prefixCls}-pane-wrap`]: true,
-          [`${prefixCls}-pane-wrap-inactive`]: !this.actives[index],
-          [`${prefixCls}-pane-wrap-active`]: this.actives[index]
+      if (children) {
+        const child = children.map((node, index) => {
+          let contentWrapCls = {
+            [`${prefixCls}-pane-wrap`]: true,
+            [`${prefixCls}-pane-wrap-inactive`]: !this.actives[index],
+            [`${prefixCls}-pane-wrap-active`]: this.actives[index]
+          }
+          return <div class={contentWrapCls}>{node}</div>
         }
-        return <div class={contentWrapCls}>{node}</div>
+        )
+        return (
+          child
+        )
+      } else {
+        return false
       }
-      )
-      return (
-        child
-      )
     }
   },
   props: {
