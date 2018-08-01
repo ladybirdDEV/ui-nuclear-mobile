@@ -8,18 +8,22 @@ export default {
     swiperSlide
   },
   render (h) {
-    return (
-      <swiper class="um-carousel" options={this.swiperOption}>
-        {
-          this.$slots.default.filter(vnode => vnode.tag).map(
-            vnode => <swiperSlide class={this.swiping ? '' : 'swiper-no-swiping'}>{vnode}</swiperSlide>
-          )
-        }
-        {
-          this.dots ? <div class="swiper-pagination" slot="pagination"></div> : ''
-        }
-      </swiper>
-    )
+    if (this.$slots.default) {
+      return (
+        <swiper class="um-carousel" options={this.swiperOption}>
+          {
+            this.$slots.default.filter(vnode => vnode.tag).map(
+              vnode => <swiperSlide class={this.swiping ? '' : 'swiper-no-swiping'}>{vnode}</swiperSlide>
+            )
+          }
+          {
+            this.dots ? <div class="swiper-pagination" slot="pagination"></div> : ''
+          }
+        </swiper>
+      )
+    } else {
+      console.warn('Carousel should contain at least one child element, otherwise nothing will be displayed')
+    }
   },
   data () {
     return {
