@@ -28,6 +28,9 @@ export default {
 <style lang="less">
 .content:not(.custom) {
   margin: 0;
+  & > h1:first-child {
+    display: inline-block;
+  }
 }
 .demo-preview-wrapper {
   margin: 0px auto;

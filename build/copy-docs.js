@@ -1,9 +1,11 @@
 var fs = require('fs')
 var path = require('path')
+var qrImage = require('qr-image')
 
 var sourcePath = path.resolve('./src/components/')
 var targetPath = path.resolve('./docs/components')
 const pages = path.resolve('./src/pages')
+const imagePath = path.resolve('./docs/.vuepress/public')
 
 const sidebarObj = require(path.join(path.resolve('./docs/.vuepress/components'), 'sidebar.js'))
 let sidebarArr = []
@@ -49,9 +51,13 @@ function syncFiles (sourcePath, targetPath, fileName = '') {
         if (err) {
           throw(err)
         }
-        let index = data.indexOf('### props') === -1 ? data.indexOf('### Props') : data.indexOf('### props')
-        let data1 = data.substring(0, index)
-        let data2 = data.substring(index, data.length)
+
+        // 获取h1
+        let h1Index = data.indexOf('\n')
+        let propsIndex = data.indexOf('### props') === -1 ? data.indexOf('### Props') : data.indexOf('### props')
+        const dataBeforeH1 = data.substring(0, h1Index)
+        const dataAfterH1BeforeIndex = data.substring(h1Index, propsIndex)
+        const dataAfterProps = data.substring(propsIndex, data.length)
         let vueContent = ''
 
         let pageName = ''
@@ -62,12 +68,16 @@ function syncFiles (sourcePath, targetPath, fileName = '') {
           vueContent = fs.readFileSync(path.join(pages, `${pageName}.vue`), 'utf-8')
         }
         let vueContentMd = '#### Code Example\n```vue\n' + vueContent + '\n```'
-        mdContent = `${data1}
+        mdContent = `${dataBeforeH1}
+<ShowQr name="${fileName}" />
+${dataAfterH1BeforeIndex}
 ${vueContentMd}
-${data2}
+${dataAfterProps}
 <Demo url="https://ladybirddev.github.io/ui-nuclear-mobile-demo/#/${fileName}" />`
         if (fileName.indexOf('mobile-') === -1) { // 移除mobile组件
           fs.writeFile(path.join(targetPath, `${pageName}.md`), mdContent, () => {})
+          const qrSvg = qrImage.imageSync(`https://ladybirddev.github.io/ui-nuclear-mobile-demo/#/${fileName}`, {type: 'svg'})
+          fs.writeFile(path.join(imagePath, `${fileName}.svg`), qrSvg, () => {})
         }
 
       })
