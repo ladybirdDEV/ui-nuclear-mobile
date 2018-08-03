@@ -17,4 +17,5 @@ selenium-debug.log
 *.njsproj
 *.sln
 /docs/.vuepress/dist/
+/docs/.vuepress/public/*.svg
 /docs/components/*
