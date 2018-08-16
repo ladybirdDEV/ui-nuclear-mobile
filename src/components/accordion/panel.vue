@@ -68,14 +68,16 @@
         }
       },
       toggle () {
-        this.$parent.toggle({
-          name: this.curName,
-          isActive: this.isActive
-        })
-        this.active()
+        if (this.$parent.toggle) {
+          this.$parent.toggle({
+            name: this.curName,
+            isActive: this.isActive
+          })
+          this.active()
+        } else {
+          console.warn('The immediate parent component of the Panel must be Accordion')
+        }
       }
-    },
-    mounted () {
     }
   }
 </script>
