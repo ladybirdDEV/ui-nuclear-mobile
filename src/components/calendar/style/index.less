@@ -1,9 +1,9 @@
 @import '../../style/mixins';
 @import '../../style/themes/default';
-@prefixClass: um-calendar;
+@calendarPrefixClass: um-calendar;
 
 // Animation
-.@{prefixClass} {
+.@{calendarPrefixClass} {
   .animate {
     animation-duration: .3s;
     animation-fill-mode: both;
@@ -126,7 +126,7 @@
 }
 
 // Calendar
-.@{prefixClass} {
+.@{calendarPrefixClass} {
   .mask {
     position: fixed;
     width: 100%;
@@ -194,7 +194,7 @@
 }
 
 // WeekPanel
-.@{prefixClass} .week-panel {
+.@{calendarPrefixClass} .week-panel {
   background: #fff;
   display: flex;
   flex-shrink: 0;
@@ -217,7 +217,7 @@
 }
 
 // DatePicker
-.@{prefixClass} .date-picker {
+.@{calendarPrefixClass} .date-picker {
   display: flex;
   flex-direction: column;
   background: #eee;
@@ -246,7 +246,7 @@
 }
 
 // ConfirmPanel
-.@{prefixClass} .confirm-panel {
+.@{calendarPrefixClass} .confirm-panel {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -294,7 +294,7 @@
 }
 
 // TimePicker
-.@{prefixClass} .time-picker {
+.@{calendarPrefixClass} .time-picker {
   flex-shrink: 0;
   text-align: center;
   background: #fff;
@@ -311,7 +311,7 @@
 }
 
 // SingleMonth
-.@{prefixClass} .single-month {
+.@{calendarPrefixClass} .single-month {
   padding: 0;
 
   .month-title {
@@ -426,7 +426,7 @@
 }
 
 // ShortcutPanel
-.@{prefixClass} .shortcut-panel {
+.@{calendarPrefixClass} .shortcut-panel {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;

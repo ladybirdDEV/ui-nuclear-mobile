@@ -15,7 +15,7 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "build": "node build/build.js",
+    "build": "node build/build.js && node scripts/merge-less.js",
     "pack": "node build/pack.js",
     "docs:dev": "node build/copy-docs.js && vuepress dev docs",
     "docs:build": "node build/copy-docs.js && vuepress build docs"
@@ -24,6 +24,7 @@
     "alloyfinger": "^0.1.13",
     "array-tree-filter": "^2.1.0",
     "better-scroll": "^1.9.1",
+    "coimport": "^1.0.1",
     "dateformat": "^3.0.3",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
