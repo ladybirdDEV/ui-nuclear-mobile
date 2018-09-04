@@ -6,13 +6,6 @@ export default {
   name: 'Block'
 }
 </script>
-<style scoped>
-.placeholder {
-  background-color: #ebebef;
-  color: #bbb;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  width: 100%;
-}
+<style scoped lang="less">
+@import url('style/index.less');
 </style>
