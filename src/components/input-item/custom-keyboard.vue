@@ -83,7 +83,7 @@ export default {
 }
 </script>
 <style lang="less">
-@import 'style/custom-keyboard';
+@import 'style/index.less';
 </style>
 
 
