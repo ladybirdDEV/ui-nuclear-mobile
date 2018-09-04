@@ -58,9 +58,12 @@ dealLessFile(path.join(stylePath, 'themes/default.less')).then(result => {
     })
   })
 }).then(() => {
+  dealLessFile(path.join(stylePath, 'index.less')).then(result => {
+    allLess += result
+  })
+}).then(() => {
   // add less file content in components
   fs.readdirSync(path.join('src/components')).map(file => {
-    // allLess += dealLessFile(path.join('src/components', `${file}/style/index.less`))
     dealLessFile(path.join('src/components', `${file}/style/index.less`)).then(result => {
       allLess += result
       // write content to main.less
