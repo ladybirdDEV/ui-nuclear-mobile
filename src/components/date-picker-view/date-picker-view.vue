@@ -109,15 +109,6 @@ export default {
   }
 }
 </script>
-<style>
-.date-picker-view .mobile-picker-item.mobile-picker-item-selected {
-  color: #000;
-  font-size: 17px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html:not([data-scale]) .date-picker-view .mobile-picker-indicator {
-    border-bottom: none;
-    border-top: none;
-  }
-}
+<style lang="less">
+@import url('style/index.less');
 </style>
