@@ -9,13 +9,13 @@ const stylePath = path.resolve('src/components/style')
 const removeImport = async (data, filePath) => {
   // let tempData = data
   let tempData = data.replace(/@import.+mixins';/g, '')
-                  .replace(/@import.+mixins";/g, '')
-                  .replace(/@import.+mixins.less';/g, '')
-                  .replace(/@import.+mixins.less";/g, '')
-                  .replace(/@import.+default';/g, '')
-                  .replace(/@import.+default";/g, '')
-                  .replace(/@import.+default.less';/g, '')
-                  .replace(/@import.+default.less";/g, '')
+    .replace(/@import.+mixins";/g, '')
+    .replace(/@import.+mixins.less';/g, '')
+    .replace(/@import.+mixins.less";/g, '')
+    .replace(/@import.+default';/g, '')
+    .replace(/@import.+default";/g, '')
+    .replace(/@import.+default.less';/g, '')
+    .replace(/@import.+default.less";/g, '')
   fs.writeFileSync(path.join(path.dirname(filePath), 'temp-result.less'), tempData)
 
   const pm = await new Promise((resolve, reject) => {
