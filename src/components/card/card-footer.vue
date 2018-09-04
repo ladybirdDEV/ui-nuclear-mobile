@@ -27,21 +27,3 @@ export default {
   }
 }
 </script>
-<style>
-.um-card-footer {
-  font-size: 14px;
-  color: #888;
-  padding: 0 15px;
-  display: flex;
-}
-
-.um-card-footer-content {
-  flex: 1;
-}
-
-.um-card-footer-extra {
-  flex: 1;
-  text-align: right;
-}
-
-</style>
