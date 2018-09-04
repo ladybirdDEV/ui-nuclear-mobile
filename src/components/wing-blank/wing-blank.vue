@@ -23,21 +23,6 @@ export default {
   }
 }
 </script>
-<style>
-.um-wing-blank {
-  margin-left: 8px;
-  margin-right: 8px;
-}
-.um-wing-blank.um-wing-blank-sm {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.um-wing-blank.um-wing-blank-md {
-  margin-left: 8px;
-  margin-right: 8px;
-}
-.um-wing-blank.um-wing-blank-lg {
-  margin-left: 15px;
-  margin-right: 15px;
-}
+<style lang="less">
+@import url('style/index.less');
 </style>
