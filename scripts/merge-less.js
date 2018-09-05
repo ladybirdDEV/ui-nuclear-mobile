@@ -3,11 +3,11 @@ const path = require('path')
 
 const coimport = require('coimport')
 
+const projectPath = path.resolve('./')
 const stylePath = path.resolve('src/components/style')
 
-// remove the line start of '@import'
+/* remove the line start of '@import' */
 const removeImport = async (data, filePath) => {
-  // let tempData = data
   let tempData = data.replace(/@import.+mixins';/g, '')
     .replace(/@import.+mixins";/g, '')
     .replace(/@import.+mixins.less';/g, '')
@@ -34,7 +34,6 @@ const removeImport = async (data, filePath) => {
   return tempData
 }
 
-// console.log(removeImport(str))
 const dealLessFile = (filePath) => {
   try {
     fs.accessSync(filePath)
@@ -46,14 +45,12 @@ const dealLessFile = (filePath) => {
 }
 let allLess = ''
 
-// add theme/default.less
+/* add theme/default.less */
 dealLessFile(path.join(stylePath, 'themes/default.less')).then(result => {
   allLess += result
 }).then(() => {
-  // add less file in style/mixins
+  /* add less file in style/mixins */
   fs.readdirSync(path.join(stylePath, 'mixins')).map(file => {
-    // allLess += dealLessFile(path.join(stylePath, `mixins/${file}.less`))
-    // console.log(dealLessFile(path.join(stylePath, `mixins/${file}`)))
     dealLessFile(path.join(stylePath, `mixins/${file}`)).then(result => {
       allLess += result
     })
@@ -63,11 +60,15 @@ dealLessFile(path.join(stylePath, 'themes/default.less')).then(result => {
     allLess += result
   })
 }).then(() => {
-  // add less file content in components
+  /* add less file content in components */
   fs.readdirSync(path.join('src/components')).map(file => {
     dealLessFile(path.join('src/components', `${file}/style/index.less`)).then(result => {
+      if (file === 'carousel') { /* carousel uses out module's css */
+        fs.accessSync(path.join(projectPath, 'node_modules/swiper/dist/css/swiper.css'))
+        allLess += fs.readFileSync(path.join(projectPath, 'node_modules/swiper/dist/css/swiper.css'))
+      }
       allLess += result
-      // write content to main.less
+      /* write content to main.less */
       fs.writeFile(path.resolve('dist/main.less'), allLess, () => {})
     })
   })
