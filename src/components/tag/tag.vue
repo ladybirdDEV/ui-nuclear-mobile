@@ -1,7 +1,7 @@
 <template>
   <div class="um-tag" :class="wrapCls" @click="tagClick" id="umtag" v-if="isShow">
-    <Icon v-if="closable" :class="{'um-tag-closable': closable = true}" type="cross-circle" size="xs" @click.native="closeClick"></Icon>
-    <div>
+    <Icon v-if="closable" :class="{'um-tag-close': closable = true}" type="cross-circle" size="xs" @click.native="closeClick"></Icon>
+    <div class="um-tag-text">
       {{text}}
     </div>
   </div>
@@ -72,54 +72,5 @@
 </script>
 
 <style lang="less">
-  .um-tag {
-    display: inline-block;
-    position: relative;
-    font-size: 14px;
-    text-align: center;
-    padding: 0 15px;
-    height: 25px;
-    line-height: 25px;
-    box-sizing: border-box;
-    border-radius: 3px;
-  }
-
-  .um-tag-small {
-    height: 15px;
-    line-height: 15px;
-    padding: 0 5px;
-    font-size: 10px;
-  }
-
-  .um-tag-normal {
-    background-color: #fff;
-    color: #888;
-    border: 1PX solid #ddd;
-
-  }
-
-  .um-tag-selected {
-    background-color: #fff;
-    color: #108ee9;
-    border: 1PX solid #108ee9;
-  }
-
-  .um-tag-disabled {
-    color: #bbb;
-    background-color: #ddd;
-    border: 1PX solid #ddd;
-  }
-
-  .um-tag-closable {
-    position: absolute;
-    top: -9px;
-    left: -10px;
-    color: #bbb;
-    background-color: #fff;
-    border-radius: 9px;
-  }
-
-  .um-tag-closable:active {
-    color: #888;
-  }
+@import url('style/index.less');
 </style>
