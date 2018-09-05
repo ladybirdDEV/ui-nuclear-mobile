@@ -51,36 +51,5 @@
 </script>
 
 <style lang="less">
-@pull-to-refresh: mobile-pull-to-refresh;
-@hd: 1px;
-
-.@{pull-to-refresh} {
-  &-content {
-    &-wrapper {
-      overflow: hidden;
-    }
-    transform-origin: left top 0;
-  }
-
-  &-transition {
-    transition: transform 0.3s;
-  }
-
-  &-indicator {
-    color: grey;
-    // text-align: center;
-    height: 25 * @hd;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &-down .@{pull-to-refresh}-indicator {
-    margin-top: -25 * @hd;
-  }
-
-  &-up .@{pull-to-refresh}-indicator {
-    margin-bottom: -25 * @hd;
-  }
-}
+@import url('style/index.less');
 </style>
