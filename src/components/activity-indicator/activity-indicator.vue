@@ -52,22 +52,6 @@
     }
   }
 </script>
-<style>
-  .um-activity-indicator-horizontal {
-    display: flex;
-    align-items: center
-  }
-  .um-activity-indicator-vertical {
-    display: flex;
-    flex-direction: column
-  }
-  .um-activitu-indicator-horizontal-text {
-    margin-left: 8px;
-    font-size: 14px;
-    color: #999;
-  }
-  .um-activitu-indicator-vertical-text {
-    font-size: 16px;
-    color: #999;
-  }
+<style lang="less">
+@import url('style/index.less');
 </style>
