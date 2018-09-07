@@ -1,7 +1,9 @@
 @import '../../style/mixins';
 @import '../../style/themes/default';
+
 @searchPrefixCls: um-search;
 
+/* 默认搜索bar */
 .@{searchPrefixCls} {
   position: relative;
   display: flex;
@@ -22,21 +24,21 @@
     border-radius: @radius-sm;
 
     .@{searchPrefixCls}-synthetic-ph,
-    input[type="search"]{
+    input[type="search"] {
       position: absolute;
       top: 0;
       left: 0;
     }
 
-    .@{searchPrefixCls}-synthetic-ph{
+    .@{searchPrefixCls}-synthetic-ph {
       box-sizing: content-box;
       z-index: 1;
       height: @search-bar-input-height;
       line-height: @search-bar-input-height;
       width: 100%;
+      transition: width .3s;
       display: block;
       text-align: center;
-      transition: width .3s;
 
       &-icon {
         display: inline-block;
@@ -71,7 +73,9 @@
       &::placeholder {
         background: none;
         text-align: left;
+        // color: @color-text-placeholder;
         color: transparent;
+        // font-size: @input-font-size;
       }
 
       &::-webkit-search-cancel-button {
@@ -90,13 +94,15 @@
       border-radius: @radius-circle;
       top: 0;
       right: 0;
-      background: transparent center no-repeat;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
       background-size: @icon-size-xxs @icon-size-xxs;
       transition: all .3s;
       .encoded-svg-background('search_bar_clear');
 
-      &-active{
-        .encoded-svg-background('search_bar_clear_active')
+      &-active {
+        .encoded-svg-background('search_bar_clear_active');
       }
 
       &-show {
@@ -114,10 +120,9 @@
     font-size: @link-button-font-size;
     color: @brand-primary;
     text-align: right;
-    //margin-right: -40px;
 
-    &-anim{
-      transition: margin-right 0.3s, opacity 0.3s;
+    &-anim {
+      transition: margin-right .3s, opacity .3s;
       transition-delay: .1s;
     }
 
@@ -126,13 +131,14 @@
     }
   }
 
-  &.@{searchPrefixCls}-start{
+  &.@{searchPrefixCls}-start {
     .@{searchPrefixCls}-input {
       input[type="search"] {
         opacity: 1;
         padding: 0 @search-bar-input-height 0 @h-spacing-lg + @icon-size-xxs + @h-spacing-sm;
 
         &::placeholder {
+          // display: none;
           color: transparent;
         }
       }

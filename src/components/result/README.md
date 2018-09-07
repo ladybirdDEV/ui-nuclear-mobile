@@ -11,12 +11,17 @@
 
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-|  imgUrl  | 插图 url	| string | - |
-|  iconClass  | icon类型	| string | - |
-|  iconColor | icon颜色	| string | - |
-|  title | title 文案	| string | - |
-|  message | message 文案	| string | - |
-|  buttonText | 按钮文案		| string | - |
-|  buttonType | 请参考 button 的配置	| string | - |
+|  img  | 插图 	| Slot `name="img"` | - |
+|  imgUrl  | 插图 url	| String | - |
+|  ~~iconClass~~  | ~~icon类型~~	| ~~String~~ | - |
+|  ~~iconColor~~ | ~~icon颜色~~	| ~~String~~ | - |
+|  title | title 文案	| String / Slot `name="title"` | - |
+|  message | message 文案	| String / Slot `name="message"` | - |
+|  buttonText | 按钮文案		| String | - |
+|  buttonType | 请参考 button 的配置	| String | - |
 |  onButtonClick | 按钮回调函数	 | (e: Object): void |
 
+### events
+| 事件名 | 说明 | 返回值 |
+| --- | --- | --- |
+| click | 按钮被单击时触发 | - |
