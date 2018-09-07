@@ -1,18 +1,22 @@
 <template>
-  <div class="um-wing-blank" :class="wrapCls">
+  <div :class="wrapCls">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
   nume: 'WingBlank',
+  data () {
+    return {
+      prefixCls: 'um-wingblank'
+    }
+  },
   computed: {
     wrapCls () {
-      return {
-        'um-wing-blank-sm': this.size === 'sm',
-        'um-wing-blank-md': this.size === 'md',
-        'um-wing-blank-lg': this.size === 'lg'
-      }
+      return [
+        `${this.prefixCls}`,
+        `${this.prefixCls}-${this.size}`
+      ]
     }
   },
   props: {
@@ -24,5 +28,5 @@ export default {
 }
 </script>
 <style lang="less">
-@import url('style/index.less');
+@import 'style/index.less';
 </style>

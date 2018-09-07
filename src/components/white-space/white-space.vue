@@ -1,19 +1,21 @@
 <template>
-  <div class="um-white-space" :class="wrapCls">
+  <div :class="wrapCls">
   </div>
 </template>
 <script>
 export default {
   nume: 'WhiteSpace',
+  data () {
+    return {
+      prefixCls: 'um-whitespace'
+    }
+  },
   computed: {
     wrapCls () {
-      return {
-        'um-white-space-xs': this.size === 'xs',
-        'um-white-space-sm': this.size === 'sm',
-        'um-white-space-md': this.size === 'md',
-        'um-white-space-lg': this.size === 'lg',
-        'um-white-space-xl': this.size === 'xl'
-      }
+      return [
+        this.prefixCls,
+        `${this.prefixCls}-${this.size}`
+      ]
     }
   },
   props: {

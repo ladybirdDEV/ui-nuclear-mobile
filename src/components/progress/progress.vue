@@ -1,12 +1,51 @@
 <template>
-    <div class="um-progress-content" :class="{'um-progress-fixed': position === 'fixed' }">
-      <div v-if="unfilled" class="um-progress-background" :style="{ height: height + 'px' }"></div>
-      <div class="um-progress-progress" :style="{ width: percent + '%', height: height + 'px' }"></div>
-    </div>
+  <div
+    :class="wrapCls"
+    role="progressbar"
+    :aria-valuenow="percent"
+    :aria-valuemin="0"
+    :aria-valuemax="100"
+  >
+    <div
+      ref="barRef"
+      :class="`${prefixCls}-bar`"
+      :style="percentStyle"
+    />
+  </div>
 </template>
 <script>
+const prefixCls = 'um-progress'
 export default {
   name: 'Progress',
+  data () {
+    return {
+      prefixCls: prefixCls
+    }
+  },
+  computed: {
+    wrapCls () {
+      return {
+        [`${prefixCls}-outer`]: true,
+        [`${prefixCls}-fixed-outer`]: this.position === 'fixed',
+        [`${prefixCls}-hide-outer`]: !this.unfilled
+      }
+    },
+    percentStyle () {
+      return {
+        width: !this.appearTransition ? `${this.percent}%` : 0,
+        height: 0
+      }
+    }
+  },
+  mounted () {
+    if (this.appearTransition) {
+      setTimeout(() => {
+        if (this.$refs.barRef) {
+          this.$refs.barRef.style.width = `${this.percent}%`
+        }
+      }, 10)
+    }
+  },
   props: {
     percent: {
       type: Number,
@@ -23,11 +62,15 @@ export default {
     position: {
       type: String,
       default: 'fixed'
+    },
+    appearTransition: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
 <style lang="less">
-@import url('style/index.less');
+@import './style/index.less';
 </style>
