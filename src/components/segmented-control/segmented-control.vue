@@ -14,7 +14,6 @@
 
 <script>
   import WingBlank from '../wing-blank'
-  import Feedback from '../feedback/feedback.vue'
   import SegControlItem from '../segmented-control/seg-control-item.vue'
 
   const prefixCls = 'um-segment'
@@ -23,7 +22,6 @@
     name: 'SegmentedControl',
     components: {
       WingBlank,
-      Feedback,
       SegControlItem
     },
     props: {
