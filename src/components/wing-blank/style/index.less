@@ -1,17 +1,23 @@
-@wingBlankPrefixCls: um-wing-blank;
-.@{wingBlankPrefixCls} {
-  margin-left: 8px;
-  margin-right: 8px;
+@import '../../style/themes/default';
+
+@wingblankPrefixCls: um-wingblank;
+
+.@{wingblankPrefixCls} {
+  margin-left: @h-spacing-md;
+  margin-right: @h-spacing-md;
+
   &&-sm {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: @h-spacing-sm;
+    margin-right: @h-spacing-sm;
   }
+
   &&-md {
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: @h-spacing-md;
+    margin-right: @h-spacing-md;
   }
+
   &&-lg {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: @h-spacing-lg;
+    margin-right: @h-spacing-lg;
   }
 }
