@@ -8,7 +8,7 @@ export default {
   nume: 'WingBlank',
   data () {
     return {
-      prefixCls: 'um-wing-blank'
+      prefixCls: 'um-wingblank'
     }
   },
   computed: {
