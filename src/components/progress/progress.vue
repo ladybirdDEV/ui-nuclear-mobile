@@ -28,33 +28,6 @@ export default {
 }
 </script>
 
-<style>
-  .um-progress-fixed {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-  }
-  .um-progress-progress {
-    position: absolute;
-    display: block;
-    top: 50%;
-    background-color: #26a2ff;
-    transform: translate(0, -50%);
-    width: 0;
-  }
-  .um-progress-background {
-    position: absolute;
-    transform: translate(0, -50%);
-    left: 0;
-    top: 50%;
-    right: 0;
-    background-color: #ebebeb;
-    height: 3px;
-  }
-  .um-progress-content {
-    position: relative;
-    flex: 1;
-  }
+<style lang="less">
+@import url('style/index.less');
 </style>

@@ -54,33 +54,3 @@ export default {
   }
 }
 </script>
-<style>
-.um-card-header {
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-  padding: 9px 15px;
-}
-
-.um-card-header-content {
-  flex: 1;
-  text-align: left;
-  color: #000;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-}
-
-.um-card-header-content img {
-  margin-right: 5px;
-}
-
-.um-card-header-extra {
-  flex: 1;
-  text-align: right;
-  font-size: 17px;
-  color: #888;
-}
-</style>

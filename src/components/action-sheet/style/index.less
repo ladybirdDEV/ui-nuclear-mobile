@@ -1,0 +1,139 @@
+.um-action-sheet-button-list-active .um-active {
+  background-color: #ddd;
+
+}
+.um-action-sheet-share-list {
+  display: flex;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  justify-content: flex-start
+}
+.um-action-sheet-share {
+  background-color: #f2f2f2;
+  z-index: 3;
+  padding: 21px 0 0px 0px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.um-action-sheet-share-list-item {
+  flex: none;
+  margin: 0 0 0 12px;
+}
+.um-action-sheet-share-list-item-icon {
+  margin-bottom: 9px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.um-action-sheet-share-list-item-title {
+  color: #888;
+  font-size: 10px;
+  text-align: center;
+}
+.um-action-sheet-share-message {
+  padding: 0px 15px 15px 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+}
+.um-action-sheet {
+  z-index: 20;
+  padding-top: 2px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.um-action-sheet-button-list {
+  text-align: center;
+  color: #000;
+}
+.um-action-sheet-title {
+  text-align: center;
+  font-size: 17px;
+}
+.um-action-sheet-message {
+  margin: 15px auto;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+.um-action-sheet-share-cancel-button {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  position: relative;
+  box-sizing: border-box;
+}
+.um-action-sheet-share-cancel-button-active .um-action-sheet-share-cancel-button {
+  background-color: #ddd;
+}
+.um-action-sheet-button-list-active {
+  background-color: #ddd;
+}
+.um-action-sheet-button-list-item {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+.um-action-sheet-button-list-item::before {
+  content: '';
+  position: absolute;
+  background-color: #ddd;
+  display: block;
+  z-index: 1;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 100%;
+  height: 1PX;
+}
+.um-action-sheet-button-list-item-cancel-button {
+  margin-top: 6px;
+  position: relative;
+}
+.um-action-sheet-button-list-item-destructive-button {
+  color:  #f4333c;
+}
+.um-action-sheet-button-list-item-cancel-button-mask {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #e7e7ed;
+}
+.um-action-sheet-mask {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.4;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: transform 0.6s;
+}
+.fade-enter, .fade-leave-to {
+  transform: translateY(100%);
+}

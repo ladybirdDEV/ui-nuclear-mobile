@@ -24,25 +24,6 @@ export default {
   }
 }
 </script>
-<style>
-.um-white-space.um-white-space-xs {
-  height: 3px;
-}
-
-.um-white-space.um-white-space-sm {
-  height: 6px;
-}
-
-.um-white-space.um-white-space-md {
-  height: 9px;
-}
-
-.um-white-space.um-white-space-lg {
-  height: 15px;
-}
-
-.um-white-space.um-white-space-xl {
-  height: 21px;
-}
-
+<style lang="less">
+@import 'style/index.less';
 </style>

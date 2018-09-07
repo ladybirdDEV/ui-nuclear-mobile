@@ -46,19 +46,7 @@ export default {
 </script>
 
 <style lang="less">
-  @import '../style/mixins';
-  @import '../style/themes/default.less';
-
-.um-segment-item-active .um-segment-item-inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0.1;
-        transition: background .2s;
-        background-color: @segmented-control-color;
-}
+@import url('style/index.less');
 </style>
 
 

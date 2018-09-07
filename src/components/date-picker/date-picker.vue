@@ -195,17 +195,6 @@ export default {
   }
 }
 </script>
-<style>
-.date-picker-list .um-list-item .um-list-line .um-list-extra {
-  flex-basis: initial;
-}
-.um-date-picker .mobile-picker-item-selected {
-  font-size: 17px;
-}
-.um-date-picker .mobile-picker-item {
-  color: #000;
-}
-.um-list-item-active {
-  background: #ddd;
-}
+<style lang="less">
+@import url('style/index.less');
 </style>

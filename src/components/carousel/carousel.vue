@@ -102,24 +102,5 @@ export default {
 }
 </script>
 <style>
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: #888;
-}
-
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-container-horizontal>.swiper-pagination-bullets {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 3px;
-}
+@import url('style/index.less');
 </style>

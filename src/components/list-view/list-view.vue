@@ -229,52 +229,8 @@
   }
 </script>
 
-<style>
- .um-scroll-list-wrapper {
-   min-height: calc(100% + 1px);
- }
- .um-scroll-wrapper {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
- }
- .after-trigger {
-   padding: 19px 0;
- }
- .before-trigger {
-    padding: 22px 0;
-    min-height: 1em;
- }
- .um-pullup-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- .um-scroll-content {
-    position: relative;
-    z-index: 1;
- }
- .um-pulldown-wrapper {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all;
- }
- .after-trigger {
-   margin-top: 5px
- }
-  /* .cube-scroll-item {
-    background-color: #fff;
-    border-bottom: 1px solid rgb(246, 246, 246);
-    height: 60px;
-    line-height: 60px;
-    font-size: 18px;
-    padding-left: 20px;
-  } */
+<style lang="less">
+@import url('style/index.less');
 </style>
 
 
