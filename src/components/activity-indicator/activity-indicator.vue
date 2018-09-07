@@ -1,56 +1,72 @@
 <template>
-  <div v-if="animating" :class="wrapCls">
-    <Icon type="loading" :size="wrapSize"></Icon>
-    <span class="um-activitu-indicator-horizontal-text" v-if="align === 'horizontal'" :style="textStyle">{{ text }}</span>
-    <span class="um-activity-indicator-vertical-text" v-else :style="textStyle">{{ text }}</span>
+  <div :class="wrapCls" v-if="animating">
+    <template v-if="toast">
+      <div :class="`${prefixCls}-content`">
+        <span :class="spinnerClass" aria-hidden="true" />
+        <span :class="`${prefixCls}-toast`">{{text}}</span>
+      </div>
+    </template>
+    <template v-else>
+      <span :class="spinnerClass" aria-hidden="true"></span>
+      <span :class="`${prefixCls}-tip`">{{text}}</span>
+    </template>
   </div>
 </template>
 <script>
-  import Icon from '../icon'
-  // const prefixCls = 'um-activity-indicator'
+const prefixCls = 'um-activity-indicator'
 
-  export default {
-    components: {
-      Icon
+export default {
+  name: 'activity-indicator',
+  data () {
+    return {
+      prefixCls: prefixCls
+    }
+  },
+  props: {
+    animating: {
+      type: Boolean,
+      default: true
     },
-    name: 'activity-indicator',
-    props: {
-      animating: {
-        type: Boolean,
-        default: true
-      },
-      text: {
-        type: String,
-        default: ''
-      },
-      size: {
-        type: String,
-        default: 'small'
-      },
-      align: {
-        type: String,
-        default: 'horizontal'
-      },
-      textStyle: {
-        type: String
+    text: {
+      type: String,
+      default: ''
+    },
+    size: {
+      type: String,
+      default: 'small'
+    },
+    toast: {
+      type: Boolean,
+      default: false
+    },
+    align: {
+      type: String
+    },
+    textStyle: {
+      type: Object
+    }
+  },
+  computed: {
+    wrapCls () {
+      return {
+        [`${prefixCls} ${prefixCls}-sm`]: this.size === 'small',
+        [`${prefixCls} ${prefixCls}-lg`]: this.size === 'large',
+        [`${prefixCls}-toast`]: !!this.toast
       }
     },
-    computed: {
-      wrapCls () {
-        return {
-          'um-activity-indicator-horizontal': this.align === 'horizontal',
-          'um-activity-indicator-vertical': this.align === 'vertical'
-        }
-      },
-      wrapSize () {
-        if (this.size === 'small') {
-          return 'md'
-        } else if (this.size === 'large') {
-          return 'lg'
-        }
+    spinnerClass () {
+      return {
+        [`${prefixCls}-spinner`]: true,
+        [`${prefixCls}-spinner-lg`]: !!this.toast || this.size === 'large'
       }
     }
+  },
+  created () {
+    if (this.align || this.textStyle) {
+      console.warn('Props "align" & "textStyle" have been deprecated.')
+    }
   }
+}
 </script>
 <style lang="less">
 @import url('style/index.less');

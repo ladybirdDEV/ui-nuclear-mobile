@@ -7,8 +7,8 @@
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 |  animating  | 显隐状态	 | boolean | true |
-|  size  | spinner大小，可选small/large	 | string | small |
+|  size  | spinner大小，可选`small`/`large`	 | string | small |
 |  text  | loading文本	 | string | loading... |
-|  align  | 垂直排列还是水平排列，可选值horizontal，vertical	 | string | horizontal |
-|  textStyle  | 自定义文本样式	 | string | 无 |
-
+|  toast  | loading样式类型 | boolean  | false  |
+|  ~~align~~  | 垂直排列还是水平排列，可选值horizontal，vertical	 | string | horizontal |
+|  ~~textStyle~~  | 自定义文本样式	 | string | 无 |

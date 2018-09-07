@@ -1,13 +1,20 @@
 <template>
-  <WingBlank>
-    <h3>基本</h3>
-    <p>Without text</p>
-    <ActivityIndicator></ActivityIndicator>
-    <p>With text</p>
-    <ActivityIndicator text="loading..." size="small"></ActivityIndicator>
-    <p>With large size and customized text style</p>
-    <ActivityIndicator text="loading..." size="large" align="vertical" style="font-size: 16px;color: #000"></ActivityIndicator>
-  </WingBlank>
+  <div>
+    <WingBlank>
+      <h3>基本</h3>
+      <p>Without text</p>
+      <ActivityIndicator></ActivityIndicator>
+      <p>With text</p>
+      <ActivityIndicator text="loading..." size="small" />
+      <p>With large size and customized text style</p>
+      <ActivityIndicator size="large" />
+      <div>Loading...</div>
+
+      <ActivityIndicator toast :animating="isAnimating" text="Loading" />
+    </WingBlank>
+    <WhiteSpace size="xl" />
+    <Button :onClick="showToast">click to show Toast</Button>
+  </div>
 </template>
 
 <script>
@@ -26,7 +33,17 @@
       ActivityIndicator
     },
     data () {
-      return {}
+      return {
+        isAnimating: false
+      }
+    },
+    methods: {
+      showToast () {
+        this.isAnimating = true
+        setTimeout(() => {
+          this.isAnimating = false
+        }, 1000)
+      }
     }
   }
 </script>
