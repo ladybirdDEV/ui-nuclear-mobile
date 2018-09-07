@@ -1,46 +1,53 @@
-.um-navbar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+@import '../../style/mixins';
+@import '../../style/themes/default';
+
+@navbar-height: 45 * @hd;
+@navbarPrefixCls: um-navbar;
+
+.@{navbarPrefixCls} {
   display: flex;
   align-items: center;
-  height: 45px;
-  background-color: #108ee9;
-  color: #fff;
-}
-.um-navbar-left,
-.um-navbar-title,
-.um-navbar-right {
-  flex: 1;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-}
-.um-navbar-left {
-  padding-left: 15px;
-  font-size: 16px;
-}
-.um-navbar-left-icon {
-  margin-right: 5px;
-  display: inherit;
-}
-.um-navbar-title {
-  justify-content: center;
-  font-size: 18px;
-  white-space: nowrap;
-}
-.um-navbar-right {
-  justify-content: flex-end;
-  font-size: 16px;
-  margin-right: 15px;
-}
-.um-navbar-light {
-  background-color: #fff;
-  color: #108ee9;
-}
-.um-navbar-light .um-navbar-title {
-  color: #000;
+  height: @navbar-height;
+  background-color: @brand-primary;
+  color: @fill-base;
+
+  &-left,
+  &-title,
+  &-right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &-left {
+    padding-left: @h-spacing-lg;
+    font-size: @link-button-font-size;
+
+    &-icon {
+      margin-right: @h-spacing-sm;
+      display: inherit;
+    }
+  }
+
+  &-title {
+    justify-content: center;
+    font-size: 18 * @hd;
+    white-space: nowrap;
+  }
+
+  &-right {
+    justify-content: flex-end;
+    font-size: @link-button-font-size;
+    margin-right: @h-spacing-lg;
+  }
+
+  &-light {
+    background-color: @fill-base;
+    color: @brand-primary;
+  }
+
+  &-light &-title {
+    color: @color-text-base;
+  }
 }
