@@ -15,8 +15,8 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "build": "node build/build.js && node scripts/merge-less.js",
-    "pack": "node build/pack.js",
+    "build": "node build/build.js",
+    "pack": "node build/pack.js && node scripts/merge-less.js",
     "docs:dev": "node build/copy-docs.js && vuepress dev docs",
     "docs:build": "node build/copy-docs.js && vuepress build docs"
   },
