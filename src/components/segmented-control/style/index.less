@@ -1,5 +1,5 @@
+@import '../../style/themes/default';
 @import '../../style/mixins';
-@import '../../style/themes/default.less';
 
 @segment-prefix-cls: um-segment;
 
@@ -46,25 +46,18 @@
       background: @segmented-control-color;
       color: @color-text-base-inverse;
     }
-    &-active &-inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      opacity: 0.1;
-      transition: background .2s;
-      background-color: @segmented-control-color;
+
+    &-active {
+      .@{segment-prefix-cls}-item-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.1;
+        transition: background .2s;
+        background-color: @segmented-control-color;
+      }
     }
   }
 }
-// .um-segment-item-active .um-segment-item-inner {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   opacity: 0.1;
-//   transition: background .2s;
-//   background-color: @segmented-control-color;
-// }
