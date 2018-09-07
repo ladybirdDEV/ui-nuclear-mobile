@@ -4,10 +4,10 @@
       <h3>基本</h3>
     </WingBlank>
     <WhiteSpace size="lg"></WhiteSpace>
-    <Progress :percent=20 :unfilled=false></progress>
+    <Progress :percent="20" :unfilled="false" position="normal"></progress>
     <WhiteSpace size="lg"></WhiteSpace>
     <WhiteSpace size="lg"></WhiteSpace>
-    <Progress :percent=60></progress>
+    <Progress :percent="60"  position="normal"></progress>
   </div>
 </template>
 
