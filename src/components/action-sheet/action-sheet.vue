@@ -1,16 +1,19 @@
 <template>
   <div style="bottom: 0px; position: fixed;width: 100%;">
-    <transition name="fade" >
-      <div v-if="visible" style="z-index: 100;position: relative;">
+    <transition name="um-fade">
+      <div :class="`${prefixCls}-mask`" v-if='visible'></div>
+    </transition>
+    <transition name="um-slide-up" >
+      <div v-if="visible" :class="`${prefixCls}-wrap`" @click="maskClick">
         <div :class="`${prefixCls}`" v-if="!isShare">
           <h3 :class="`${prefixCls}-title`" v-if="title !== undefined">{{ title }}</h3>
           <div :class="`${prefixCls}-message`" v-if="message !== undefined">{{ message }}</div>
           <div :class="`${prefixCls}-button-list`">
             <div :class="wrapCls(index)"
-                    class="um-active"
-                    :key=index
-                    v-for="(item, index) in btnGroup"
-                    @click="btnClick(item)">
+              class="um-active"
+              :key=index
+              v-for="(item, index) in btnGroup"
+              @click="btnClick(item)">
               <Feedback :activeClassName="`${prefixCls}-button-list-active`">
                 <span v-if="cancelButtonIndex === index"
                     :class="`${prefixCls}-button-list-item-cancel-button-mask`">
@@ -22,33 +25,36 @@
           </div>
         </div>
 
-        <div :class="`${prefixClsShare}`"  v-if="isShare">
-          <div :class="`${prefixClsShare}-message`">{{message}}</div>
-          <div :class="`${prefixClsShare}-list`" :key=rowIndex v-if="multipleLine" v-for="(row, rowIndex) in iconGroup">
-            <div :class="`${prefixClsShare}-list-item`" :key=colIndex v-for="(col, colIndex) in row"
-                 @click="iconClick(rowIndex, colIndex)">
-              <div :class="`${prefixClsShare}-list-item-icon`">
-                <img :src="col.icon" style="width: 36px; height: 36px"/>
+        <div :class="`${prefixCls} ${prefixClsShare}`"  v-if="isShare">
+          <div :class="`${prefixCls}-body`">
+            <div>
+              <div :class="`${prefixCls}-message`">{{message}}</div>
+              <div :class="`${prefixClsShare}-list`" :key=rowIndex v-if="multipleLine" v-for="(row, rowIndex) in iconGroup">
+                <div :class="`${prefixClsShare}-list-item`" :key=colIndex v-for="(col, colIndex) in row"
+                    @click="iconClick(rowIndex, colIndex)">
+                  <div :class="`${prefixClsShare}-list-item-icon`">
+                    <img :src="col.icon" style="width: 36px; height: 36px"/>
+                  </div>
+                  <div :class="`${prefixClsShare}-list-item-title`">{{ col.title }}</div>
+                </div>
               </div>
-              <div :class="`${prefixClsShare}-list-item-title`">{{ col.title }}</div>
-            </div>
-          </div>
 
-          <div :class="`${prefixClsShare}-list`" v-if="!multipleLine">
-            <div :class="`${prefixClsShare}-list-item`" :key=index v-for="(item, index) in iconGroup">
-              <div :class="`${prefixClsShare}-list-item-icon`" @click="iconClick(item)">
-                <img :src="item.icon" style="width: 36px; height: 36px"/>
+              <div :class="`${prefixClsShare}-list`" v-if="!multipleLine">
+                <div :class="`${prefixClsShare}-list-item`" :key=index v-for="(item, index) in iconGroup">
+                  <div :class="`${prefixClsShare}-list-item-icon`" @click="iconClick(item)">
+                    <img :src="item.icon" style="width: 36px; height: 36px"/>
+                  </div>
+                  <div :class="`${prefixClsShare}-list-item-title`">{{ item.title }}</div>
+                </div>
               </div>
-              <div :class="`${prefixClsShare}-list-item-title`">{{ item.title }}</div>
+              <Feedback :onMouseUp="cancelClick" :activeClassName="`${prefixClsShare}-cancel-button-active`">
+                <div :class="`${prefixClsShare}-cancel-button`">{{ cancelButtonText }}</div>
+              </Feedback>
             </div>
           </div>
-          <Feedback :onMouseUp="cancelClick" :activeClassName="`${prefixClsShare}-cancel-button-active`">
-            <div :class="`${prefixClsShare}-cancel-button`">{{ cancelButtonText }}</div>
-          </Feedback>
         </div>
       </div>
     </transition>
-    <div :class="`${prefixCls}-mask`" v-if='visible' @click="maskClick"></div>
   </div>
 </template>
 
@@ -86,8 +92,8 @@
       cancelClick () {
         this.visible = false
       },
-      maskClick () {
-        if (this.maskClosable) {
+      maskClick (ev) {
+        if (this.maskClosable && ev.target.className === 'um-action-sheet-wrap') {
           this.visible = false
         }
       },
