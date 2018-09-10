@@ -71,31 +71,34 @@
 }
 
 .@{listPrefixCls} {
-  .@{radioWarpPrefixCls}-item {
-    .@{radioWarpPrefixCls} {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: @list-item-height;
-      overflow: visible;
+  & &-item {
+    &.@{radioWarpPrefixCls}-item {
+      .@{listPrefixCls}-line {
+        .@{listPrefixCls}-extra {
+          flex: 0;
 
-      &-inner {
-        right: @v-spacing-lg;
-        top: @h-spacing-lg;
-      }
-    }
-    .@{listPrefixCls}-line {
-      .@{listPrefixCls}-extra {
-        flex: 0;
-      }
-    }
+          .@{radioWarpPrefixCls} {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: @list-item-height;
+            overflow: visible;
 
-    &.@{radioWarpPrefixCls}-item-disabled {
-      .@{listPrefixCls}-content {
-        color: @color-text-disabled;
+            &-inner {
+              right: @v-spacing-lg;
+              top: @h-spacing-lg;
+            }
+          }
+        }
+      }
+
+      &.@{radioWarpPrefixCls}-item-disabled {
+        .@{listPrefixCls}-content {
+          color: @color-text-disabled;
+        }
       }
     }
   }
