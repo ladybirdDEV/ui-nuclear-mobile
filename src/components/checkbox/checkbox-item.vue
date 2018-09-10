@@ -47,7 +47,9 @@
     },
     methods: {
       check () {
-        this.$refs.checkbox.isChecked = !this.$refs.checkbox.isChecked
+        if (!this.disabled) {
+          this.$refs.checkbox.isChecked = !this.$refs.checkbox.isChecked
+        }
       },
       change (value) {
         this.$emit('onChange')
@@ -114,9 +116,3 @@
     }
   }
 </script>
-
-<style>
-  .um-cbxitem-color {
-    color: #bbb;
-  }
-</style>
