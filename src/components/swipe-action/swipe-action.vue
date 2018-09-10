@@ -1,15 +1,13 @@
 <template>
   <div :class="prefixCls">
-    <div :class="`${prefixCls}-actions`">
-      <div :class="`${prefixCls}-actions-left`" ref="leftActions">
-        <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in left" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
-          <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
-        </div>
+    <div :class="`${prefixCls}-actions ${prefixCls}-actions-left`" ref="leftActions">
+      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in left" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
+        <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
       </div>
-      <div :class="`${prefixCls}-actions-right`" ref="rightActions">
-        <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in right" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
-          <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
-        </div>
+    </div>
+    <div :class="`${prefixCls}-actions ${prefixCls}-actions-right`" ref="rightActions">
+      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in right" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
+        <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
       </div>
     </div>
     <div :class="`${prefixCls}-content ${moveClass}`" v-finger:touch-move="touchMove" v-finger:touch-start="touchStart" v-finger:touch-end="touchEnd" :style="moveStyle">
