@@ -50,10 +50,16 @@ dealLessFile(path.join(stylePath, 'themes/default.less')).then(result => {
   allLess += result
 }).then(() => {
   /* add less file in style/mixins */
-  fs.readdirSync(path.join(stylePath, 'mixins')).map(file => {
-    dealLessFile(path.join(stylePath, `mixins/${file}`)).then(result => {
-      allLess += result
-    })
+  dealLessFile(path.join(stylePath, 'mixins/hairline.less')).then(result => {
+    allLess += result
+  })
+}).then(() => {
+  dealLessFile(path.join(stylePath, 'mixins/util.less')).then(result => {
+    allLess += result
+  })
+}).then(() => {
+  dealLessFile(path.join(stylePath, 'mixins/icon.less')).then(result => {
+    allLess += result
   })
 }).then(() => {
   dealLessFile(path.join(stylePath, 'index.less')).then(result => {

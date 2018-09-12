@@ -1,16 +1,17 @@
 <template>
-    <div class="um-checkbox-agree"
-         @click="check"
-         ref="agree">
-         
-             <Checkbox :label="label" 
-                    :disabled="disabled" 
-                    :checked="checked"
-                    :defaultChecked="defaultChecked"
-                    @onChange="change"
-                    :name="name"></Checkbox>
-                    <span class="um-checkbox-agree-inner"><slot></slot></span>
-    </div>
+  <div :class="`${prefixCls}`" @click.prevent="check">
+    <Checkbox
+      :label="label"
+      :disabled="disabled"
+      :checked="checked"
+      :defaultChecked="defaultChecked"
+      @onChange="change"
+      :name="name"
+      :class="`${prefixCls}-label`"
+      ref="checkbox">
+      <slot></slot>
+    </Checkbox>
+  </div>
 </template>
 
 <script>
@@ -45,9 +46,14 @@ export default {
       type: Boolean
     }
   },
+  data () {
+    return {
+      prefixCls: 'um-checkbox-agree'
+    }
+  },
   methods: {
     check () {
-      this.$children[0].isChecked = !this.$children[0].isChecked
+      this.$refs.checkbox.isChecked = !this.$refs.checkbox.isChecked
     },
     change (value) {
       this.$emit('onChange')
@@ -57,27 +63,7 @@ export default {
 </script>
 
 <style lang="less">
-@checkboxWarpPrefixCls: um-checkbox;
-@import '../style/themes/default';
-
-
-.@{checkboxWarpPrefixCls}-agree {
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  margin-left: @h-spacing-lg;
-  padding-top: @v-spacing-md;
-  padding-bottom: @v-spacing-md;
-
-    &-inner {
-      margin-left:  @h-spacing-lg;
-      display: inline-block;
-      font-size: @font-size-subhead;
-      color: @color-text-base;
-      line-height: @line-height-paragraph;
-      margin-top: 1PX;
-    }
-  }
+@import url('style/index.less');
 </style>
 
 

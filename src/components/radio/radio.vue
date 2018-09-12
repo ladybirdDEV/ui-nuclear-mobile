@@ -1,17 +1,4 @@
 <template>
-  <!-- <div class="um-checkbox" :for="`awesome${id}`">
-    <input type="checkbox"
-      class="um-checkbox-input"
-      :name="name"
-      :id="`awesome${id}`"
-      :disabled="disabled"
-      :value="value"
-      v-model="isChecked"
-      @change="change"/>
-    <label v-if="isChecked"><Icon class="um-checkbox-checked" type="check" :color="color"></Icon></label>
-    <label v-else>{{label}}</label>
-    <slot></slot>
-  </div> -->
   <label class="um-radio-wrapper">
     <span class="um-radio um-radio-checked" :class="{'um-radio-disabled': disabled}">
       <input type="radio"

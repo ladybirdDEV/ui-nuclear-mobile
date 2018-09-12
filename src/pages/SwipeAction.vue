@@ -36,14 +36,16 @@ export default {
         {
           text: 'edit',
           style: {
-            backgroundColor: '#c8c7ce'
+            backgroundColor: '#c8c7ce',
+            color: '#fff'
           },
           onPress: this.edit
         },
         {
           text: 'hide',
           style: {
-            backgroundColor: '#0d8ee9'
+            backgroundColor: '#0d8ee9',
+            color: '#fff'
           }
         }
       ],
@@ -51,7 +53,8 @@ export default {
         {
           text: 'remove',
           style: {
-            backgroundColor: '#ff3a2e'
+            backgroundColor: '#ff3a2e',
+            color: '#fff'
           }
         }
       ],

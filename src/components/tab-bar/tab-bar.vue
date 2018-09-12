@@ -9,7 +9,7 @@ export default {
   render (h) {
     return (
       <div class={prefixCls}>
-        <Tabs tabBarPosition="bottom" animated={false} renderTabBar={this.renderTabBar} swipeable={false}>
+        <Tabs tabBarPosition={this.tabBarPosition} animated={false} renderTabBar={this.renderTabBar} swipeable={false}>
           {this.contents}
         </Tabs>
       </div>
@@ -47,7 +47,7 @@ export default {
       })
     },
     renderTabBar () {
-      let barCls = this.hidden ? `${prefixCls}-bar ${prefixCls}-bar-hidden` : `${prefixCls}-bar`
+      let barCls = this.hidden ? `${prefixCls}-bar ${prefixCls}-bar-hidden-${this.tabBarPosition}` : `${prefixCls}-bar`
       return (
         <div class={barCls} style={`background-color:${this.barTintColor}`}>
           {this.$slots.default}
@@ -78,6 +78,10 @@ export default {
     hidden: {
       type: Boolean,
       default: false
+    },
+    tabBarPosition: {
+      type: String,
+      default: 'bottom'
     }
   }
 }

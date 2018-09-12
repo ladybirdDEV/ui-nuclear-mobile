@@ -1,11 +1,11 @@
 @import '../../style/mixins';
-@import '../../style/themes/default.less';
+@import '../../style/themes/default';
 
 @listPrefixCls: um-list;
-@prefixCls: um-textarea;
+@textareaPrefixCls: um-textarea;
 
 .@{listPrefixCls} .@{listPrefixCls}-item {
-  &.@{prefixCls}-item {
+  &.@{textareaPrefixCls}-item {
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
@@ -14,14 +14,14 @@
     padding-right: @h-spacing-lg;
     .hairline('bottom');
 
-    &.@{prefixCls}-item-single-line {
+    &.@{textareaPrefixCls}-item-single-line {
       align-items: center;
 
-      .@{prefixCls}-label {
+      .@{textareaPrefixCls}-label {
         align-self: center;
       }
 
-      .@{prefixCls}-control {
+      .@{textareaPrefixCls}-control {
         padding-top: 0;
         padding-bottom: 0;
 
@@ -30,12 +30,12 @@
         }
       }
 
-      .@{prefixCls}-clear {
+      .@{textareaPrefixCls}-clear {
         margin-top: 0;
       }
 
-      &.@{prefixCls}-error {
-        .@{prefixCls}-error-extra {
+      &.@{textareaPrefixCls}-error {
+        .@{textareaPrefixCls}-error-extra {
           margin-top: 0;
         }
       }
@@ -43,7 +43,44 @@
   }
 }
 
-.@{prefixCls}-control {
+.@{textareaPrefixCls}-label {
+  align-self: flex-start;
+  color: @color-text-base;
+  text-align: left;
+  min-height: @list-item-height;
+  font-size: @font-size-heading;
+  line-height: @list-item-height;
+  margin-left: 0;
+  margin-right: @h-spacing-sm;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &.@{textareaPrefixCls}-label-2 {
+    width: 2 * @input-label-width;
+  }
+
+  &.@{textareaPrefixCls}-label-3 {
+    width: 3 * @input-label-width;
+  }
+
+  &.@{textareaPrefixCls}-label-4 {
+    width: 4 * @input-label-width;
+  }
+
+  &.@{textareaPrefixCls}-label-5 {
+    width: 5 * @input-label-width;
+  }
+
+  &.@{textareaPrefixCls}-label-6 {
+    width: 6 * @input-label-width;
+  }
+
+  &.@{textareaPrefixCls}-label-7 {
+    width: 7 * @input-label-width;
+  }
+}
+
+.@{textareaPrefixCls}-control {
   flex: 1;
   padding-top: 10 * @hd;
   padding-bottom: 9 * @hd;
@@ -52,6 +89,7 @@
     color: @color-text-base;
     font-size: @font-size-heading;
     line-height: @line-height-paragraph * @font-size-heading;
+    appearance: none;
     width: 100%;
     padding: 0;
     border: 0;
@@ -73,44 +111,7 @@
   }
 }
 
-.@{prefixCls}-label {
-  align-self: flex-start;
-  color: @color-text-base;
-  text-align: left;
-  min-height: @list-item-height;
-  font-size: @font-size-heading;
-  line-height: @list-item-height;
-  margin-left: 0;
-  margin-right: @h-spacing-sm;
-  white-space: nowrap;
-  overflow: hidden;
-
-  &.@{prefixCls}-label-2 {
-    width: 2 * @input-label-width;
-  }
-
-  &.@{prefixCls}-label-3 {
-    width: 3 * @input-label-width;
-  }
-
-  &.@{prefixCls}-label-4 {
-    width: 4 * @input-label-width;
-  }
-
-  &.@{prefixCls}-label-5 {
-    width: 5 * @input-label-width;
-  }
-
-  &.@{prefixCls}-label-6 {
-    width: 6 * @input-label-width;
-  }
-
-  &.@{prefixCls}-label-7 {
-    width: 7 * @input-label-width;
-  }
-}
-
-.@{prefixCls}-clear {
+.@{textareaPrefixCls}-clear {
   display: none;
   width: @icon-size-sm;
   height: @icon-size-sm;
@@ -129,17 +130,17 @@
   }
 }
 
-&.@{prefixCls}-focus {
-  .@{prefixCls}-clear {
+&.@{textareaPrefixCls}-focus {
+  .@{textareaPrefixCls}-clear {
     display: block;
   }
 }
 
-.@{prefixCls}-has-count {
+.@{textareaPrefixCls}-has-count {
   padding-bottom: 14px;
 }
 
-.@{prefixCls}-count {
+.@{textareaPrefixCls}-count {
   position: absolute;
   bottom: @v-spacing-sm;
   right: @h-spacing-sm;
@@ -151,14 +152,14 @@
   }
 }
 
-&.@{prefixCls}-error {
-  .@{prefixCls}-control {
+&.@{textareaPrefixCls}-error {
+  .@{textareaPrefixCls}-control {
     textarea {
       color: #f50;
     }
   }
 
-  .@{prefixCls}-error-extra {
+  .@{textareaPrefixCls}-error-extra {
     margin-top: 12 * @hd;
     width: @icon-size-sm;
     height: @icon-size-sm;
@@ -168,8 +169,8 @@
   }
 }
 
-&.@{prefixCls}-disabled {
-  .@{prefixCls}-label {
+&.@{textareaPrefixCls}-disabled {
+  .@{textareaPrefixCls}-label {
     color: @color-text-disabled;
   }
 }
