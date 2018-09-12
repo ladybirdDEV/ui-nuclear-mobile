@@ -31,7 +31,7 @@ let sidebarNav = [
   {
     title: '',
     collapsable: false,
-    children: ['']
+    children: ['', 'Theme']
   }
 ]
 function getSidebar () {
@@ -64,6 +64,11 @@ module.exports = {
       }
     ],
     sidebar: {
+      // 'theme': {
+      //   title: '',
+      //   collapsable: false,
+      //   children: ['Theme']
+      // },
       '/components/': sidebarNav
     }
   },
