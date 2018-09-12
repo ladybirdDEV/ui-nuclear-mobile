@@ -24,13 +24,11 @@
     "alloyfinger": "^0.1.13",
     "array-tree-filter": "^2.1.0",
     "better-scroll": "^1.9.1",
-    "coimport": "^1.0.1",
     "dateformat": "^3.0.3",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
     "normalize.css": "^7.0.0",
     "number-precision": "^1.2.0",
-    "qr-image": "^3.2.0",
     "style-loader": "^0.19.1",
     "swiper": "^4.0.7",
     "vue": "^2.5.2",
@@ -40,6 +38,8 @@
     "vue-sticky-position": "^2.0.0"
   },
   "devDependencies": {
+    "qr-image": "^3.2.0",
+    "coimport": "^1.0.1",
     "@vue/test-utils": "^1.0.0-beta.12",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
