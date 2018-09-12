@@ -17,18 +17,46 @@ sidebarArr.map((name)=> {
   name = name.replace(/([A-Z])/g,"-$1").toLowerCase().substring(1)
   componentsArr.push(name)
 })
-/* 生成site的README.md */
-fs.access(path.resolve('./introduce.md'), (err) => {
-  if (err) throw err
-  fs.readFile(path.resolve('./introduce.md'), (err, data) => {
+function transFile(sourcePath, targetPath) {
+  fs.access(sourcePath, (err) => {
     if (err) throw err
-    let introContent = `${data}
-<StyleCom />`
-    fs.writeFile(path.join(targetPath, 'README.md'), introContent, (err) => {
+    fs.readFile(sourcePath, (err, data) => {
       if (err) throw err
+      let introContent = `${data}
+  <StyleCom />`
+      fs.writeFile(targetPath, introContent, (err) => {
+        if (err) throw err
+      })
     })
   })
-})
+}
+/* 生成site的README.md */
+// fs.access(path.resolve('./introduce.md'), (err) => {
+//   if (err) throw err
+//   fs.readFile(path.resolve('./introduce.md'), (err, data) => {
+//     if (err) throw err
+//     let introContent = `${data}
+// <StyleCom />`
+//     fs.writeFile(path.join(targetPath, 'README.md'), introContent, (err) => {
+//       if (err) throw err
+//     })
+//   })
+// })
+transFile(path.resolve('./introduce.md'), path.join(targetPath, 'README.md'))
+/* 生成site的Theme.md */
+// fs.access(path.resolve('docs/.vuepress/md/Theme.md'), (err) => {
+//   if (err) throw err
+//   fs.readFile(path.resolve('docs/.vuepress/md/Theme.md'), (err, data) => {
+//     if (err) throw err
+//     let introContent = `${data}
+// <StyleCom />`
+//     fs.writeFile(path.join(targetPath, 'Theme.md'), introContent, (err) => {
+//       if (err) throw err
+//     })
+//   })
+// })
+transFile(path.resolve('docs/.vuepress/md/Theme.md'), path.join(targetPath, 'Theme.md'))
+
 
 function syncFiles (sourcePath, targetPath, fileName = '') {
   if (!fs.existsSync(targetPath)) {
