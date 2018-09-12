@@ -13,7 +13,7 @@ ui-nuclear-mobile 的样式使用了 [Less](http://lesscss.org/) 作为开发语
 建立一个单独的 `less` 文件如下，再引入这个文件。
 
 ```css
-@import "~ui-nuclear-mobile/dist/ui-nuclear-mobile.less";  // 引入官方提供的 less 样式入口文件
+@import "~ui-nuclear-mobile/dist/main.less";  // 引入官方提供的 less 样式入口文件
 @import "your-theme-file.less";  // 用于覆盖上面定义的变量
 ```
 
