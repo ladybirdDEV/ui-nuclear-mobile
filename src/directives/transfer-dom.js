@@ -8,7 +8,8 @@
  * @return {Node} The target that the el will be appended to
  */
 function getTarget (node) {
-  if (node === void 0) {
+  node = document.getElementById('oneitfarm_editor_special_treat')
+  if (node === void 0 || node === null) {
     node = document.body
   }
   if (node === true) { return document.body }
