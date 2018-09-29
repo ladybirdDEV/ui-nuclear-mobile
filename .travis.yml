@@ -3,7 +3,7 @@ sudo: required
 node_js:
 - 8.11.3
 before_script:
-- yarn add vuepress@^0.8.4
+- yarn add vuepress
 script:
 - bash ./scripts/deploy.sh
 - bash ./scripts/deploy-demo.sh
