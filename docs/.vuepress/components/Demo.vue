@@ -27,7 +27,7 @@ export default {
 </script>
 <style lang="less">
 .content:not(.custom) {
-  margin: 0;
+  margin: 0 !important;
   & > h1:first-child {
     display: inline-block;
   }
