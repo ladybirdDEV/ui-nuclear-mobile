@@ -11,8 +11,8 @@
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | mode | 形态，可选 `button`,`number`,`pointer` | String | `'button'` |
-| current | 当前页号 双向绑定 | Number | 1 |
-| v-model | 当前页号 | Number | 1 |
+| current | 当前页号 | Number | 1 |
+| v-model | 当前页号 双向绑定 | Number | 1 |
 | total | 数据总数 | Number | 0 |
 | simple | 是否隐藏数值 | Boolean | `false` |
 | disabled | 禁用状态	 | Boolean | `false` |
