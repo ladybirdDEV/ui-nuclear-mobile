@@ -33,13 +33,14 @@ export default {
       default: undefined
     },
     defaultChecked: {
-      type: Boolean
+      type: Boolean,
+      default: undefined
     }
   },
   data () {
     return {
       prefixCls: 'um-checkbox',
-      isChecked: this.checked !== undefined ? this.checked : this.defaultChecked
+      isChecked: this.checked !== undefined ? this.checked : Boolean(this.defaultChecked)
     }
   },
   methods: {
