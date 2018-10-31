@@ -15,7 +15,7 @@
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | value | 当前激活tab面板中的key，可用v-model双向绑定 | Array | 默认无，accordion模式下默认为第一个元素 |
-| defaultActiveKey | 初始化选中面板的key | String|Array(正常模式下，可以多选) |  |
+| defaultActiveKey | 初始化选中面板的key | String/Array(正常模式下，可以多选) | 无 |
 | onChange | 切换面板的回调函数 | function(key){} | 无 |
 | accordion | 手风琴模式 | Boolean | false |
 | openAnimation | 设置是否开启切换动画| Boolean | true |
