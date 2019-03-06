@@ -21,7 +21,7 @@
 | tabHeight | Tab 高度，仅在 `verticle` 下有效 | Number | - |
 
 
-### props
+### tabs.tab
 | 属性 | 说明 |
 | ---- | ---- |
 | title | 标签文字 |
