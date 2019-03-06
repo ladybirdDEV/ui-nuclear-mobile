@@ -136,14 +136,14 @@ export default {
       if (this.tabDirection === 'horizontal') {
         return `width:${this.tabWidth}%`
       } else if (this.tabDirection === 'vertical') {
-        return `height:${this.tabWidth}%`
+        return this.tabHeight ? `height:${this.tabHeight}px` : `height:${this.tabWidth}%`
       }
     },
     underlineStyles () {
       if (this.tabDirection === 'horizontal') {
         return `width:${this.tabWidth}%;left:${this.tabWidth * this.page}%`
       } else if (this.tabDirection === 'vertical') {
-        return `height:${this.tabWidth}%;top:${this.tabWidth * this.page}%`
+        return this.tabHeight ? `height: ${this.tabHeight}px;top:${this.tabHeight * this.page}px` : `height:${this.tabWidth}%;top:${this.tabWidth * this.page}%`
       }
     }
   },
@@ -247,6 +247,9 @@ export default {
         return oneOf(value, ['horizontal', 'vertical'])
       },
       default: 'horizontal'
+    },
+    tabHeight: {
+      type: String
     },
     renderTabBar: {
       type: Function
