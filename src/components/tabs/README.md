@@ -18,7 +18,7 @@
 | swipeable | 是否可以滑动内容切换 | Boolean | `true` |
 | distanceToChangeTab	| 滑动切换阈值(宽度比例) | Number | `0.3` |
 | tabDirection | Tab方向 `(web only)` | String `'horizontal'` \| `'vertical'` | `'horizontal'` |
-| tabHeight | Tab 高度，仅在 `verticle` 下有效 | Number | - |
+| tabHeight | Tab 高度，仅在 `vertical` 下有效 | Number | - |
 
 
 ### tabs.tab
