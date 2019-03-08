@@ -6,8 +6,6 @@ English | [简体中文](./README.zh_CN.md)
   </a>
 </p>
 
-[![Build Status](https://travis-ci.org/ladybirdDEV/ui-nuclear-mobile.svg?branch=master)](https://travis-ci.org/ladybirdDEV/ui-nuclear-mobile)
-
 # UI Nuclear Mobile
 
 A configurable Mobile UI specification and Vue-based implementation.
