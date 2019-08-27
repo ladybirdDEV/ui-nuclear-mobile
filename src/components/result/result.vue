@@ -7,7 +7,7 @@
       <slot name="img"></slot>
     </div>
     <div v-if="title" :class="`${prefixCls}-title`"><slot name="title">{{ title }}</slot></div>
-    <div v-if="message" :class="`${prefixCls}-message`"><slot name="message">{{ message }}</slot></div>
+    <div v-if="hasMessage" :class="`${prefixCls}-message`"><slot name="message">{{ message }}</slot></div>
     <div v-if="buttonText" :class="`${prefixCls}-button`">
       <Button :type="buttonType" :onClick="buttonClick">{{ buttonText }}</Button>
     </div>
@@ -26,6 +26,11 @@ export default {
   mounted () {
     if (this.iconClass || this.iconColor) {
       console.warn('\'iconClass\' and \'iconColor\' props has been deprecated, Please use slot instead')
+    }
+  },
+  computed: {
+    hasMessage () {
+      return this.$slots.message || this.message
     }
   },
   data () {
