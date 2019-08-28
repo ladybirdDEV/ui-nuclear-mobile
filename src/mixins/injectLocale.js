@@ -6,7 +6,7 @@ const mixin = {
         const localeCode = 'zh_CN'
         const name = this.$options.name
         const defaultLocale = require(`../components/${name}/locale/${localeCode}.js`).default
-        console.log(`../components/${ name }/locale/${ localeCode }.js`)
+        console.log(`../components/${name}/locale/${localeCode}.js`)
         return defaultLocale
       }
     }
@@ -14,7 +14,7 @@ const mixin = {
   props: {
     locale: {
       type: Object,
-      default() {
+      default () {
         return this.localeData[this.$options.name] ? this.localeData[this.$options.name] : this.localeData
       }
     }

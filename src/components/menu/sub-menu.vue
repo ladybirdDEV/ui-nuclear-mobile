@@ -128,7 +128,7 @@
         // 二级
         if (this.level === 2) {
           const subMenuData = this.subMenuData.children
-            // 多选
+          // 多选
           if (this.subMenuData.value === this.value[0]) {
             if (this.multiSelect) {
               for (let j = 0; j < subMenuData.length; j++) {

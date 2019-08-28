@@ -1,6 +1,6 @@
 <template>
   <div :class="wrapCls">
-    <div v-if="!beforeAfter" :class="[`${prefixCls}-content-wrap`,animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-finger:touch-start="touchStart" v-finger:touch-move="touchMove" v-finger:touch-end="touchEnd">
+    <div v-if="!beforeAfter" :class="[`${prefixCls}-content-wrap`,animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
       <render v-if="renderPane" :render="renderPane"></render>
     </div>
     <div :class="`${prefixCls}-tab-bar-wrap`">
@@ -19,7 +19,7 @@
       </div>
       </template>
     </div>
-    <div v-if="beforeAfter" :class="[`${prefixCls}-content-wrap`, animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-finger:touch-start="touchStart" v-finger:touch-move="touchMove" v-finger:touch-end="touchEnd">
+    <div v-if="beforeAfter" :class="[`${prefixCls}-content-wrap`, animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
       <render v-if="renderPane" :render="renderPane"></render>
     </div>
   </div>

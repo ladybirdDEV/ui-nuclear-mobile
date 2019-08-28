@@ -9,9 +9,9 @@
       <div
         v-if="dragable"
         :class="`${prefixCls}-draghandle`"
-        v-finger:touch-start="touchStart"
-        v-finger:touch-move="touchMove"
-        v-finger:touch-end="touchEnd"
+        v-touch:start="touchStart"
+        v-touch:moving="touchMove"
+        v-touch:end="touchEnd"
         :style="dragHandleStyles"
         >
       </div>

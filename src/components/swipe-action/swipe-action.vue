@@ -10,7 +10,7 @@
         <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
       </div>
     </div>
-    <div :class="`${prefixCls}-content ${moveClass}`" v-finger:touch-move="touchMove" v-finger:touch-start="touchStart" v-finger:touch-end="touchEnd" :style="moveStyle">
+    <div :class="`${prefixCls}-content ${moveClass}`" v-touch:moving="touchMove" v-touch:start="touchStart" v-touch:end="touchEnd" :style="moveStyle">
       <slot></slot>
     </div>
     <div :class="`${prefixCls}-cover`"></div>

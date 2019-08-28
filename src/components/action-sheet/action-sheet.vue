@@ -65,13 +65,13 @@
   const prefixClsShare = 'um-action-sheet-share'
   export default {
     name: 'ActionSheetVue',
-//    mixins: [Feedback],
+    //    mixins: [Feedback],
     components: {
       Feedback
     },
     data () {
       return {
-//        activeClassName: 'um-action-sheet-button-list-active',
+        // activeClassName: 'um-action-sheet-button-list-active',
         visible: '',
         title: '',
         message: '',

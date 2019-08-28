@@ -1,13 +1,11 @@
 import components from './components'
-import AlloyFinger from 'alloyfinger'
-import AlloyFingerPlugin from 'alloyfinger/vue/alloy_finger.vue'
+import Vue2TouchEvents from 'vue2-touch-events'
+
 import 'normalize.css'
 const install = function (Vue) {
   if (install.installed) return
 
-  Vue.use(AlloyFingerPlugin, {
-    AlloyFinger
-  })
+  Vue.use(Vue2TouchEvents)
 
   for (let key in components) {
     Vue.component(key, components[key])

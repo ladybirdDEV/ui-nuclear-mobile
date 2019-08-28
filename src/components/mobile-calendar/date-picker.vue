@@ -146,7 +146,7 @@ export default {
           }
           if (panel) {
             this.setTransform(panel.style, `translate3d(0,0,0)`)
-          // console.log(panel)
+            // console.log(panel)
             this.setTransition(panel.style, '.3s')
             setTimeout(() => {
               this.setTransition(panel.style, '')

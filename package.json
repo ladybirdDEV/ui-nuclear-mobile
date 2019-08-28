@@ -21,7 +21,6 @@
     "docs:build": "node build/copy-docs.js && vuepress build docs"
   },
   "dependencies": {
-    "alloyfinger": "^0.1.13",
     "array-tree-filter": "^2.1.0",
     "better-scroll": "^1.9.1",
     "dateformat": "^3.0.3",
@@ -35,7 +34,8 @@
     "vue-awesome-swiper": "^3.1.0",
     "vue-router": "^3.0.1",
     "vue-slider-component": "^2.4.7",
-    "vue-sticky-position": "^2.0.0"
+    "vue-sticky-position": "^2.0.0",
+    "vue2-touch-events": "^2.0.0"
   },
   "devDependencies": {
     "qr-image": "^3.2.0",

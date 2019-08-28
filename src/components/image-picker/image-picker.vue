@@ -71,8 +71,8 @@
         wrapUrlIndex: '',
         index: '',
         addImgEl: [],
-        flexEl: [],                           // 分行分割后的多维数组
-        picker: [                            // 图片选择器
+        flexEl: [], // 分行分割后的多维数组
+        picker: [ // 图片选择器
           {
             picker: '0'
           }
@@ -152,7 +152,7 @@
       parseFile (file, index) {
         let vm = this
         const reader = new FileReader()
-        reader.readAsDataURL(file)                // filelist文件，里面有两个图片。 index为0
+        reader.readAsDataURL(file) // filelist文件，里面有两个图片。 index为0
         reader.onloadend = function (event) {
           const dataURL = event.target.result
           if (!dataURL) {
@@ -164,7 +164,7 @@
           vm.getOrientation(file, (res) => {
             // -2: not jpeg , -1: not defined
             if (res > 0) {
-              orientation = res                    // 1
+              orientation = res // 1
             }
             vm.addImage({
               url: dataURL,
@@ -200,12 +200,12 @@
           this.onChange(this.allImgEl, this.index, 'remove')
         }
       },
-//      wrapUrl (rowindex, colindex) {
-//        return {
-//          backgroundImage: `url(${this.allImgEl[this.wrapUrlIndex].url})`,
-//          transform: `rotate(${this.getRotation(this.addImgEl.orientation)}deg)`
-//        }
-//      },
+      //      wrapUrl (rowindex, colindex) {
+      //        return {
+      //          backgroundImage: `url(${this.allImgEl[this.wrapUrlIndex].url})`,
+      //          transform: `rotate(${this.getRotation(this.addImgEl.orientation)}deg)`
+      //        }
+      //      },
       ImgClick (rowindex, colindex) {
         if (this.onImgClick) {
           this.onImgClick(this.allImgEl, rowindex, colindex)

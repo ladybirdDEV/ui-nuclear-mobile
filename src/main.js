@@ -4,13 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'normalize.css'
-import AlloyFinger from 'alloyfinger'
-import AlloyFingerPlugin from 'alloyfinger/vue/alloy_finger.vue'
+import Vue2TouchEvents from 'vue2-touch-events'
 
-Vue.use(AlloyFingerPlugin, {
-  AlloyFinger
-})
-
+Vue.use(Vue2TouchEvents)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

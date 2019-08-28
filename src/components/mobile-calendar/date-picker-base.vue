@@ -177,7 +177,7 @@ export default {
           }
           needUpdate = needUpdate || d.selected !== oldValue
         })
-      )
+        )
         const componentRef = this.$refs.month
         if (needUpdate && componentRef && componentRef[monthIndex]) {
           componentRef[monthIndex].updateWeeks()
@@ -217,13 +217,13 @@ export default {
       const MAX_VIEW_PORT = clientHeight * 2
       const MIN_VIEW_PORT = clientHeight
 
-    // 大缓冲区外过滤规则
+      // 大缓冲区外过滤规则
       const filterFunc = (vm) => vm.y && vm.height && (vm.y + vm.height > scrollTop - MAX_VIEW_PORT && vm.y < scrollTop + clientHeight + MAX_VIEW_PORT)
       if (this.infiniteOpt && this.visibleMonth.length > 12) {
         this.visibleMonth = this.visibleMonth.filter(filterFunc).sort((a, b) => +a.firstDate - +b.firstDate)
       }
 
-    // 当小缓冲区不满时填充
+      // 当小缓冲区不满时填充
       if (this.visibleMonth.length > 0) {
         const last = this.visibleMonth[this.visibleMonth.length - 1]
         if (last.y !== undefined && last.height && last.y + last.height < scrollTop + clientHeight + MIN_VIEW_PORT) {

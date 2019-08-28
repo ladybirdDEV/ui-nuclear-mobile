@@ -32,7 +32,7 @@
     methods: {
       showActionSheet () {
         ActionSheet({
-//          title: '提示',
+        //          title: '提示',
           message: 'I am description, description, description',
           cancelButtonIndex: 4,
           destructiveButtonIndex: 3,
