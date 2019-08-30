@@ -9,12 +9,25 @@ export default {
   data () {
     return {
       hidden: false,
-      fullScreen: false
+      fullScreen: false,
+      selectedTab: 'redTab'
     }
   },
   render (h) {
     return (
-      <div style={ this.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0, backgroundColor: 'white' } : { height: 400 + 'px', backgroundColor: 'white' }}>
+      <div
+        style={
+          this.fullScreen
+            ? {
+              position: 'fixed',
+              height: '100%',
+              width: '100%',
+              top: 0,
+              backgroundColor: 'white'
+            }
+            : { height: 400 + 'px', backgroundColor: 'white' }
+        }
+      >
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -24,10 +37,19 @@ export default {
           <TabBarItem
             title="Life"
             key="Life"
-            icon="https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg"
             selectedIcon="https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg"
             badge={1}
+            selected={this.selectedTab === 'blueTab'}
           >
+            <div
+              slot="icon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
+              }}
+            />
             {this.renderContent('Life')}
           </TabBarItem>
           <TabBarItem
@@ -36,6 +58,7 @@ export default {
             icon="https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg"
             selectedIcon="https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg"
             badge="new"
+            selected={this.selectedTab === 'redTab'}
           >
             {this.renderContent('Koubei')}
           </TabBarItem>
@@ -63,18 +86,37 @@ export default {
   methods: {
     renderContent (pageText) {
       return (
-        <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-          <div style={{ paddingTop: 60 + 'px' }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-          <a style={{ display: 'block', marginTop: 40 + 'px', marginBottom: 20 + 'px', color: '#108ee9' }}
-            onClick={(e) => {
+        <div
+          style={{
+            backgroundColor: 'white',
+            height: '100%',
+            textAlign: 'center'
+          }}
+        >
+          <div style={{ paddingTop: 60 + 'px' }}>
+            Clicked “{pageText}” tab， show “{pageText}” information
+          </div>
+          <a
+            style={{
+              display: 'block',
+              marginTop: 40 + 'px',
+              marginBottom: 20 + 'px',
+              color: '#108ee9'
+            }}
+            onClick={e => {
               e.preventDefault()
               this.hidden = !this.hidden
             }}
           >
             Click to show/hide tab-bar
           </a>
-          <a style={{ display: 'block', marginBottom: 600 + 'px', color: '#108ee9' }}
-            onClick={(e) => {
+          <a
+            style={{
+              display: 'block',
+              marginBottom: 600 + 'px',
+              color: '#108ee9'
+            }}
+            onClick={e => {
               e.preventDefault()
               this.fullScreen = !this.fullScreen
             }}
