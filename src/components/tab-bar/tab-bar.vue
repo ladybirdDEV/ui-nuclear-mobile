@@ -1,68 +1,17 @@
 <script>
 import Tabs from '../tabs'
-const prefixCls = 'um-tab-bar'
+import Tab from './tab'
 export default {
   name: 'TabBar',
   components: {
-    Tabs
-  },
-  render (h) {
-    return (
-      <div class={prefixCls}>
-        <Tabs tabBarPosition={this.tabBarPosition} animated={false} renderTabBar={this.renderTabBar} swipeable={false}>
-          {this.contents}
-        </Tabs>
-      </div>
-    )
-  },
-  data () {
-    return {
-      prefixCls: prefixCls,
-      contents: {}
-    }
-  },
-  mounted () {
-    this.$nextTick(() => { this.contents = this.getContents() })
-    this.updateDescendant()
-  },
-  methods: {
-    updateDescendant () {
-      const child = this.$children[0]
-      const grandSons = this.$children[0].$children
-      grandSons.forEach((item, index) => {
-        item.isTintColor = this.tintColor
-        item.isUnselectedTintColor = this.unselectedTintColor
-        item.$on('onPress', () => {
-          child.page = index
-          grandSons.forEach((item, index) => {
-            item.isSelected = false
-          })
-          grandSons[index].isSelected = true
-        })
-        if (index === child.page) {
-          item.isSelected = true
-        } else {
-          item.isSelected = false
-        }
-      })
-    },
-    renderTabBar () {
-      let barCls = this.hidden ? `${prefixCls}-bar ${prefixCls}-bar-hidden-${this.tabBarPosition}` : `${prefixCls}-bar`
-      return (
-        <div class={barCls} style={`background-color:${this.barTintColor}`}>
-          {this.$slots.default}
-        </div>
-      )
-    },
-    getContents () {
-      const children = this.$children[0].$children
-      const child = children.map((node, index) => {
-        return <div class={`${prefixCls}-item`}>{node.$slots.default}</div>
-      })
-      return child
-    }
+    Tabs,
+    Tab
   },
   props: {
+    prefixCls: {
+      type: String,
+      default: 'um-tab-bar'
+    },
     barTintColor: {
       type: String,
       default: 'white'
@@ -71,21 +20,143 @@ export default {
       type: String,
       default: '#108ee9'
     },
+    hidden: {
+      type: Boolean,
+      default: false
+    },
     unselectedTintColor: {
       type: String,
       default: '#888'
     },
-    hidden: {
+    placeholder: {
+      type: String,
+      default: '正在加载'
+    },
+    animated: {
       type: Boolean,
       default: false
+    },
+    swipeable: {
+      type: Boolean,
+      default: false
+    },
+    prerenderingSiblingsNumber: {
+      type: Number,
+      default: 1
     },
     tabBarPosition: {
       type: String,
       default: 'bottom'
     }
+  },
+  methods: {
+    getTabs () {
+      const tabs = []
+      this.$slots.default.forEach(child => {
+        const cProps = child.componentOptions.propsData
+        const slotIcon =
+          child.componentOptions.children.filter(obj => {
+            return obj.data.slot === 'icon'
+          }).length > 0
+            ? child.componentOptions.children.filter(obj => {
+              return obj.data.slot === 'icon'
+            })
+            : undefined
+        const slotSelectedIcon =
+          child.componentOptions.children.filter(obj => {
+            return obj.data.slot === 'selectedIcon'
+          }).length > 0
+            ? child.componentOptions.children.filter(obj => {
+              return obj.data.slot === 'selectedIcon'
+            })
+            : undefined
+        tabs.push({
+          ...cProps,
+          ...{ slotIcon: slotIcon },
+          ...{ slotSelectedIcon: slotSelectedIcon }
+        })
+      })
+      return tabs
+    }
+  },
+  render (h) {
+    const { prefixCls, animated, tabBarPosition, swipeable } = this.$props
+    const tabs = this.getTabs()
+    let activeIndex = 0
+    if (Array.isArray(tabs)) {
+      tabs.forEach((tab, index) => {
+        if (tab.selected) {
+          activeIndex = index
+        }
+      })
+    }
+    const children = this.$slots.default
+    const renderTabBar = () => {
+      const {
+        barTintColor,
+        prefixCls,
+        tintColor,
+        unselectedTintColor,
+        hidden,
+        tabBarPosition
+      } = this.$props
+
+      const tabsData = this.getTabs()
+      const content = Array.isArray(tabsData)
+        ? tabsData.map((tab, index) => {
+          const tabProps = {
+            props: {
+              prefixCls: `${prefixCls}-tab`,
+              badge: tab.badge,
+              dot: tab.dot,
+              selected: tab.selected,
+              icon: tab.icon,
+              selectedIcon: tab.selectedIcon,
+              title: tab.title,
+              tintColor: tintColor,
+              unselectedTintColor: unselectedTintColor
+            },
+            on: {
+              press: () => {
+                tab.press && tab.press()
+              }
+            },
+            scopedSlots: {
+              icon: () => tab.slotIcon,
+              selectedIcon: () => tab.slotSelectedIcon
+            }
+          }
+          return <Tab {...tabProps} />
+        })
+        : null
+      let cls = `${prefixCls}-bar`
+      if (hidden) {
+        cls += ` ${prefixCls}-bar-hidden-${tabBarPosition}`
+      }
+      return (
+        <div class={cls} style={{ backgroundColor: barTintColor }}>
+          {content}
+        </div>
+      )
+    }
+    return (
+      <div class={prefixCls}>
+        <Tabs
+          tabs={tabs}
+          renderTabBar={renderTabBar}
+          tabBarPosition={tabBarPosition}
+          page={activeIndex < 0 ? undefined : activeIndex}
+          animated={animated}
+          swipeable={swipeable}
+        >
+          {children}
+        </Tabs>
+      </div>
+    )
   }
 }
 </script>
+
 <style lang="less">
-@import './style/index';
+@import "./style/index";
 </style>
