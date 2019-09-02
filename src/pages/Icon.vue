@@ -73,14 +73,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-.demoTitle {
-  padding: 15px 0 9px 15px;
-  color: #000;
-  font-size: 16px;
-  line-height: 16px;
-  height: 16px;
-  font-weight: bolder;
-  position: relative;
-}
-</style>

@@ -48,15 +48,4 @@ export default {
   }
 }
 </script>
-<style>
-.show-info {
-  margin-top: 18px;
-  display: flex;
-  align-items: center;
-}
-.show-info .progress {
-  margin-right: 5px;
-  width: 100%;
-}
-</style>
 

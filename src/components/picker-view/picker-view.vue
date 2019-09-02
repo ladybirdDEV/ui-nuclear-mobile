@@ -106,15 +106,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-.um-picker-view .mobile-picker-item.mobile-picker-item-selected {
-  color: #000;
-  font-size: 17px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html:not([data-scale]) .um-picker-view .mobile-picker-indicator {
-    border-bottom: none;
-    border-top: none;
-  }
-}
-</style>

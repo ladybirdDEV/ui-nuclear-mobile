@@ -44,26 +44,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.pagination-container {
-  margin: 0 15px;
-}
-
-.custom-pagination-with-icon .am-pagination-wrap-btn-prev .am-button-inline{
-  padding-left: 0;
-  padding-right: 10px;
-}
-.custom-pagination-with-icon .am-pagination-wrap-btn-next .am-button-inline{
-  padding-left: 10px;
-  padding-right: 0;
-}
-.arrow-align {
-  display: flex;
-  align-items: center;
-}
-.sub-title {
-  color: #888;
-  font-size: 14px;
-  padding: 30px 0 18px 0;
-}
-</style>

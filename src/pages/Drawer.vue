@@ -55,19 +55,4 @@ export default {
   }
 }
 </script>
-<style scoped>
-.my-drawer {
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-}
-.my-drawer .um-drawer-sidebar {
-  background-color: #fff;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.my-drawer .um-drawer-sidebar .um-list {
-  width: 300px;
-  padding: 0;
-}
-</style>
 

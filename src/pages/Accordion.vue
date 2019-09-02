@@ -73,14 +73,3 @@
     }
   }
 </script>
-
-<style>
-  .accordion-title {
-    color: #363636;
-    font-size: 16px;
-    padding-top: 20px;
-  }
-  .my-accordion .pad .um-accordion-content-box {
-    padding: 10px;
-  }
-</style>

@@ -18,7 +18,9 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
-      sourceMap: options.sourceMap
+      minimize: process.env.NODE_ENV === 'production',
+      sourceMap: options.sourceMap,
+      importLoaders: 1
     }
   }
 

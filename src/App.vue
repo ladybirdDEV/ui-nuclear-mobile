@@ -38,10 +38,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import './components/style/index';
-html,
-body {
-  font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial;
-}
-</style>

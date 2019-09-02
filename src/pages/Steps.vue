@@ -80,11 +80,4 @@ export default {
   }
 }
 </script>
-<style>
-.sub-title {
-  color: #888;
-  font-size: 14px;
-  padding: 30px 0 18px 0;
-}
-</style>
 

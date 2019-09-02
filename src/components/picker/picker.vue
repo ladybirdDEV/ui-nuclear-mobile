@@ -266,8 +266,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import '../picker-view/style/index.less';
-@import './style/index.less';
-</style>

@@ -156,9 +156,3 @@ export default {
   }
 }
 </script>
-<style>
-.my-list .spe .um-list-line .um-list-extra {
-  flex-basis: initial;
-}
-
-</style>

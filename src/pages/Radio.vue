@@ -101,12 +101,3 @@
     }
   }
 </script>
-
-<style>
-.my-radio .um-radio {
-  padding: 2.5px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-</style>

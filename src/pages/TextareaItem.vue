@@ -96,11 +96,3 @@
   }
 </script>
 
-<style>
-.click-btn {
-  width: 100%;
-  color: rgb(16, 142, 233);
-  text-align: center
-}
-</style>
-

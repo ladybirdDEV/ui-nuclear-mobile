@@ -40,22 +40,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.my-carousel {
-  height: 36px;
-  overflow: 36px;
-}
-
-.my-carousel .v-item {
-  height: 36px;
-  line-height: 36px;
-  padding-left: 10px;
-}
-
-.sub-title {
-  color: #888;
-  font-size: 14px;
-  padding: 30px 0 18px 0;
-}
-
-</style>

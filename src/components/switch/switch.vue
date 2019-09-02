@@ -78,6 +78,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import url('style/index.less');
-</style>

@@ -48,9 +48,3 @@
   }
 </script>
 
-<style scoped>
-p {
-  color: #888;
-}
-</style>
-

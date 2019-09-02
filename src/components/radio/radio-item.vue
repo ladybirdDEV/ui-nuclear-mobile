@@ -136,9 +136,3 @@
     }
   }
 </script>
-
-<style>
-  .um-cbxitem-color {
-    color: #bbb;
-  }
-</style>

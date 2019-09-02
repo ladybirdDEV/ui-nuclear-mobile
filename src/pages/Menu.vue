@@ -249,28 +249,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .sub-title {
-    color: #2f2f2f;
-    font-size: 18px;
-    padding: 20px 0 12px 15px;
-  }
-  .foo-menu{
-    position: relative;
-    z-index: 1000;
-  }
-  .menu-active{
-    z-index: 80;
-  }
-  .menu-mask {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.4;
-    z-index: 79;
-  }
-</style>

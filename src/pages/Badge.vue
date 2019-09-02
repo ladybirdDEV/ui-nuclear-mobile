@@ -64,30 +64,3 @@ export default {
   }
 }
 </script>
-<style>
-.corner-badge {
-  height: 50px;
-  width: 200px;
-}
-.special-badge.um-list-item .um-list-line {
-  padding-right: 0;
-}
-
-.special-badge.um-list-item .um-list-line .um-list-extra {
-  padding: 0;
-  height: 44px;
-}
-
-.special-badge .um-badge {
-  transform: rotate(45deg);
-  transform-origin: right bottom;
-  right: 0;
-  top: 13px;
-  width: 50px;
-}
-
-.special-badge .um-badge-text {
-  border-radius: 1px;
-}
-
-</style>
