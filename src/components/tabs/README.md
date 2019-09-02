@@ -12,8 +12,8 @@
 | --- | --- | --- | --- |
 | tabs | tab数据 | Array `见下表` | - |
 | tabBarPosition | TabBar位置 | String `'top'` \| `'bottom'` \| `'left'` `(web only)` \| `'right'` `(web only)` | `'top'` |
-| renderTabBar | 替换TabBar | Function (h) | - |
-| initialPage | 初始化Tab, index | Number | `0` |
+| renderTabBar | 替换TabBar | Function (h) => vnode | - |
+| page | 当前Tab, index | Number | `0` |
 | animated | 是否开启切换动画 | Boolean | `true` |
 | swipeable | 是否可以滑动内容切换 | Boolean | `true` |
 | distanceToChangeTab	| 滑动切换阈值(宽度比例) | Number | `0.3` |

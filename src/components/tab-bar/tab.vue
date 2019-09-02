@@ -7,7 +7,7 @@
             <img :class="`${prefixCls}-image`" :src="selectedIcon" :alt="title" />
           </slot>
         </Badge>
-        <Badge v-else-if="dot" :class="`${prefixCls}-badge tab-dot`">
+        <Badge v-else-if="dot" :class="`${prefixCls}-badge tab-dot`" dot>
           <slot name="selectedIcon">
             <img :class="`${prefixCls}-image`" :src="selectedIcon" :alt="title" />
           </slot>
@@ -24,7 +24,7 @@
             <img :class="`${prefixCls}-image`" :src="icon" :alt="title" />
           </slot>
         </Badge>
-        <Badge v-else-if="dot" :class="`${prefixCls}-badge tab-dot`">
+        <Badge v-else-if="dot" :class="`${prefixCls}-badge tab-dot`" dot>
           <slot name="icon">
             <img :class="`${prefixCls}-image`" :src="icon" :alt="title" />
           </slot>
@@ -76,9 +76,6 @@ export default {
     tintColor: {
       type: String
     }
-  },
-  mounted () {
-    console.log(this.$slots)
   },
   methods: {
     onClick () {

@@ -62,16 +62,34 @@ export default {
               return obj.data.slot === 'icon'
             })
             : undefined
+        const slotSelectedIcon =
+          child.componentOptions.children.filter(obj => {
+            return obj.data.slot === 'selectedIcon'
+          }).length > 0
+            ? child.componentOptions.children.filter(obj => {
+              return obj.data.slot === 'selectedIcon'
+            })
+            : undefined
         tabs.push({
           ...cProps,
-          ...{slotIcon: slotIcon}
+          ...{ slotIcon: slotIcon },
+          ...{ slotSelectedIcon: slotSelectedIcon }
         })
       })
       return tabs
     }
   },
   render (h) {
-    const { prefixCls, tabBarPosition, swipeable } = this.$props
+    const { prefixCls, animated, tabBarPosition, swipeable } = this.$props
+    const tabs = this.getTabs()
+    let activeIndex = 0
+    if (Array.isArray(tabs)) {
+      tabs.forEach((tab, index) => {
+        if (tab.selected) {
+          activeIndex = index
+        }
+      })
+    }
     const children = this.$slots.default
     const renderTabBar = () => {
       const {
@@ -86,7 +104,6 @@ export default {
       const tabsData = this.getTabs()
       const content = Array.isArray(tabsData)
         ? tabsData.map((tab, index) => {
-          console.log(tab.slotIcon)
           const tabProps = {
             props: {
               prefixCls: `${prefixCls}-tab`,
@@ -99,8 +116,14 @@ export default {
               tintColor: tintColor,
               unselectedTintColor: unselectedTintColor
             },
+            on: {
+              press: () => {
+                tab.press && tab.press()
+              }
+            },
             scopedSlots: {
-              icon: () => tab.icon
+              icon: () => tab.slotIcon,
+              selectedIcon: () => tab.slotSelectedIcon
             }
           }
           return <Tab {...tabProps} />
@@ -118,7 +141,14 @@ export default {
     }
     return (
       <div class={prefixCls}>
-        <Tabs renderTabBar={renderTabBar} tabBarPosition={tabBarPosition} swipeable={swipeable}>
+        <Tabs
+          tabs={tabs}
+          renderTabBar={renderTabBar}
+          tabBarPosition={tabBarPosition}
+          page={activeIndex < 0 ? undefined : activeIndex}
+          animated={animated}
+          swipeable={swipeable}
+        >
           {children}
         </Tabs>
       </div>

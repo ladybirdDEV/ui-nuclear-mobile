@@ -24,6 +24,9 @@ export default {
     },
     selected: {
       type: Boolean
+    },
+    press: {
+      type: Function
     }
   },
   render () {

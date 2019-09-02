@@ -37,9 +37,11 @@ export default {
           <TabBarItem
             title="Life"
             key="Life"
-            selectedIcon="https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg"
-            badge={1}
             selected={this.selectedTab === 'blueTab'}
+            badge={1}
+            press={() => {
+              this.selectedTab = 'blueTab'
+            }}
           >
             <div
               slot="icon"
@@ -50,33 +52,101 @@ export default {
                   'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
               }}
             />
+            <div
+              slot="selectedIcon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
+              }}
+            />
             {this.renderContent('Life')}
           </TabBarItem>
           <TabBarItem
             title="Koubei"
             key="Koubei"
-            icon="https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg"
-            selectedIcon="https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg"
             badge="new"
             selected={this.selectedTab === 'redTab'}
+            press={() => {
+              this.selectedTab = 'redTab'
+            }}
           >
+            <div
+              slot="icon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat'
+              }}
+            />
+            <div
+              slot="selectedIcon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat'
+              }}
+            />
             {this.renderContent('Koubei')}
           </TabBarItem>
           <TabBarItem
             title="Friend"
             key="Friend"
-            icon="https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg"
-            selectedIcon="https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg"
             dot
+            selected={this.selectedTab === 'greenTab'}
+            press={() => {
+              this.selectedTab = 'greenTab'
+            }}
           >
+            <div
+              slot="icon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat'
+              }}
+            />
+            <div
+              slot="selectedIcon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat'
+              }}
+            />
             {this.renderContent('Friend')}
           </TabBarItem>
           <TabBarItem
             title="My"
             key="My"
-            icon="https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg"
-            selectedIcon="https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg"
+            selected={this.selectedTab === 'yellowTab'}
+            press={() => {
+              this.selectedTab = 'yellowTab'
+            }}
           >
+            <div
+              slot="icon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg) center center /  21px 21px no-repeat'
+              }}
+            />
+            <div
+              slot="selectedIcon"
+              style={{
+                width: '22px',
+                height: '22px',
+                background:
+                  'url(https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg) center center /  21px 21px no-repeat'
+              }}
+            />
             {this.renderContent('My')}
           </TabBarItem>
         </TabBar>

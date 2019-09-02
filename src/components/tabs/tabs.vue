@@ -33,10 +33,48 @@ export default {
   components: {
     Render
   },
+  props: {
+    tabs: {
+      type: Array
+    },
+    tabBarPosition: {
+      validator (value) {
+        return oneOf(value, ['top', 'bottom', 'left', 'right'])
+      },
+      default: 'top'
+    },
+    tabDirection: {
+      validator (value) {
+        return oneOf(value, ['horizontal', 'vertical'])
+      },
+      default: 'horizontal'
+    },
+    tabHeight: {
+      type: String
+    },
+    renderTabBar: {
+      type: Function
+    },
+    page: {
+      type: Number,
+      default: 0
+    },
+    animated: {
+      type: Boolean,
+      default: true
+    },
+    distanceToChangeTab: {
+      type: Number,
+      default: 0.3
+    },
+    swipeable: {
+      type: Boolean,
+      default: true
+    }
+  },
   data () {
     return {
       prefixCls: prefixCls,
-      page: this.initialPage,
       actives: [],
       originX: 0,
       offsetX: false,
@@ -230,45 +268,6 @@ export default {
       } else {
         return false
       }
-    }
-  },
-  props: {
-    tabs: {
-      type: Array
-    },
-    tabBarPosition: {
-      validator (value) {
-        return oneOf(value, ['top', 'bottom', 'left', 'right'])
-      },
-      default: 'top'
-    },
-    tabDirection: {
-      validator (value) {
-        return oneOf(value, ['horizontal', 'vertical'])
-      },
-      default: 'horizontal'
-    },
-    tabHeight: {
-      type: String
-    },
-    renderTabBar: {
-      type: Function
-    },
-    initialPage: {
-      type: Number,
-      default: 0
-    },
-    animated: {
-      type: Boolean,
-      default: true
-    },
-    distanceToChangeTab: {
-      type: Number,
-      default: 0.3
-    },
-    swipeable: {
-      type: Boolean,
-      default: true
     }
   }
 }
