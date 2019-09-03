@@ -1,7 +1,3 @@
-<template>
-
-</template>
-
 <script>
 import { formatDate } from './util'
 

@@ -25,8 +25,6 @@
 <script>
   import List from '../list'
   import ListItem from '../list-item'
-  import Radio from '../radio'
-  import RadioItem from '../radio-item'
   import Icon from '../icon'
   import { oneOf } from '../../utils'
 
@@ -34,8 +32,6 @@
     components: {
       List,
       ListItem,
-      Radio,
-      RadioItem,
       Icon
     },
     props: {

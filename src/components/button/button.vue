@@ -4,7 +4,7 @@
       :class="wrapCls"
       :aria-disabled="disabled"
       ref="button"
-      :style="inlineStyle"
+      :style="inline ? {display: 'inline-block'} : undefined"
       :disabled="disabled"
       @click="click"
       v-feedback="{ disabled: disabled, activeClass: activeClassName }"
@@ -27,11 +27,6 @@ export default {
     Icon
   },
   computed: {
-    inlineStyle () {
-      if (this.inline) {
-        return { display: 'inline-block' }
-      }
-    },
     iconType () {
       if (this.loading) {
         return 'loading'

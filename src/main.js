@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'normalize.css'
 import Vue2TouchEvents from 'vue2-touch-events'
+import './components/style/index'
 
 Vue.use(Vue2TouchEvents)
 Vue.config.productionTip = false

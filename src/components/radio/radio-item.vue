@@ -29,7 +29,6 @@
 
 <script>
   import Radio from './radio'
-  import List from '../list'
   import ListItem from '../list-item'
   import ListItemBrief from '../list-item-brief'
 
@@ -37,7 +36,6 @@
     name: 'RadioItem',
     components: {
       Radio,
-      List,
       ListItem,
       ListItemBrief
     },

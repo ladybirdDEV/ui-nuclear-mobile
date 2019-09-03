@@ -22,20 +22,12 @@
   </div>
 </template>
 <script>
-import Button from '@/components/button'
-import WhiteSpace from '@/components/white-space'
-import WingBlank from '@/components/wing-blank'
 import List from '@/components/list'
 import ListItem from '@/components/list-item'
-import Icon from '@/components/icon'
 export default {
   components: {
-    Button,
     List,
     ListItem,
-    WhiteSpace,
-    WingBlank,
-    Icon
   },
   data () {
     return {
@@ -293,3 +285,80 @@ export default {
   }
 }
 </script>
+<style>
+.um-demo-page .um-demo-hd {
+  position: relative;
+  overflow: hidden;
+}
+.um-demo-page .um-demo-hd .um-demo-title,
+.um-demo-page .um-demo-hd .um-demo-subtitle {
+  text-align: left;
+  padding-left: 16px;
+}
+.um-demo-page .um-demo-hd .um-demo-title {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 21px;
+  font-weight: normal;
+  margin: 27px 0 15px;
+}
+.um-demo-page .um-demo-hd .um-demo-subtitle {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: normal;
+  margin: 0 0 27px;
+}
+.um-demo-page .um-demo-bd .um-list {
+  margin: 0 16px 12px;
+  background-color: white;
+  border-radius: 2px;
+}
+.um-demo-page .um-demo-bd .um-list .um-list-header {
+  padding: 0;
+  padding-left: 24px;
+  height: 70px;
+  line-height: 70px;
+  color: #404040;
+  font-size: 16px;
+}
+.um-demo-page .um-demo-bd .um-list .um-list-body {
+  border-top: none;
+}
+.um-demo-page .um-demo-bd .um-list .um-list-body::before {
+  display: none;
+}
+.um-demo-page .um-demo-bd .um-list .um-list-item {
+  padding-left: 24px;
+}
+.um-demo-page .um-demo-bd .um-list .um-list-item .um-list-content {
+  color: #666;
+  font-size: 14px;
+}
+.um-demo-page .um-demo-bd .um-list.category-closed .um-list-header {
+  position: relative;
+}
+.um-demo-page .um-demo-bd .um-list.category-closed .um-list-body {
+  display: none;
+}
+.um-demo-page .um-demo-category {
+  display: flex;
+}
+.um-demo-page .um-demo-category-name {
+  flex: 1;
+}
+.um-demo-page .um-demo-category-arrow {
+  width: 50px;
+  text-align: center;
+  transform: rotate(0deg);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.um-demo-page .um-demo-category-arrow span {
+  margin-top: 5px;
+  display: inline-block;
+  color: #c7c7cc;
+}
+.category-open .um-demo-category .um-demo-category-arrow {
+  transform: rotate(-180deg);
+}
+</style>

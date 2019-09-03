@@ -14,7 +14,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "lint": "eslint --ext .js,.vue src --fix",
     "build": "node build/build.js",
     "pack": "node build/pack.js && node scripts/merge-less.js",
     "docs:dev": "node build/copy-docs.js && vuepress dev docs",

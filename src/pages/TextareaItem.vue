@@ -70,14 +70,12 @@
   import TextareaItem from '@/components/textarea-item'
   import List from '@/components/list'
   import ListItem from '@/components/list-item'
-  import ListItemBrief from '@/components/list-item-brief'
 
   export default {
     components: {
       TextareaItem,
       List,
       ListItem,
-      ListItemBrief
     },
     data () {
       return {}

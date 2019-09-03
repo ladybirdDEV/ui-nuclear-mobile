@@ -9,12 +9,10 @@
 
 <script>
 import IndexList from '@/components/index-list'
-import WhiteSpace from '@/components/white-space'
 import SearchBar from '@/components/search-bar'
 
 export default {
   components: {
-    WhiteSpace,
     IndexList,
     SearchBar
   },

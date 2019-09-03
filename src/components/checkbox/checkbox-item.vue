@@ -27,7 +27,6 @@
 
 <script>
   import Checkbox from './checkbox'
-  import List from '../list'
   import ListItem from '../list-item'
   import ListItemBrief from '../list-item-brief'
 
@@ -35,7 +34,6 @@
     name: 'CheckboxItem',
     components: {
       Checkbox,
-      List,
       ListItem,
       ListItemBrief
     },

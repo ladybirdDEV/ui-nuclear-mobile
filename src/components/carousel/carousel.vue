@@ -22,6 +22,7 @@ export default {
       )
     } else {
       console.warn('Carousel should contain at least one child element, otherwise nothing will be displayed')
+      return
     }
   },
   data () {

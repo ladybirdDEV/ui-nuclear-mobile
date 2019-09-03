@@ -52,8 +52,6 @@
 </template>
 
 <script>
-import List from '../list'
-import ListItem from '../list-item'
 import treeFilter from 'array-tree-filter'
 import MobileCascader from '../mobile-cascader'
 import MobilePopupCascader from '../mobile-picker/mobile-popup'
@@ -64,8 +62,6 @@ const defaultLocale = require(`./locale/${localeCode}.js`).default
 export default {
   name: 'Picker',
   components: {
-    List,
-    ListItem,
     MobileCascader,
     MobilePopupCascader,
     MobilePicker,
