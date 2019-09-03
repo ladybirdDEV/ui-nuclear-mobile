@@ -1,41 +1,7 @@
-<template>
-  <div class="um-flexbox" :class="wrapCls">
-    <slot></slot>
-  </div>
-</template>
 <script>
-const prefixCls = 'um-flexbox'
+import classnames from "classnames"
 export default {
-  name: 'Flex',
-  computed: {
-    wrapCls () {
-      return {
-        [`${prefixCls}-dir-row`]: this.direction === 'row',
-        [`${prefixCls}-dir-row-reverse`]: this.direction === 'row-reverse',
-        [`${prefixCls}-dir-column`]: this.direction === 'column',
-        [`${prefixCls}-dir-column-reverse`]: this.direction === 'column-reverse',
-        [`${prefixCls}-nowrap`]: this.wrap === 'nowrap',
-        [`${prefixCls}-wrap`]: this.wrap === 'wrap',
-        [`${prefixCls}-wrap-reverse`]: this.wrap === 'wrap-reverse',
-        [`${prefixCls}-justify-start`]: this.justify === 'start',
-        [`${prefixCls}-justify-end`]: this.justify === 'end',
-        [`${prefixCls}-justify-center`]: this.justify === 'center',
-        [`${prefixCls}-justify-between`]: this.justify === 'between',
-        [`${prefixCls}-justify-around`]: this.justify === 'around',
-        [`${prefixCls}-align-start`]: this.align === 'start',
-        [`${prefixCls}-align-center`]: this.align === 'center',
-        [`${prefixCls}-align-end`]: this.align === 'end',
-        [`${prefixCls}-align-baseline`]: this.align === 'baseline',
-        [`${prefixCls}-align-stretch`]: this.align === 'stretch',
-        [`${prefixCls}-align-content-start`]: this.alignContent === 'start',
-        [`${prefixCls}-align-content-end`]: this.alignContent === 'end',
-        [`${prefixCls}-align-content-center`]: this.alignContent === 'center',
-        [`${prefixCls}-align-content-between`]: this.alignContent === 'between',
-        [`${prefixCls}-align-content-around`]: this.alignContent === 'around',
-        [`${prefixCls}-align-content-stretch`]: this.alignContent === 'stretch'
-      }
-    }
-  },
+  name: "Flex",
   props: {
     direction: {
       type: String
@@ -48,11 +14,60 @@ export default {
     },
     align: {
       type: String,
-      default: 'center'
+      default: "center"
+    },
+    disabled: {
+      type: Boolean
     },
     alignContent: {
       type: String
+    },
+    prefixCls: {
+      type: String,
+      default: "um-flexbox"
     }
+  },
+  render() {
+    const {
+      direction,
+      wrap,
+      justify,
+      align,
+      alignContent,
+      prefixCls
+    } = this.$props
+
+    const children = this.$slots.default
+    const wrapCls = classnames(prefixCls, {
+      [`${prefixCls}-dir-row`]: direction === "row",
+      [`${prefixCls}-dir-row-reverse`]: direction === "row-reverse",
+      [`${prefixCls}-dir-column`]: direction === "column",
+      [`${prefixCls}-dir-column-reverse`]: direction === "column-reverse",
+
+      [`${prefixCls}-nowrap`]: wrap === "nowrap",
+      [`${prefixCls}-wrap`]: wrap === "wrap",
+      [`${prefixCls}-wrap-reverse`]: wrap === "wrap-reverse",
+
+      [`${prefixCls}-justify-start`]: justify === "start",
+      [`${prefixCls}-justify-end`]: justify === "end",
+      [`${prefixCls}-justify-center`]: justify === "center",
+      [`${prefixCls}-justify-between`]: justify === "between",
+      [`${prefixCls}-justify-around`]: justify === "around",
+
+      [`${prefixCls}-align-start`]: align === "start",
+      [`${prefixCls}-align-center`]: align === "center",
+      [`${prefixCls}-align-end`]: align === "end",
+      [`${prefixCls}-align-baseline`]: align === "baseline",
+      [`${prefixCls}-align-stretch`]: align === "stretch",
+
+      [`${prefixCls}-align-content-start`]: alignContent === "start",
+      [`${prefixCls}-align-content-end`]: alignContent === "end",
+      [`${prefixCls}-align-content-center`]: alignContent === "center",
+      [`${prefixCls}-align-content-between`]: alignContent === "between",
+      [`${prefixCls}-align-content-around`]: alignContent === "around",
+      [`${prefixCls}-align-content-stretch`]: alignContent === "stretch"
+    })
+    return <div class={wrapCls}>{children}</div>
   }
 }
 </script>
