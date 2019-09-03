@@ -23,6 +23,7 @@
   "dependencies": {
     "array-tree-filter": "^2.1.0",
     "better-scroll": "^1.9.1",
+    "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
     "normalize.css": "^7.0.0",
     "number-precision": "^1.2.0",

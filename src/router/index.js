@@ -60,6 +60,7 @@ import DatePicker from '@/pages/DatePicker'
 import IndexList from '@/pages/IndexList'
 import LocaleProvider from '@/pages/LocaleProvider'
 import ListViewNav from '@/pages/ListViewNav'
+import TouchFeedback from '../components/vmc-feedback/examples/simple.js';
 Vue.use(Router)
 
 export default new Router({
@@ -363,6 +364,11 @@ export default new Router({
       path: '/list-view-nav',
       name: 'list-view-nav',
       component: ListViewNav
+    },
+    {
+      path: '/touch-feedback',
+      name: 'touch-feedback',
+      component: TouchFeedback
     }
   ]
 })

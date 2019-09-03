@@ -24,10 +24,12 @@
 <script>
 import List from '@/components/list'
 import ListItem from '@/components/list-item'
+import Icon  from '@/components/icon'
 export default {
   components: {
     List,
     ListItem,
+    Icon
   },
   data () {
     return {
