@@ -18,33 +18,32 @@
 </template>
 
 <script>
-  import WingBlank from '@/components/wing-blank'
-  import Button from '@/components/button'
-  import WhiteSpace from '@/components/white-space'
-  import ActionSheet from '@/components/action-sheet'
-  import ActivityIndicator from '@/components/activity-indicator'
+import WingBlank from "@/components/wing-blank"
+import Button from "@/components/button"
+import WhiteSpace from "@/components/white-space"
+import ActionSheet from "@/components/action-sheet"
+import ActivityIndicator from "@/components/activity-indicator"
 
-  export default{
-    components: {
-      WingBlank,
-      ActionSheet,
-      Button,
-      WhiteSpace,
-      ActivityIndicator
-    },
-    data () {
-      return {
-        isAnimating: false
-      }
-    },
-    methods: {
-      showToast () {
-        this.isAnimating = true
-        setTimeout(() => {
-          this.isAnimating = false
-        }, 1000)
-      }
+export default {
+  components: {
+    WingBlank,
+    Button,
+    WhiteSpace,
+    ActivityIndicator
+  },
+  data() {
+    return {
+      isAnimating: false
+    }
+  },
+  methods: {
+    showToast() {
+      this.isAnimating = true
+      setTimeout(() => {
+        this.isAnimating = false
+      }, 1000)
     }
   }
+}
 </script>
 

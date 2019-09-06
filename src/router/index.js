@@ -61,6 +61,7 @@ import IndexList from '@/pages/IndexList'
 import LocaleProvider from '@/pages/LocaleProvider'
 import ListViewNav from '@/pages/ListViewNav'
 import TouchFeedback from '../components/vmc-feedback/examples/simple.js';
+import VMCDrawer from '../components/vmc-drawer/examples/simple.js';
 Vue.use(Router)
 
 export default new Router({
@@ -369,6 +370,11 @@ export default new Router({
       path: '/touch-feedback',
       name: 'touch-feedback',
       component: TouchFeedback
+    },
+    {
+      path: '/vmc-drawer',
+      name: 'vmc-drawer',
+      component: VMCDrawer
     }
   ]
 })

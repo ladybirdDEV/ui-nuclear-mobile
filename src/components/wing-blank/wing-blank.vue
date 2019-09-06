@@ -1,29 +1,22 @@
-<template>
-  <div :class="wrapCls">
-    <slot></slot>
-  </div>
-</template>
 <script>
+import classnames from "classnames"
 export default {
-  nume: 'WingBlank',
-  data () {
-    return {
-      prefixCls: 'um-wingblank'
-    }
-  },
-  computed: {
-    wrapCls () {
-      return [
-        `${this.prefixCls}`,
-        `${this.prefixCls}-${this.size}`
-      ]
-    }
-  },
+  name: "WingBlank",
   props: {
     size: {
       type: String,
-      default: 'lg'
+      default: "lg"
+    },
+    prefixCls: {
+      type: String,
+      default: "um-wingblank"
     }
+  },
+  render() {
+    const { prefixCls, size } = this.$props
+    const children = this.$slots.default
+    const wrapCls = classnames(prefixCls, `${prefixCls}-${size}`)
+    return <div class={wrapCls}>{children}</div>
   }
 }
 </script>

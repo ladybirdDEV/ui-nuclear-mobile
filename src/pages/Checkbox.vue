@@ -29,15 +29,9 @@
   export default {
     components: {
       WingBlank,
-      WhiteSpace,
-      Checkbox,
       List,
-      ListItem,
       CheckboxItem,
-      Button,
       AgreeItem,
-      Flex,
-      FlexItem
     },
     data () {
       return {
