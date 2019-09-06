@@ -8,8 +8,8 @@
       :style="{minHeight: clientHeight + 'px'}"
       :contentStyle="{ color: '#A6A6A6', textAlign: 'center', paddingTop: '42px' }"
       ref="drawer"
-      v-model="open"
-      enableDragHandle>
+      :open="open"
+      >
       <template slot="sidebar">
         <List>
           <ListItem
@@ -45,7 +45,7 @@ export default {
   data () {
     return {
       clientHeight: '',
-      open: false
+      open: true
     }
   },
   methods: {
