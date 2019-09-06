@@ -317,8 +317,8 @@ export default {
   },
   render() {
     const { prefixCls, position, transitions, touch, enableDragHandle, docked, open } = this.$props
-    const children = this.$slots.default
-    const sidebar = this.$slots.sidebar
+    const children = this.$scopedSlots.default()
+    const sidebar = this.$scopedSlots.sidebar()
 
     const sidebarStyle = { ...this.$props.sidebarStyle }
     const contentStyle = { ...this.$props.contentStyle }

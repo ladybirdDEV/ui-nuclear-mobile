@@ -62,11 +62,17 @@ export default {
       default: 30
     }
   },
+  methods: {
+    onOpenChange(open, payload) {
+      this.$emit("open-change", open, payload)
+    }
+  },
   render() {
     const drawerProps = {
       props: this.$props,
-      scopedSlots: {
-        sidebar: () => this.$slots.sidebar
+      scopedSlots: this.$scopedSlots,
+      on: {
+        "open-change": this.onOpenChange
       }
     }
     return <VmcDrawer {...drawerProps} />

@@ -1,54 +1,15 @@
-<template>
-  <label :class="wrapCls">
-    <input type="checkbox" :name="name" :class="`${prefixCls}-checkbox`" :disabled="disabled" @change="change" v-model="isChecked" @click="click">
-    <div class="checkbox" :class="{'checkbox-disabled': disabled === true}" :style="style" @click="click">
-    </div>
-  </label>
-</template>
 <script>
-import { oneOf } from '../../utils'
-const prefixCls = 'um-switch'
+import classnames from "classnames"
 export default {
-  name: 'uSwitch',
-  computed: {
-    style () {
-      if (this.color && this.isChecked) {
-        return { backgroundColor: this.color }
-      }
-    },
-    wrapCls () {
-      return {
-        [`${prefixCls}`]: true,
-        [`${prefixCls}-android`]: this.platform === 'android'
-      }
-    },
-    currentValue () {
-      if (this.isChecked) {
-        return 'on'
-      } else {
-        return 'off'
-      }
-    }
-  },
-  methods: {
-    change (v) {
-      if (this.onChange) {
-        this.$nextTick(() => { this.onChange(this.isChecked) })
-      }
-    },
-    click (v) {
-      if (this.onClick) {
-        this.$nextTick(() => { this.onClick(this.isChecked) })
-      }
-    }
-  },
-  data () {
-    return {
-      isChecked: this.checked,
-      prefixCls: prefixCls
-    }
-  },
   props: {
+    prefixCls: {
+      type: String,
+      default: "um-switch"
+    },
+    platform: {
+      type: String,
+      default: "ios"
+    },
     checked: {
       type: Boolean,
       default: false
@@ -61,20 +22,73 @@ export default {
       type: String
     },
     name: {
-      type: String
-    },
-    platform: {
-      validator (value) {
-        return oneOf(value, ['android', 'ios'])
-      },
-      default: 'ios'
-    },
-    onChange: {
-      type: Function
-    },
-    onClick: {
-      type: Function
+      type: String,
+      default: ""
     }
+  },
+  data() {
+    return {
+      currentChecked: this.$props.checked
+    }
+  },
+  methods: {
+    onChange(e) {
+      const checked = e.target.checked
+      this.$emit('change', checked)
+    },
+    onClick(e) {
+      let val
+      if (e && e.target && e.target.checked !== undefined) {
+        val = e.target.checked
+      } else {
+        val = this.$props.checked
+      }
+      this.$data.currentChecked = val
+      this.$emit("click", val)
+    }
+  },
+  render() {
+    const { prefixCls, name, disabled, platform, color } = this.$props
+    const wrapCls = classnames(prefixCls, {
+      [`${prefixCls}-android`]: platform === "android"
+    })
+
+    const fakeInputCls = classnames("checkbox", {
+      [`checkbox-disabled`]: disabled
+    })
+
+    const style = {}
+
+    if (color && this.$data.currentChecked) {
+      style.backgroundColor = color
+    }
+    const inputProps = {
+      attrs: {
+        type: "checkbox",
+        name: name,
+        disabled: disabled,
+        checked: this.$data.currentChecked,
+        value: this.$data.currentChecked ? "on" : "off"
+      },
+      class: `${prefixCls}-checkbox`,
+      on: {
+        change: this.onChange,
+        click: !disabled ? this.onClick : {}
+      }
+    }
+    const fakeInputProps = {
+      class: fakeInputCls,
+      style: style,
+      on: {
+        click: disabled ? this.onClick : {}
+      }
+    }
+    return (
+      <label class={wrapCls}>
+        <input {...inputProps} />
+        <div {...fakeInputProps} />
+      </label>
+    )
   }
 }
 </script>

@@ -17,8 +17,13 @@
 | --- | --- | --- | --- |
 | checked | 是否默认选中 | Boolean | `false` |
 | disabled | 是否不可修改 | Boolean | `false` |
-| onChange | change 事件触发的回调函数 | Function (checked: bool) | - |
 | color | 开关打开后的颜色 | String | `#4dd865` |
-| name(`web only`) | switch 的 name | String | - |
-| platform (`web only`) | 设定组件的平台特有样式, 可选值为 `'android'`, `'ios'`， 默认为 `'ios'` | String | `'ios'` |
-| onClick | click事件触发的回调函数，当switch为disabled时，入参的值始终是默认传入的checked值。 | Function (checked: bool) | - |
+| name | switch 的 name | String | - |
+| platform | 设定组件的平台特有样式, 可选值为 `'android'`, `'ios'`， 默认为 `'ios'` | String | `'ios'` |
+
+### events
+
+| 事件 | 说明 | 返回 |
+| --- | --- | --- |
+| change | switch 状态发生改变 | `checked` |
+| click |switch 被点击时, 当 switch为 disabled 时,返回值始终是默认传入的 checked 值 | `checked` |
