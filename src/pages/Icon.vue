@@ -11,7 +11,6 @@ import Icon from '@/components/icon'
 import Grid from '@/components/grid'
 export default {
   components: {
-    Icon,
     Grid
   },
   computed: {

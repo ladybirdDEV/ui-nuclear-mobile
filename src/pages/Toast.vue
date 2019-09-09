@@ -16,63 +16,62 @@
 </template>
 
 <script>
-  import Toast from '@/components/toast'
-  import WingBlank from '@/components/wing-blank'
-  import Button from '@/components/button'
-  import WhiteSpace from '@/components/white-space'
+import Toast from "@/components/toast"
+import WingBlank from "@/components/wing-blank"
+import Button from "@/components/button"
+import WhiteSpace from "@/components/white-space"
 
-  export default{
-    components: {
-      WingBlank,
-      Button,
-      WhiteSpace,
-      Toast
+export default {
+  components: {
+    WingBlank,
+    Button,
+    WhiteSpace
+  },
+  data() {
+    return {
+      visible: true
+    }
+  },
+  methods: {
+    textonly() {
+      Toast({
+        message: "操作成功",
+        duration: 2000,
+        onClose: () => {
+          console.log("onClose callback")
+        }
+      })
     },
-    data () {
-      return {
-        visible: true
-      }
+    withoutmask() {
+      Toast({
+        message: "Toast without mask",
+        duration: 2000,
+        mask: false
+      })
     },
-    methods: {
-      textonly () {
-        Toast({
-          message: '操作成功',
-          duration: 2000,
-          onClose: () => {
-            console.log('onClose callback')
-          }
-        })
-      },
-      withoutmask () {
-        Toast({
-          message: 'Toast without mask',
-          duration: 2000,
-          mask: false
-        })
-      },
-      cumstomicon () {
-        Toast({
-          iconClass: 'loading'
-        })
-      },
-      toastsuccess () {
-        Toast({
-          iconClass: 'check',
-          message: '操作成功'
-        })
-      },
-      toastfail () {
-        Toast({
-          iconClass: 'cross',
-          message: '操作失败'
-        })
-      },
-      toastloading () {
-        Toast({
-          iconClass: 'loading',
-          message: 'loading...'
-        })
-      }
+    cumstomicon() {
+      Toast({
+        iconClass: "loading"
+      })
+    },
+    toastsuccess() {
+      Toast({
+        iconClass: "check",
+        message: "操作成功"
+      })
+    },
+    toastfail() {
+      Toast({
+        iconClass: "cross",
+        message: "操作失败"
+      })
+    },
+    toastloading() {
+      Toast({
+        iconClass: "loading",
+        message: "loading..."
+      })
     }
   }
+}
 </script>
