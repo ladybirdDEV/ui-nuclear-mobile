@@ -115,6 +115,7 @@ export default {
     const {
       prefixCls,
       prefixListCls,
+      name,
       editable,
       clear,
       error,
@@ -171,6 +172,7 @@ export default {
         {title && <div class={labelCls}>{title}</div>}
         <div class={`${prefixCls}-control`}>
           <textarea
+            name={name}
             value={currentValue}
             on-input={this.onInput}
             on-change={this.onChange}

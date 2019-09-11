@@ -1,6 +1,7 @@
 import classnames from 'classnames'
 import { cloneElement } from '../../_util/vnode.js'
 export default {
+  name: 'TouchFeedback',
   props: {
     disabled: {
       type: Boolean,
@@ -19,31 +20,32 @@ export default {
     }
   },
   methods: {
-    triggerEvent(isActive) {
+    triggerEvent(type, isActive, ev) {
       if (isActive !== this.active) {
         this.active = isActive
       }
+      this.$emit(type, ev)
     },
     onTouchStart(e) {
-      this.triggerEvent(true)
+      this.triggerEvent('touchstart', true, e)
     },
     onTouchMove(e) {
-      this.triggerEvent(false)
+      this.triggerEvent('touchmove', false, e)
     },
     onTouchEnd(e) {
-      this.triggerEvent(false)
+      this.triggerEvent('touchend', false, e)
     },
     onTouchCancel(e) {
-      this.triggerEvent(false)
+      this.triggerEvent('touchcancel', false, e)
     },
-    onMouseDown() {
-      this.triggerEvent(true)
+    onMouseDown(e) {
+      this.triggerEvent('mousedown', true, e)
     },
-    onMouseUp() {
-      this.triggerEvent(false)
+    onMouseUp(e) {
+      this.triggerEvent('mouseup', false, e)
     },
-    onMouseLeave () {
-      this.triggerEvent(false)
+    onMouseLeave(e) {
+      this.triggerEvent('mouseleave', false, e)
     }
   },
   render() {

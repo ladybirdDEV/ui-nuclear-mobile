@@ -62,6 +62,7 @@ import LocaleProvider from '@/pages/LocaleProvider'
 import ListViewNav from '@/pages/ListViewNav'
 import TouchFeedback from '../components/vmc-feedback/examples/simple.js';
 import VMCDrawer from '../components/vmc-drawer/examples/simple.js';
+import VMCInputNumber from '../components/vmc-input-number/examples/simple.js';
 Vue.use(Router)
 
 export default new Router({
@@ -375,6 +376,11 @@ export default new Router({
       path: '/vmc-drawer',
       name: 'vmc-drawer',
       component: VMCDrawer
+    },
+    {
+      path: '/vmc-input-number',
+      name: 'vmc-input-number',
+      component: VMCInputNumber
     }
   ]
 })
