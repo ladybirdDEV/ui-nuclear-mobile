@@ -305,7 +305,8 @@ export default {
     })
     let upDisabledClass = ''
     let downDisabledClass = ''
-
+    const isUpDisabled = !!upDisabledClass || disabled || readOnly
+    const isDownDisabled = !!downDisabledClass || disabled || readOnly
     const { currentValue } = this.$data
 
     if (currentValue || currentValue === 0) {
@@ -323,8 +324,7 @@ export default {
       }
     }
     const editable = !this.$props.readOnly && !this.$props.disabled
-    const isUpDisabled = !!upDisabledClass || disabled || readOnly
-    const isDownDisabled = !!downDisabledClass || disabled || readOnly
+
     // focus state, show input value
     // unfocus state, show valid value
 
