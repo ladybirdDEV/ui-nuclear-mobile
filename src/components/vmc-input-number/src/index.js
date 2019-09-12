@@ -90,23 +90,23 @@ export default {
       inputValue: this.$props.value
     }
   },
-  beforeUpdate() {
-    this.$nextTick(() => {
-      if (this.$props.value !== undefined) {
-        const value = this.$data.focused ? this.$props.value : this.getValidValue(this.$props.value)
+  watch: {
+    value(v) {
+      if (v !== undefined) {
+        const value = this.$data.focused ? v : this.getValidValue(v)
         this.$data.currentValue = value
         this.$data.inputValue = value
       }
-    })
+    }
   },
   methods: {
     onChange(e) {
       const { parser } = this.$props
       const input = parser && parser(this.getValueFromEvent(e).trim())
-      this.$data.inputValue = input
+      this.$emit('change', this.getCurrentValidValue(input))
     },
     onInput(e) {
-      this.$data.inputValue = e.target.value
+      this.$emit('change', this.getCurrentValidValue(e.target.value))
     },
     onFocus(e) {
       this.$data.focused = true
@@ -305,8 +305,6 @@ export default {
     })
     let upDisabledClass = ''
     let downDisabledClass = ''
-    const isUpDisabled = !!upDisabledClass || disabled || readOnly
-    const isDownDisabled = !!downDisabledClass || disabled || readOnly
 
     const { currentValue } = this.$data
 
@@ -324,9 +322,9 @@ export default {
         downDisabledClass = `${prefixCls}-handler-down-disabled`
       }
     }
-
     const editable = !this.$props.readOnly && !this.$props.disabled
-
+    const isUpDisabled = !!upDisabledClass || disabled || readOnly
+    const isDownDisabled = !!downDisabledClass || disabled || readOnly
     // focus state, show input value
     // unfocus state, show valid value
 
@@ -352,8 +350,8 @@ export default {
       touchstart: (editable && !downDisabledClass) ? this.down : noop,
       touchend: this.stop
     }
-
     const inputDisplayValueFormat = this.formatWrapper(inputDisplayValue)
+
     return (
       <div class={classes}>
         <div class={`${prefixCls}-handler-wrap`}>

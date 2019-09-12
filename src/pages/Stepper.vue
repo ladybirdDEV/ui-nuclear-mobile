@@ -8,7 +8,9 @@
             :max="10"
             :min="1"
             showNumber
-            v-model="value"></Stepper>
+            :value="value"
+            @change="onChange"
+          ></Stepper>
         </template>
         Show number value
       </ListItem>
@@ -19,8 +21,9 @@
             :max="10"
             :min="1"
             showNumber
-            :defaultValue="3"
-            disabled></Stepper>
+            :value="3"
+            disabled
+          ></Stepper>
         </template>
         Disabled
       </ListItem>
@@ -28,18 +31,23 @@
   </div>
 </template>
 <script>
-import List from '@/components/list'
-import ListItem from '@/components/list-item'
-import Stepper from '@/components/stepper'
+import List from "@/components/list"
+import ListItem from "@/components/list-item"
+import Stepper from "@/components/stepper"
 export default {
   components: {
     Stepper,
     List,
     ListItem
   },
-  data () {
+  data() {
     return {
       value: 3
+    }
+  },
+  methods: {
+    onChange (val) {
+      this.value = val
     }
   }
 }

@@ -62,10 +62,9 @@ export default {
     }
 
     const child = children[0]
-    if (this.active) {
+    if (!disabled && this.$data.active) {
       return cloneElement(child, { class: activeClassName, style: activeStyle, on: { ...events } })
-    } else {
-      return cloneElement(child, { on: { ...events } })
     }
+    return cloneElement(child, { on: { ...events } })
   }
 }
