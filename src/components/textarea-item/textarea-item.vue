@@ -59,6 +59,11 @@
         hasError: this.error
       }
     },
+    watch: {
+      value () {
+        this.curValue = this.value
+      }
+    },
     props: {
       value: {
         type: String
