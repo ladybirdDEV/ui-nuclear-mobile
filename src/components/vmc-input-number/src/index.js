@@ -87,7 +87,9 @@ export default {
       currentValue: this.$props.value,
       focused: false,
       autoStepTimer: '',
-      inputValue: this.$props.value
+      inputValue: this.$props.value,
+      upDisabledClass: '',
+      downDisabledClass: '',
     }
   },
   watch: {
@@ -263,6 +265,9 @@ export default {
       if (val > props.max) {
         val = props.max
       }
+      if (val < props.min) {
+        val = props.min
+      }
       this.setValue(val)
       this.$data.focused = true
       return !outOfRange
@@ -303,24 +308,26 @@ export default {
       [`${prefixCls}-disabled`]: disabled,
       [`${prefixCls}-focused`]: this.$data.focused
     })
-    let upDisabledClass = ''
-    let downDisabledClass = ''
-    const isUpDisabled = !!upDisabledClass || disabled || readOnly
-    const isDownDisabled = !!downDisabledClass || disabled || readOnly
+    const isUpDisabled = !!this.$data.upDisabledClass || disabled || readOnly
+    const isDownDisabled = !!this.$data.downDisabledClass || disabled || readOnly
     const { currentValue } = this.$data
 
     if (currentValue || currentValue === 0) {
       if (!isNaN(currentValue)) {
         const val = Number(currentValue)
         if (val >= max) {
-          upDisabledClass = `${prefixCls}-handler-up-disabled`
+          this.$data.upDisabledClass = `${prefixCls}-handler-up-disabled`
+        } else {
+          this.$data.upDisabledClass = ''
         }
         if (val <= min) {
-          downDisabledClass = `${prefixCls}-handler-down-disabled`
+          this.$data.downDisabledClass = `${prefixCls}-handler-down-disabled`
+        } else {
+          this.$data.downDisabledClass = ''
         }
       } else {
-        upDisabledClass = `${prefixCls}-handler-up-disabled`
-        downDisabledClass = `${prefixCls}-handler-down-disabled`
+        this.$data.upDisabledClass = `${prefixCls}-handler-up-disabled`
+        this.$data.downDisabledClass = `${prefixCls}-handler-down-disabled`
       }
     }
     const editable = !this.$props.readOnly && !this.$props.disabled
@@ -343,15 +350,14 @@ export default {
     let upEvents
     let downEvents
     upEvents = {
-      touchstart: (editable && !upDisabledClass) ? this.up : noop,
+      touchstart: (editable && !this.$data.upDisabledClass) ? this.up : noop,
       touchend: this.stop
     }
     downEvents = {
-      touchstart: (editable && !downDisabledClass) ? this.down : noop,
+      touchstart: (editable && !this.$data.downDisabledClass) ? this.down : noop,
       touchend: this.stop
     }
     const inputDisplayValueFormat = this.formatWrapper(inputDisplayValue)
-
     return (
       <div class={classes}>
         <div class={`${prefixCls}-handler-wrap`}>
@@ -363,7 +369,7 @@ export default {
             role="button"
             aria-label="Increase Value"
             aria-disabled={!!isUpDisabled}
-            class={`${prefixCls}-handler ${prefixCls}-handler-up ${upDisabledClass}`}
+            class={`${prefixCls}-handler ${prefixCls}-handler-up ${this.$data.upDisabledClass}`}
           >
             {this.$slots.upHandler || (<span unselectable="unselectable" class={`${prefixCls}-handler-up-inner`} />)}
           </InputHandler>
@@ -375,7 +381,7 @@ export default {
             role="button"
             aria-label="Decrease Value"
             aria-disabled={!!isDownDisabled}
-            class={`${prefixCls}-handler ${prefixCls}-handler-down ${downDisabledClass}`}
+            class={`${prefixCls}-handler ${prefixCls}-handler-down ${this.$data.downDisabledClass}`}
           >
             {this.$slots.downHandler || (<span unselectable="unselectable" class={`${prefixCls}-handler-down-inner`} />)}
           </InputHandler>

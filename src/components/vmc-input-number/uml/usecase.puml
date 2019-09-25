@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor User
+actor Developer
+rectangle InputNumber {
+    (input number)
+    (add / minus number )
+    (view number)
+    (set limits)
+    (set step value of per operation)
+    (set initial number)
+    (set disabled)
+}
+
+User --> (input number)
+User --> (add / minus number )
+User --> (view number)
+
+Developer --> (set limits)
+Developer --> (set step value of per operation)
+Developer --> (set initial number)
+Developer --> (set disabled)
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+class Input {
+  + value
+  + max
+  + min
+  + setValue()
+  + getValue()
+}
+class handler {
+  + disabled
+  + step
+
+  + click()
+}
+class AddHandler {
+}
+class MinusHandler {
+}
+class parser {
+  + transform()
+}
+class Display {
+  + number
+}
+
+handler <|-- AddHandler
+handler <|-- MinusHandler
+@enduml
