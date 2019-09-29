@@ -150,6 +150,7 @@ export default {
   },
   watch: {
     data (val) {
+      this.getDatas()
       if (this.curValue && this.curValue.length > 0) {
         this.getExtra()
       }
@@ -172,17 +173,21 @@ export default {
       }
     },
     ok (value) {
-      if (!this.cascade) {
-        if (this.curValue.length <= 0) {
-          if (this.data) {
-            for (let i = 0; i < this.data.length; i++) {
-              this.curValue.push(this.allDatas[i][0].value)
-            }
-          } else {
-            this.curValue = []
-          }
-        }
-      }
+      // if (!this.cascade) {
+      //   if (this.curValue.length <= 0) {
+      //     if (this.data) {
+      //       for (let i = 0; i < this.data.length; i++) {
+      //         if (this.allDatas.length > 1) {
+      //           this.curValue.push(this.allDatas[i][0].value)
+      //         } else {
+      //           this.curValue.push(this.allDatas[0][0].value)
+      //         }
+      //       }
+      //     } else {
+      //       this.curValue = []
+      //     }
+      //   }
+      // }
       value = this.curValue
       if (this.onChange) {
         this.onChange(value)
