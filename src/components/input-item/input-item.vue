@@ -14,7 +14,7 @@
       </div>
       <Clear v-if="clear && currentValue.length > 0"></Clear>
       <div v-if="error" :class="`${prefixCls}-error-extra`" @click="onErrorClick"></div>
-      <div v-if="extra" :class="`${prefixCls}-extra`" @click="onExtraClick">{{ extra }}</div>
+      <div v-if="extra || $slots.extra" :class="`${prefixCls}-extra`" @click="onExtraClick"><slot name="extra">{{ extra }}</slot></div>
     </div>
   </div>
 </template>
