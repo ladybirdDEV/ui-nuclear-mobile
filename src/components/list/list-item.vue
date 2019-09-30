@@ -7,7 +7,7 @@
       <div :class="`${prefixCls}-content`">
         <slot></slot>
       </div>
-      <div :class="`${prefixCls}-extra`" v-if="isExtra"><slot name="extra">{{ extra }}</slot></div>
+      <div :class="`${prefixCls}-extra`" v-if="extra || $slots.extra"><slot name="extra">{{ extra }}</slot></div>
       <div :class="arrowCls" aria-hidden="true" v-if="arrow"></div>
     </div>
     <div :class="rippleCls" :style="coverRippleStyle"></div>
