@@ -23,7 +23,9 @@
           :key="index" v-model="valueCopy[index]"
           :disabled="disabled"
           :indicatorStyle="indicatorStyle">
-            <MobilePickerItem v-for="innerItem in data[index]" :key="innerItem.value" v-if="data[index].length > 0" :value="innerItem.value" :style="pickerItemStyle">{{innerItem.label}}</MobilePickerItem>
+          <template v-if="data[index].length > 0">
+            <MobilePickerItem v-for="innerItem in data[index]" :key="innerItem.value"  :value="innerItem.value" :style="pickerItemStyle">{{innerItem.label}}</MobilePickerItem>
+          </template>
         </MobilePicker>
       </template>
     </MobileMultiPicker>

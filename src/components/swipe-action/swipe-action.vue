@@ -1,12 +1,12 @@
 <template>
   <div :class="prefixCls">
     <div :class="`${prefixCls}-actions ${prefixCls}-actions-left`" ref="leftActions">
-      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in left" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
+      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="(btn, index) in left" :key="index":style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
         <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
       </div>
     </div>
     <div :class="`${prefixCls}-actions ${prefixCls}-actions-right`" ref="rightActions">
-      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="btn in right" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
+      <div :class="`${prefixCls}-btn ${btn.className ? btn.className : ''}`" v-for="(btn, index) in right" :key="index" :style="btn.style" @touchstart="btnClick(btn.onPress, $event)">
         <span :class="`${prefixCls}-btn-text`">{{btn.text ? btn.text : 'Click'}}</span>
       </div>
     </div>
