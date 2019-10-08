@@ -47,18 +47,24 @@ export default {
     },
     blur () {
       this.$refs.input.blur()
+    },
+    handleChange (e) {
+      const { disabled } = this.$props
+      if (disabled) {
+        return
+      }
+      this.$emit('change', this.currentChecked)
     }
   },
   render() {
-    const { prefixCls, name, id, type, disabled, readOnly, tabIndex, autoFocus, value } = this.$props
+    const { prefixCls, name, id, type, disabled, readOnly, tabIndex, autoFocus, value, ...others } = this.$props
     const checked = this.$data.currentChecked
     const classString = classNames(prefixCls, {
       [`${prefixCls}-checked`]: checked,
       [`${prefixCls}-disabled`]: disabled
     })
-
     return (
-      <span>
+      <span class={classString}>
         <input
           name={name}
           id={id}
@@ -71,6 +77,7 @@ export default {
           autoFocus={autoFocus}
           ref="input"
           value={value}
+          on-change={this.handleChange}
         />
         <span class={`${prefixCls}-inner`} />
       </span>

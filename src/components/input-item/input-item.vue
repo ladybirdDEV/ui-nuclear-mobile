@@ -9,7 +9,7 @@
           <CustomInput ref="CustomInput" :placeholder="placeholder" :moneyKeyboardAlign="moneyKeyboardAlign" :maxLength="maxLength" :disabled="disabled" v-model="currentValue" @onFocus="onFocus" @input="onInputChange" :locale="locale"></CustomInput>
         </template>
         <template v-else>
-          <input :name="name" ref="inputRef" :type="inputType" :placeholder="placeholder" :pattern="patternProps" @input="onInputChange" v-model="currentValue" @focus="onFocus" @blur="onBlur" :readonly="!editable" :disabled="disabled" :maxLength="type !== 'phone' ? maxLength : false" />
+          <input :name="name" ref="inputRef" :type="inputType" :placeholder="placeholder" :pattern="type==='number' ? '[0-9]*' : undefined" @input="onInputChange" v-model="currentValue" @focus="onFocus" @blur="onBlur" :readonly="!editable" :disabled="disabled" :maxLength="type !== 'phone' ? maxLength : false" />
         </template>
       </div>
       <Clear v-if="clear && currentValue.length > 0"></Clear>
@@ -69,11 +69,6 @@ export default {
         return this.type
       } else {
         return 'text'
-      }
-    },
-    patternProps () {
-      if (this.type === 'number') {
-        return '[0-9]*'
       }
     },
     hasLabel () {
