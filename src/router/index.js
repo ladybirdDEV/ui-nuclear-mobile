@@ -64,6 +64,7 @@ import VMCTouchFeedback from '../components/vmc-feedback/examples/simple.js';
 import VMCDrawer from '../components/vmc-drawer/examples/simple.js';
 import VMCInputNumber from '../components/vmc-input-number/examples/simple.js';
 import VCCheckbox from '../components/vc-checkbox/examples/simple.js'
+import VMCDialog from '../components/vmc-dialog/examples/simple.js'
 Vue.use(Router)
 
 export default new Router({
@@ -387,6 +388,11 @@ export default new Router({
       path: '/vc-checkbox',
       name: 'vc-checkbox',
       component: VCCheckbox
+    },
+    {
+      path: '/vmc-dialog',
+      name: 'vmc-dialog',
+      component: VMCDialog
     }
   ]
 })
