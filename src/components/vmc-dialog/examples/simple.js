@@ -13,20 +13,32 @@ export default {
     onClick() {
       this.visible = true
     },
-    showDialog2 () {
+    showDialog2() {
       this.visible2 = true
     },
-    onClose () {
+    onClose() {
       this.visible = false
+    },
+    centered (e) {
+      this.center = e.target.checked
     }
   },
   render() {
     let dialog
+    let wrapClassName = ''
+    if (this.center) {
+      wrapClassName = 'center'
+    }
     dialog = (
-      <Dialog visible={this.visible} on-close={this.onClose}>
+      <Dialog
+        visible={this.visible}
+        wrapClassName={wrapClassName}
+        animation="zoom"
+        on-close={this.onClose}
+      >
         <input ref="modalInput" />
         <p on-click={this.showDialog2}>click to show dialog2</p>
-        <div style={{ height: '20px' }}></div>
+        <div style={{ height: '200px' }}></div>
       </Dialog>
     )
     const dialog2 = (
@@ -34,6 +46,7 @@ export default {
         visible={this.visible2}
         animation="zoom"
         maskAnimation="fade"
+        on-close={() => { this.visible2 = false }}
       >
         <input ref="modalInput" />
         <p>basic modal</p>
@@ -42,11 +55,22 @@ export default {
     )
     return (
       <div style={{ width: '98%', margin: '0 auto' }}>
+        <style>
+          {
+            `
+            .center {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            `
+          }
+        </style>
         <p>
           <button on-click={this.onClick}>show dialog</button>
           &nbsp;
           <label>center
-            <input type="checkbox" checked={this.center} />
+            <input type="checkbox" checked={this.center} on-change={this.centered} />
           </label>
         </p>
         {dialog}

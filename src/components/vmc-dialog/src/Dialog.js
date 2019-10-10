@@ -57,12 +57,6 @@ export default {
       type: Number
     }
   },
-  mounted() {
-    document.body.style.overflow = ''
-    if (this.$refs.wrapRef) {
-      this.$refs.wrapRef.style.display = 'none'
-    }
-  },
   methods: {
     getZIndexStyle() {
       const style = {}
@@ -80,6 +74,15 @@ export default {
       const props = this.$props
       let transitionName = props.maskTransitionName
       const animation = props.maskAnimation
+      if (!transitionName && animation) {
+        transitionName = `${props.prefixCls}-${animation}`
+      }
+      return transitionName
+    },
+    getTransitionName() {
+      const props = this.$props
+      let transitionName = props.transitionName
+      const animation = props.animation
       if (!transitionName && animation) {
         transitionName = `${props.prefixCls}-${animation}`
       }
@@ -113,7 +116,6 @@ export default {
       const props = this.$props
       const closable = props.closable
       const prefixCls = props.prefixCls
-
       let footer
       if (this.$slots.footer) {
         footer = (
@@ -134,10 +136,13 @@ export default {
           </button>
         )
       }
+
+      const transitionName = this.getTransitionName()
       const dialogElement = (
         <LazyRenderBox
           key="dialog-element"
           role="document"
+          ref="dialogRef"
           class={`${prefixCls}`}
           visible={props.visible}
         >
@@ -151,12 +156,18 @@ export default {
         </LazyRenderBox>
       )
       return (
-        <transition>
+        <transition
+          appear
+          appear-to-class={`${transitionName}-appear`}
+          appear-active-class={`${transitionName}-appear-active`}
+          leave-to-class={`${transitionName}-leave`}
+          leave-active-class={`${transitionName}-leave-active`}
+        >
           {dialogElement}
         </transition>
       )
     },
-    close () {
+    close() {
       this.$emit('close')
     }
   },
@@ -164,9 +175,7 @@ export default {
     const props = this.$props
     const { prefixCls, maskClosable } = props
     const style = this.getWrapStyle()
-    if (props.visible) {
-      style.display = null
-    }
+
     return (
       <div>
         {this.getMaskElement()}
