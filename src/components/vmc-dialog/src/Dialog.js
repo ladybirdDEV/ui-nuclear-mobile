@@ -162,6 +162,7 @@ export default {
           appear-active-class={`${transitionName}-appear-active`}
           leave-to-class={`${transitionName}-leave`}
           leave-active-class={`${transitionName}-leave-active`}
+          on-leave={() => {console.log('leave')}}
         >
           {dialogElement}
         </transition>
