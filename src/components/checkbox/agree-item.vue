@@ -5,7 +5,6 @@
       :disabled="disabled"
       :checked="checked"
       :defaultChecked="defaultChecked"
-      @onChange="change"
       :name="name"
       :class="`${prefixCls}-label`"
       ref="checkbox">
@@ -54,9 +53,7 @@ export default {
   methods: {
     check () {
       this.$refs.checkbox.isChecked = !this.$refs.checkbox.isChecked
-    },
-    change (value) {
-      this.$emit('onChange')
+      this.$emit('change', this.$refs.checkbox.isChecked)
     }
   }
 }
