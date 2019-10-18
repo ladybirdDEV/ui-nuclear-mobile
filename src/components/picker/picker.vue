@@ -236,8 +236,12 @@ export default {
           this.data, (c, level) => c.value === value[level]
         )
       } else {
-        treeChildren = value.map((v, i) => {
-          return (this.allDatas)[i].filter(d => d.value === v)[0]
+        treeChildren = []
+        value.forEach((v, i) => {
+          const filters = this.allDatas[i].filter(d => d.value === v)
+          if (filters[0]) {
+            treeChildren.push(filters[0])
+          }
         })
       }
       if (this.format) {

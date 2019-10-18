@@ -117,7 +117,7 @@
         data: [
           {
             value: 'bj',
-            label: '北京省'
+            label: '北京市'
           },
           {
             value: 'zj',
