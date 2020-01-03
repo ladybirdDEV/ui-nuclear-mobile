@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Tabs :tabs="tabs" :initialPage="1" @onTabClick="(obj, index) => log(obj, index)" @onChange="(obj, index) => log(obj, index)">
+    <Tabs :tabs="tabs" :page="page" @onTabClick="(obj, index) => log(obj, index)" @onChange="(obj, index) => log(obj, index)">
       <div style="display: flex; align-items: center; justify-content: center; height: 150px; background-color: #fff;">
         Content of first tab
       </div>
@@ -110,6 +110,7 @@ export default {
   },
   data () {
     return {
+      page: 1,
       tabs: [
         {
           render () {

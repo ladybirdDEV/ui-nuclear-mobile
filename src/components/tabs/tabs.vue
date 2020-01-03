@@ -9,7 +9,7 @@
       <div :class="barCls" style="background-color: #fff">
         <div :class="`${prefixCls}-default-bar-prevpage`" v-if="showPrev"></div>
         <div :class="`${prefixCls}-default-bar-content`" :style="barContentStyles">
-          <div :class="[`${prefixCls}-default-bar-tab`,page === index ? `${prefixCls}-default-bar-tab-active` : '']" v-for="(item, index) in tabs" :key="index" :style="tabBarStyles" @click="onClick(index)">
+          <div :class="[`${prefixCls}-default-bar-tab`,currentPage === index ? `${prefixCls}-default-bar-tab-active` : '']" v-for="(item, index) in tabs" :key="index" :style="tabBarStyles" @click="onClick(index)">
             <render :render="item.render" v-if="item.render"></render>
             <template v-else>{{ item.title }}</template>
           </div>
@@ -79,7 +79,13 @@ export default {
       originX: 0,
       offsetX: false,
       tabBarOffset: 0,
-      paneWidth: false
+      paneWidth: false,
+      currentPage: this.page
+    }
+  },
+  watch: {
+    page () {
+      this.currentPage = this.page
     }
   },
   mounted () {
@@ -87,14 +93,14 @@ export default {
   },
   computed: {
     showPrev () {
-      if (this.tabs.length > 5 && this.page > 2) {
+      if (this.tabs.length > 5 && this.currentPage > 2) {
         return true
       } else {
         return false
       }
     },
     showNext () {
-      if (this.tabs.length > 5 && this.page < (this.tabs.length - 3)) {
+      if (this.tabs.length > 5 && this.currentPage < (this.tabs.length - 3)) {
         return true
       } else {
         return false
@@ -109,15 +115,15 @@ export default {
     },
     tabPaneOffset () {
       if (this.offsetX && this.animated) {
-        if (this.page === 0 && this.offsetX > 0) {
+        if (this.currentPage === 0 && this.offsetX > 0) {
           return 0
-        } else if (this.page === this.tabs.length - 1 && this.offsetX < 0) {
-          return `${0 - this.page * this.paneWidth}px`
+        } else if (this.currentPage === this.tabs.length - 1 && this.offsetX < 0) {
+          return `${0 - this.currentPage * this.paneWidth}px`
         } else {
-          return `${0 - this.page * this.paneWidth + this.offsetX}px`
+          return `${0 - this.currentPage * this.paneWidth + this.offsetX}px`
         }
       } else {
-        return `${0 - 100 * this.page}%`
+        return `${0 - 100 * this.currentPage}%`
       }
     },
     tabWidth () {
@@ -179,9 +185,9 @@ export default {
     },
     underlineStyles () {
       if (this.tabDirection === 'horizontal') {
-        return `width:${this.tabWidth}%;left:${this.tabWidth * this.page}%`
+        return `width:${this.tabWidth}%;left:${this.tabWidth * this.currentPage}%`
       } else if (this.tabDirection === 'vertical') {
-        return this.tabHeight ? `height: ${this.tabHeight}px;top:${this.tabHeight * this.page}px` : `height:${this.tabWidth}%;top:${this.tabWidth * this.page}%`
+        return this.tabHeight ? `height: ${this.tabHeight}px;top:${this.tabHeight * this.currentPage}px` : `height:${this.tabWidth}%;top:${this.tabWidth * this.currentPage}%`
       }
     }
   },
@@ -207,23 +213,23 @@ export default {
     },
     touchEnd (evt) {
       if (this.swipeable) {
-        let next = this.page === this.tabs.length - 1 ? this.tabs.length - 1 : this.page + 1
-        let prev = this.page === 0 ? 0 : this.page - 1
+        let next = this.currentPage === this.tabs.length - 1 ? this.tabs.length - 1 : this.currentPage + 1
+        let prev = this.currentPage === 0 ? 0 : this.currentPage - 1
         if (this.offsetX < 0 && Math.abs(this.offsetX) > this.paneWidth * this.distanceToChangeTab) {
           this.gotoPage(next)
         } else if (this.offsetX > 0 && Math.abs(this.offsetX) > this.paneWidth * this.distanceToChangeTab) {
           this.gotoPage(prev)
         } else {
-          this.gotoPage(this.page)
+          this.gotoPage(this.currentPage)
         }
       }
     },
     gotoPage (index) {
-      if (this.page !== index) {
+      if (this.currentPage !== index) {
         this.$emit('onChange', this.tabs[index], index)
       }
       this.offsetX = false
-      this.page = index
+      this.currentPage = index
       let tmp = []
       tmp.length = this.actives.length
       tmp.fill(false)
