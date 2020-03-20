@@ -5,6 +5,7 @@
       <DatePicker
         :onDismiss="dismiss"
         mode="datetime"
+        :mask="false"
         v-model="date">
         <template slot-scope="props" slot="list-item">
           <ListItem arrow="horizontal" :extra="props.extra">Datetime</ListItem>

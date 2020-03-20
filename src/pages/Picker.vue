@@ -7,6 +7,7 @@
         :data="district"
         :onOk="onOk"
         :onDismiss="onDismiss"
+        :mask="false"
         :onChange="onChange">
         <template slot-scope="props" slot="list-item">
           <ListItem arrow="horizontal" :extra="props.extra" :onClick="props.onClick">Multiple & cascade</ListItem>
@@ -28,6 +29,7 @@
       <Picker
         title="选择地区"
         :data="provinces"
+        v-model="province"
         :cascade="false"
         :onChange="onChange">
         <template slot-scope="props" slot="list-item">
@@ -85,8 +87,9 @@
     data () {
       return {
         value: ['05', '05-1', '05-1-3'],
+        province: ['00'],
         district: cityData,
-        provinces: provinces,
+        provinces: [{value: '00', label: '请选择'}, ...provinces],
         extra: '请选择',
         sValue: ['2013', '夏'],
         col: 1,

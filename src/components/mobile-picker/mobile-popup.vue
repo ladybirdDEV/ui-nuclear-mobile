@@ -10,6 +10,7 @@
     @onChange="onVisibleChange"
     :styles="wrapStyle"
     :maskClosable="maskClosable"
+    :mask="mask"
     >
       <div>
         <div :class="`${prefixCls}-header`">
@@ -81,6 +82,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    mask: {
+      type: Boolean,
+      default: true
     },
     maskClosable: {
       type: Boolean,

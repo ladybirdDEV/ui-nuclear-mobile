@@ -10,6 +10,7 @@
       v-model="visibleCopy"
       :onDismiss="dismiss"
       :onOk="ok"
+      :mask="mask"
       :maskClosable="visible === undefined ? maskClosable : false"
       :title="title">
       <MobileDatePicker
@@ -78,6 +79,10 @@ export default {
     visible: {
       type: Boolean,
       default: undefined
+    },
+    mask: {
+      type: Boolean,
+      default: true
     },
     onDismiss: Function,
     onOk: Function,

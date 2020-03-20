@@ -11,7 +11,9 @@
       :onDismiss="dismiss"
       :onOk="ok"
       :locale="currentLocale"
-      :onVisibleChange="visibleChange">
+      :onVisibleChange="visibleChange"
+      :mask="mask"
+      >
       <MobileCascader
         v-if="cascade"
         :data="data"
@@ -106,6 +108,10 @@ export default {
       default: false
     },
     cascade: {
+      type: Boolean,
+      default: true
+    },
+    mask: {
       type: Boolean,
       default: true
     },
