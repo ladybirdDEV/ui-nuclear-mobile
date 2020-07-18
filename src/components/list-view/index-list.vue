@@ -45,9 +45,7 @@
 <script>
 import List from '../list'
 import ListItem from '../list-item'
-import ListItemBrief from '../list-item-brief'
 import ListView from './list-view'
-import Feedback from '../feedback/feedback.vue'
 
 const TITLE_HEIGHT = 50
 const SUBTITLE_HEIGHT = 40
@@ -56,10 +54,8 @@ const ANCHOR_HEIGHT = window.innerHeight <= 480 ? 17 : 18
 export default {
   components: {
     ListView,
-    Feedback,
     List,
     ListItem,
-    ListItemBrief
   },
   props: {
     title: {
@@ -68,7 +64,7 @@ export default {
     },
     data: {
       type: Array,
-      default: []
+      default: () => { return [] }
     },
     anchorColor: {
       type: String,
@@ -211,7 +207,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-@import url('style/index.less');
-</style>

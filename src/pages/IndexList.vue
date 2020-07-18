@@ -9,12 +9,10 @@
 
 <script>
 import IndexList from '@/components/index-list'
-import WhiteSpace from '@/components/white-space'
 import SearchBar from '@/components/search-bar'
 
 export default {
   components: {
-    WhiteSpace,
     IndexList,
     SearchBar
   },
@@ -245,34 +243,6 @@ export default {
   }
 }
 </script>
-
-<style>
-h3 {
-  margin-left: 8px;
-}
-.item {
-  background-color: #fff;
-  border-bottom: 1px solid rgb(246, 246, 246);
-  height: 60px;
-  line-height: 60px;
-  font-size: 18px;
-  padding-left: 20px;
-}
-.wrapper {
-    overflow: hidden;
-    height: 100%;
-    /* width: 95%; */
-    margin: 0 auto
-}
-.view-wrapper {
-    position: fixed;
-    height: 100%;
-    top: 45px;
-    left: 0;
-    bottom: 0;
-    width: 100%
-}
-</style>
 
 
 

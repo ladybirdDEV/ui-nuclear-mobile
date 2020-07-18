@@ -24,14 +24,12 @@
 <script>
   import PullToRefresh from '@/components/pull-to-refresh'
   import Icon from '@/components/icon'
-  import WhiteSpace from '@/components/white-space'
   import Button from '@/components/button'
   import WingBlank from '@/components/wing-blank'
 
   export default {
     components: {
       PullToRefresh,
-      WhiteSpace,
       WingBlank,
       Icon,
       Button

@@ -29,16 +29,17 @@
           <div :class="`${prefixCls}-body`">
             <div>
               <div :class="`${prefixCls}-message`">{{message}}</div>
-              <div :class="`${prefixClsShare}-list`" :key=rowIndex v-if="multipleLine" v-for="(row, rowIndex) in iconGroup">
-                <div :class="`${prefixClsShare}-list-item`" :key=colIndex v-for="(col, colIndex) in row"
-                    @click="iconClick(rowIndex, colIndex)">
-                  <div :class="`${prefixClsShare}-list-item-icon`">
-                    <img :src="col.icon" style="width: 36px; height: 36px"/>
+              <template v-if="multipleLine" >
+                <div :class="`${prefixClsShare}-list`" :key=rowIndex v-for="(row, rowIndex) in iconGroup">
+                  <div :class="`${prefixClsShare}-list-item`" :key=colIndex v-for="(col, colIndex) in row"
+                      @click="iconClick(rowIndex, colIndex)">
+                    <div :class="`${prefixClsShare}-list-item-icon`">
+                      <img :src="col.icon" style="width: 36px; height: 36px"/>
+                    </div>
+                    <div :class="`${prefixClsShare}-list-item-title`">{{ col.title }}</div>
                   </div>
-                  <div :class="`${prefixClsShare}-list-item-title`">{{ col.title }}</div>
                 </div>
-              </div>
-
+              </template>
               <div :class="`${prefixClsShare}-list`" v-if="!multipleLine">
                 <div :class="`${prefixClsShare}-list-item`" :key=index v-for="(item, index) in iconGroup">
                   <div :class="`${prefixClsShare}-list-item-icon`" @click="iconClick(item)">
@@ -129,7 +130,3 @@
     }
   }
 </script>
-
-<style lang="less" scoped>
-@import url('style/index.less');
-</style>

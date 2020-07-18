@@ -68,8 +68,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-.sub-title {
-  margin: 8px;
-}
-</style>

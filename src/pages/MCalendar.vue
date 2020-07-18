@@ -163,23 +163,5 @@ export default {
 }
 </script>
 
-<style lang="less">
-.wrap{
-  margin: 10px 0;
-  font-size: 14px;
-}
-.btn{
-  background: #1A7BE6;
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
-
-  p{
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-}
-</style>
 
 

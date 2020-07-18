@@ -99,8 +99,6 @@
       umMenu: Menu,
       NavBar,
       Icon,
-      WhiteSpace,
-      WingBlank,
       ActivityIndicator
     },
     data () {
@@ -249,7 +247,6 @@
     }
   }
 </script>
-
 <style scoped>
   .sub-title {
     color: #2f2f2f;

@@ -314,8 +314,4 @@ export default {
 }
 </script>
 
-<style>
-@import 'style/index.less';
-</style>
-
 

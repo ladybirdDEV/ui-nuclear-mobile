@@ -39,21 +39,17 @@ import enUS from '@/components/locale-provider/en_US'
 import ruRU from '@/components/locale-provider/ru_RU'
 import DatePicker from '@/components/date-picker'
 import Picker from '@/components/picker'
-import Button from '@/components/button'
 import List from '@/components/list'
 import ListItem from '@/components/list-item'
 import LocaleProvider from '@/components/locale-provider'
 import WingBlank from '@/components/wing-blank'
 import WhiteSpace from '@/components/white-space'
-import Pagination from '@/components/pagination'
 import InputItem from '@/components/input-item'
 export default {
   components: {
     WingBlank,
     WhiteSpace,
-    Pagination,
     LocaleProvider,
-    Button,
     DatePicker,
     Picker,
     List,

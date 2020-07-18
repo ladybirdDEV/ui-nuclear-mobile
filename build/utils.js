@@ -18,7 +18,9 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
-      sourceMap: options.sourceMap
+      minimize: process.env.NODE_ENV === 'production',
+      sourceMap: options.sourceMap,
+      importLoaders: 1
     }
   }
 
@@ -58,7 +60,7 @@ exports.cssLoaders = function (options) {
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less'),
+    less: generateLoaders('less', { javascriptEnabled: true }),
     sass: generateLoaders('sass', { indentedSyntax: true }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),

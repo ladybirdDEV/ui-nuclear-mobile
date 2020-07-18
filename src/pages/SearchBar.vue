@@ -78,12 +78,3 @@
     }
   }
 </script>
-
-<style>
-  .sub-title {
-    color: #888;
-    font-size: 14px;
-    padding: 20px 0 18px 0;
-  }
-
-</style>

@@ -48,7 +48,6 @@ export default {
 .pagination-container {
   margin: 0 15px;
 }
-
 .custom-pagination-with-icon .am-pagination-wrap-btn-prev .am-button-inline{
   padding-left: 0;
   padding-right: 10px;

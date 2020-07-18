@@ -213,28 +213,3 @@
     }
   }
 </script>
-
-<style>
-.test {
-  position: relative;
-  border-bottom: 0;
-  display: flex;
-  height: 45px;
-  line-height: 45px;
-}
-.test:after {
-  content: '';
-  position: absolute;
-  background-color: #ddd;
-  display: block;
-  z-index: 1;
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  transform-origin: 50% 100%;
-  transform: scaleY(0.5);
-}
-</style>

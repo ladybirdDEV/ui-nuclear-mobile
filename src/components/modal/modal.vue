@@ -52,7 +52,6 @@
 <script>
   import List from '../list'
   import ListItem from '../list-item'
-  import ListItemBrief from '../list-item-brief'
   import Button from '../button'
   import Feedback from '../feedback/feedback.vue'
 
@@ -60,7 +59,6 @@
     components: {
       List,
       ListItem,
-      ListItemBrief,
       Button,
       Feedback
     },
@@ -139,8 +137,4 @@
     }
   }
 </script>
-
-<style lang="less">
-@import url('style/index.less');
-</style>
 

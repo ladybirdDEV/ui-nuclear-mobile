@@ -35,6 +35,8 @@ export default {
     activeClassName () {
       if (this.onClick) {
         return `${prefixCls}-item-active`
+      } else {
+        return ''
       }
     },
     wrapCls () {

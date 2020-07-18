@@ -62,5 +62,4 @@ export default {
   width: 40px;
   height: 60px;
 }
-
 </style>

@@ -81,22 +81,5 @@ export default {
 }
 </script>
 
-<style>
-h3 {
-  margin-left: 8px;
-}
-.item {
-  background-color: #fff;
-  border-bottom: 1px solid rgb(246, 246, 246);
-  height: 60px;
-  line-height: 60px;
-  font-size: 18px;
-  padding-left: 20px;
-}
-.wrapper {
-  height: 480px;
-}
-</style>
-
 
 

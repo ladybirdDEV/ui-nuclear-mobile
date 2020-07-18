@@ -35,10 +35,4 @@ export default {
 }
 </script>
 
-<style>
-/* .mobile-picker-item-selected{
-  color: red;
-} */
-</style>
-
 

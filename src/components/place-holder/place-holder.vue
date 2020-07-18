@@ -6,6 +6,3 @@ export default {
   name: 'Block'
 }
 </script>
-<style scoped lang="less">
-@import url('style/index.less');
-</style>

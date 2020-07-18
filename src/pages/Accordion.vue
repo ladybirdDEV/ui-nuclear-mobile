@@ -45,7 +45,6 @@
   import List from '@/components/list'
   import ListItem from '@/components/list-item'
   import WingBlank from '@/components/wing-blank'
-  import WhiteSpace from '@/components/white-space'
 
   export default {
     components: {
@@ -54,7 +53,6 @@
       ListItem,
       List,
       WingBlank,
-      WhiteSpace
     },
     data () {
       return {
@@ -73,7 +71,6 @@
     }
   }
 </script>
-
 <style>
   .accordion-title {
     color: #363636;

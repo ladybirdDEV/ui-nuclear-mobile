@@ -9,17 +9,17 @@
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | sidebar | 抽屉里的内容 | Slot `name="sidebar"` | - |
-| v-model | 开关状态 `双向绑定` | Boolean | - |
+| open | 开关状态 | Boolean | - |
 | position | 抽屉所在位置	 | String `'left' 'right' 'top' 'bottom'`| `'left'` |
-| sidebarStyle (`web only`)	 | 抽屉的样式 | Object | - |
-| contentStyle (`web only`)	| 内容样式 | Object | - |
-| overlayStyle (`web only`)	| 遮罩样式 | Object | - |
-| dragHandleStyle (`web only`)	| 拖动条样式 | Object | - |
-| touch `暂不支持` (`web only`)	| 是否开启触摸手势 | Boolean | true |
-| transitions `暂不支持` (`web only`)	| 是否开启动画 | Boolean | true |
-| docked (`web only`)	| 是否嵌入到正常文档流里	 | Boolean | false |
-| enableDragHandle (`web only`)	| 是否禁止 dragHandle | Boolean | false |
-| dragToggleDistance (`web only`)	| 打开关闭抽屉时距 `sidebar` 的拖动距离	 | Number | 30 |
+| sidebarStyle | 抽屉的样式 | Object | - |
+| contentStyle | 内容样式 | Object | - |
+| overlayStyle | 遮罩样式 | Object | - |
+| dragHandleStyle	| 拖动条样式 | Object | - |
+| touch | 是否开启触摸手势 | Boolean | true |
+| transitions | 是否开启动画 | Boolean | true |
+| docked	| 是否嵌入到正常文档流里	 | Boolean | false |
+| enableDragHandle	| 是否禁止 dragHandle | Boolean | false |
+| dragToggleDistance	| 打开关闭抽屉时距 `sidebar` 的拖动距离	 | Number | 30 |
 
 ### events
 

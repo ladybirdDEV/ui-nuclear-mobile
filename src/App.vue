@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <NavBar mode="light" :onLeftClick="handleClick" v-if="$route.name !== 'home'">
@@ -12,12 +13,10 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/icon'
 import NavBar from '@/components/nav-bar'
 export default {
   name: 'app',
   components: {
-    Icon,
     NavBar
   },
   computed: {
@@ -39,7 +38,6 @@ export default {
 }
 </script>
 <style lang="less">
-@import './components/style/index';
 html,
 body {
   font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial;

@@ -1,5 +1,4 @@
 <script>
-import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
   name: 'Carousel',
@@ -23,6 +22,7 @@ export default {
       )
     } else {
       console.warn('Carousel should contain at least one child element, otherwise nothing will be displayed')
+      return ''
     }
   },
   data () {
@@ -101,6 +101,3 @@ export default {
   }
 }
 </script>
-<style>
-@import url('style/index.less');
-</style>

@@ -3,27 +3,27 @@
     <List>
       <template slot="renderHeader">Form switch</template>
       <ListItem>
-        On
-        <template slot="extra">
-          <uSwitch checked :onClick="(v) => {log(v)}"></uSwitch>
-        </template>
-      </ListItem>
-      <ListItem>
         Off
         <template slot="extra">
-          <uSwitch :onClick="(v) => {log(v)}"></uSwitch>
+          <uSwitch @click="log"></uSwitch>
         </template>
       </ListItem>
       <ListItem>
-        Off disabled
+        On
         <template slot="extra">
-          <uSwitch disabled :onClick="(v) => {log(v)}"></uSwitch>
+          <uSwitch checked @click="log"></uSwitch>
         </template>
       </ListItem>
       <ListItem>
-        On disabled
+        Disabled off
         <template slot="extra">
-          <uSwitch checked disabled :onClick="(v) => {log(v)}"></uSwitch>
+          <uSwitch disabled @click="log"></uSwitch>
+        </template>
+      </ListItem>
+      <ListItem>
+        Disabled on
+        <template slot="extra">
+          <uSwitch checked disabled @click="log"></uSwitch>
         </template>
       </ListItem>
       <ListItem>

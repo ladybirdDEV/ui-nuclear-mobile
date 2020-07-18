@@ -1,0 +1,21 @@
+.drawer-container {
+  position: relative;
+  height: 400px;
+  border: 1px solid #ccc;
+  .main {
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+}
+.vmc-drawer {
+  &-sidebar {
+    padding: 16px;
+    background-color: #e4f6fe;
+  }
+  &-left &-sidebar,
+  &-right &-sidebar, {
+    height: 100%;
+  }
+}

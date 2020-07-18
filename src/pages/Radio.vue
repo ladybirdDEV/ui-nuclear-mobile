@@ -61,8 +61,6 @@
   import WingBlank from '@/components/wing-blank'
   import WhiteSpace from '@/components/white-space'
   import List from '@/components/list'
-  import ListItem from '@/components/list-item'
-  import ListItemBrief from '@/components/list-item-brief'
   import Flex from '@/components/flex'
   import FlexItem from '@/components/flex-item'
 
@@ -72,8 +70,6 @@
       WhiteSpace,
       Radio,
       List,
-      ListItem,
-      ListItemBrief,
       RadioItem,
       Flex,
       FlexItem
@@ -101,12 +97,3 @@
     }
   }
 </script>
-
-<style>
-.my-radio .um-radio {
-  padding: 2.5px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-</style>

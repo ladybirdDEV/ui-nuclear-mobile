@@ -1,103 +1,95 @@
 <template>
   <label class="um-radio-wrapper">
     <span class="um-radio um-radio-checked" :class="{'um-radio-disabled': disabled}">
-      <input type="radio"
+      <input
+        type="radio"
         class="um-radio-input"
         :name="name"
         :disabled="disabled"
         :value="value"
         :checked="isChecked"
-        @change="change"/>
+        @change="change"
+      />
       <span v-if="isChecked" class="um-radio-inner"></span>
     </span>
     <slot></slot>
   </label>
 </template>
 <script>
-  import Icon from '../icon'
-
-  export default {
-    components: {
-      Icon
+export default {
+  name: "Radio",
+  model: {
+    prop: "checkedVal",
+    event: "input"
+  },
+  props: {
+    disabled: {
+      type: Boolean,
+      default: false
     },
-    name: 'Radio',
-    model: {
-      prop: 'checkedVal',
-      event: 'input'
+    label: {
+      type: String,
+      default: ""
     },
-    props: {
-      disabled: {
-        type: Boolean,
-        default: false
-      },
-      label: {
-        type: String,
-        default: ''
-      },
-      value: {
-        type: [String, Number]
-      },
-      checked: {
-        type: Boolean,
-        default: undefined
-      },
-      name: {
-        type: String,
-        default: ''
-      },
-      defaultChecked: {
-        type: Boolean,
-        default: undefined
-      },
-      checkedVal: [String, Number, Boolean],
-      onChange: Function
+    value: {
+      type: [String, Number]
     },
-    created () {
+    checked: {
+      type: Boolean,
+      default: undefined
     },
-    data () {
-      return {
-        isChecked: this.computeCheckState(),
-        currentValue: ''
+    name: {
+      type: String,
+      default: ""
+    },
+    defaultChecked: {
+      type: Boolean,
+      default: undefined
+    },
+    checkedVal: [String, Number, Boolean],
+    onChange: Function
+  },
+  created() {},
+  data() {
+    return {
+      isChecked: this.computeCheckState(),
+      currentValue: ""
+    }
+  },
+  methods: {
+    computeCheckState() {
+      if (this.checked !== undefined) {
+        return this.checked
+      } else if (this.defaultChecked !== undefined) {
+        return this.defaultChecked
+      } else {
+        return this.value === this.checkedVal
       }
     },
-    methods: {
-      computeCheckState () {
-        if (this.checked !== undefined) {
-          return this.checked
-        } else if (this.defaultChecked !== undefined) {
-          return this.defaultChecked
-        } else {
-          return this.value === this.checkedVal
+    change() {
+      if (this.value === undefined && !this.checkedVal) {
+        this.isChecked = !this.isChecked
+        this.$emit("input", this.isChecked)
+        if (this.onChange) {
+          this.onChange(this.isChecked)
         }
-      },
-      change () {
-        if (this.value === undefined && !this.checkedVal) {
-          this.isChecked = !this.isChecked
-          this.$emit('input', this.isChecked)
-          if (this.onChange) {
-            this.onChange(this.isChecked)
-          }
-          this.$emit('change', this.isChecked)
-        } else {
-          this.$emit('input', this.value)
-          if (this.onChange) {
-            this.onChange(this.value)
-          }
-          this.$emit('change', this.value)
+        this.$emit("change", this.isChecked)
+      } else {
+        this.$emit("input", this.value)
+        if (this.onChange) {
+          this.onChange(this.value)
         }
-      }
-    },
-    watch: {
-      checkedVal (val) {
-        this.isChecked = this.value === val
-      },
-      checked (val) {
-        this.isChecked = val
+        this.$emit("change", this.value)
       }
     }
+  },
+  watch: {
+    checkedVal(val) {
+      this.isChecked = this.value === val
+    },
+    checked(val) {
+      this.isChecked = val
+    }
   }
+}
 </script>
-
-<style lang="less">
-@import './style/index.less';
-</style>

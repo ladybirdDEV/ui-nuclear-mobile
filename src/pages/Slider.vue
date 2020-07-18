@@ -34,12 +34,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.sub-title {
-  color: #888;
-  font-size: 14px;
-  padding: 30px 0 18px 0;
-  margin: 0;
-}
-
-</style>

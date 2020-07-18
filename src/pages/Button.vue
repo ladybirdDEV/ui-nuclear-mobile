@@ -2,7 +2,7 @@
   <div>
     <WingBlank>
       <WhiteSpace></WhiteSpace>
-      <Button :onClick="log">default</Button>
+      <Button @click="log">default</Button>
       <WhiteSpace></WhiteSpace>
       <Button disabled>default disabled</Button>
       <WhiteSpace></WhiteSpace>
@@ -14,7 +14,7 @@
       <WhiteSpace></WhiteSpace>
       <Button type="warning" disabled>warning disabled</Button>
       <WhiteSpace></WhiteSpace>
-      <Button :loading="loading" :onClick="handleLoading">loading button</Button>
+      <Button :loading="loading" @click="handleLoading">loading button</Button>
       <WhiteSpace></WhiteSpace>
       <Button icon="check-circle-o">with icon</Button>
       <WhiteSpace></WhiteSpace>
@@ -58,7 +58,7 @@ export default {
     WhiteSpace,
     List,
     ListItem,
-    ListItemBrief
+    ListItemBrief,
   },
   data () {
     return {
@@ -66,8 +66,8 @@ export default {
     }
   },
   methods: {
-    log (ev) {
-      console.log(ev)
+    log (e) {
+      console.log(e)
     },
     handleLoading () {
       this.loading = !this.loading

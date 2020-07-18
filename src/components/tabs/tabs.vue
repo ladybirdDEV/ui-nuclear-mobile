@@ -1,6 +1,6 @@
 <template>
   <div :class="wrapCls">
-    <div v-if="!beforeAfter" :class="[`${prefixCls}-content-wrap`,animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
+    <div v-if="tabBarPosition === 'bottom' || tabBarPosition === 'right'" :class="[`${prefixCls}-content-wrap`,animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
       <render v-if="renderPane" :render="renderPane"></render>
     </div>
     <div :class="`${prefixCls}-tab-bar-wrap`">
@@ -19,7 +19,7 @@
       </div>
       </template>
     </div>
-    <div v-if="beforeAfter" :class="[`${prefixCls}-content-wrap`, animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
+    <div v-if="tabBarPosition === 'top' || tabBarPosition === 'left'" :class="[`${prefixCls}-content-wrap`, animated && !offsetX ? `${prefixCls}-content-wrap-animated` : '']" :style="contentWrapStyles" ref="content" v-touch:start="touchStart" v-touch:moving="touchMove" v-touch:end="touchEnd">
       <render v-if="renderPane" :render="renderPane"></render>
     </div>
   </div>
@@ -106,13 +106,6 @@ export default {
         return false
       }
     },
-    beforeAfter () {
-      if (this.tabBarPosition === 'top' || this.tabBarPosition === 'left') {
-        return true
-      } else if (this.tabBarPosition === 'bottom' || this.tabBarPosition === 'right') {
-        return false
-      }
-    },
     tabPaneOffset () {
       if (this.offsetX && this.animated) {
         if (this.currentPage === 0 && this.offsetX > 0) {
@@ -159,6 +152,8 @@ export default {
         return `transform: translate3d(-${this.tabBarOffset}%, 0px, 1px)`
       } else if (this.tabDirection === 'vertical') {
         return `transform: translate3d(0px, -${this.tabBarOffset}%, 1px)`
+      } else {
+        return false
       }
     },
     contentWrapStyles () {
@@ -167,12 +162,16 @@ export default {
           return `transform: translate3d(${this.tabPaneOffset}, 0px, 1px);touch-action:pan-x pan-y`
         } else if (this.tabDirection === 'vertical') {
           return `transform: translate3d(0px, ${this.tabPaneOffset}, 1px)`
+        } else {
+          return ''
         }
       } else {
         if (this.tabDirection === 'horizontal') {
           return `position:relative;left: ${this.tabPaneOffset}`
         } else if (this.tabDirection === 'vertical') {
           return `position:relative;top:${this.tabPaneOffset}`
+        } else {
+          return ''
         }
       }
     },
@@ -181,6 +180,8 @@ export default {
         return `width:${this.tabWidth}%`
       } else if (this.tabDirection === 'vertical') {
         return this.tabHeight ? `height:${this.tabHeight}px` : `height:${this.tabWidth}%`
+      } else {
+        return ''
       }
     },
     underlineStyles () {
@@ -188,6 +189,8 @@ export default {
         return `width:${this.tabWidth}%;left:${this.tabWidth * this.currentPage}%`
       } else if (this.tabDirection === 'vertical') {
         return this.tabHeight ? `height: ${this.tabHeight}px;top:${this.tabHeight * this.currentPage}px` : `height:${this.tabWidth}%;top:${this.tabWidth * this.currentPage}%`
+      } else {
+        return ''
       }
     }
   },
@@ -278,6 +281,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-@import './style/index';
-</style>

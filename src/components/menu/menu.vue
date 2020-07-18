@@ -36,8 +36,6 @@
   import FlexItem from '../flex-item'
   import List from '../list'
   import ListItem from '../list-item'
-  import Radio from '../radio'
-  import RadioItem from '../radio-item'
   import SubMenu from './sub-menu'
   import Button from '../button'
   import { oneOf } from '../../utils'
@@ -49,8 +47,6 @@
       FlexItem,
       List,
       ListItem,
-      RadioItem,
-      Radio,
       SubMenu,
       Button
     },
@@ -150,6 +146,3 @@
     }
   }
 </script>
-<style lang="less">
-@import "style/index";
-</style>

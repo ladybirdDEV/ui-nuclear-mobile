@@ -1,119 +1,111 @@
-<template>
-    <a
-      role="button"
-      :class="wrapCls"
-      :aria-disabled="disabled"
-      ref="button"
-      :style="inlineStyle"
-      :disabled="disabled"
-      @click="click"
-      v-feedback="{ disabled: disabled, activeClass: activeClassName }"
-    >
-      <Icon v-if="isIcon" :type="iconType" :class="`${prefixCls}-icon`" ></Icon>
-      <span><slot></slot></span>
-    </a>
-</template>
 <script>
-import { oneOf } from '../../utils'
-import Icon from '../icon'
-import Feedback from '../../directives/feedback'
-const prefixCls = 'um-button'
+import classnames from "classnames"
+import { cloneElement } from "../_util/vnode.js"
+import Icon from "../icon"
+import TouchFeedback from "../vmc-feedback"
 export default {
-  name: 'Button',
-  directives: {
-    Feedback
-  },
-  components: {
-    Icon
-  },
-  computed: {
-    inlineStyle () {
-      if (this.inline) {
-        return { display: 'inline-block' }
-      }
-    },
-    iconType () {
-      if (this.loading) {
-        return 'loading'
-      }
-      return this.icon
-    },
-    wrapCls () {
-      return {
-        [`${prefixCls}`]: true,
-        [`${prefixCls}-primary`]: this.type === 'primary',
-        [`${prefixCls}-ghost`]: this.type === 'ghost',
-        [`${prefixCls}-warning`]: this.type === 'warning',
-        [`${prefixCls}-small`]: this.size === 'small',
-        [`${prefixCls}-inline`]: this.inline,
-        [`${prefixCls}-disabled`]: this.disabled,
-        [`${prefixCls}-loading`]: this.loading,
-        [`${prefixCls}-icon`]: !!this.iconType
-      }
-    }
-  },
-  mounted () {
-    this.isIcon = this.icon || this.loading
-  },
-  watch: {
-    loading () {
-      if (this.loading) {
-        this.isIcon = true
-      } else {
-        this.isIcon = false
-      }
-    }
-  },
-  data () {
-    return {
-      activeClassName: `${prefixCls}-active`,
-      prefixCls: prefixCls,
-      isIcon: false
-    }
-  },
   props: {
-    type: {
-      validator (value) {
-        return oneOf(value, ['primary', 'warning', 'ghost', ''])
-      }
+    prefixCls: {
+      type: String,
+      default: "um-button"
     },
-    size: {
-      validator (value) {
-        return oneOf(value, ['large', 'small'])
-      },
-      default: 'large'
+    type: {
+      type: String
     },
     disabled: {
-      type: Boolean,
-      default: false
+      type: Boolean
+    },
+    size: {
+      type: String,
+      default: "large"
     },
     inline: {
-      type: Boolean,
-      default: false
-    },
-    loading: {
       type: Boolean,
       default: false
     },
     icon: {
       type: String
     },
-    onClick: {
-      type: Function
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    activeStyle: {
+      type: Object,
+      default: () => {}
+    },
+    activeClassName: {
+      type: String
     }
   },
   methods: {
-    click (ev) {
-      if (!this.disabled) {
-        this.$emit('onClick')
-      }
-      if (this.onClick) {
-        this.onClick(ev)
+    onClick (e) {
+      this.$emit('click', e)
+    }
+  },
+  render() {
+    const {
+      prefixCls,
+      type,
+      size,
+      inline,
+      disabled,
+      loading,
+      activeStyle,
+      activeClassName
+    } = this.$props
+    const icon = this.$slots.icon || this.icon
+    const iconType = loading ? "loading" : icon
+    const wrapCls = classnames(prefixCls, {
+      [`${prefixCls}-primary`]: type === "primary",
+      [`${prefixCls}-ghost`]: type === "ghost",
+      [`${prefixCls}-warning`]: type === "warning",
+      [`${prefixCls}-small`]: size === "small",
+      [`${prefixCls}-inline`]: inline,
+      [`${prefixCls}-disabled`]: disabled,
+      [`${prefixCls}-loading`]: loading,
+      [`${prefixCls}-icon`]: !!iconType
+    })
+
+    const kids = <span>{this.$slots.default}</span>
+    let iconEl
+    if (typeof iconType === "string") {
+      iconEl = (
+        <Icon
+          aria-hidden="true"
+          type={iconType}
+          size={size === "small" ? "xxs" : "md"}
+          class={`${prefixCls}-icon`}
+        />
+      )
+    } else if (iconType) {
+      const cls = classnames(
+        "um-icon",
+        `${prefixCls}-icon`,
+        size === "small" ? "um-icon-xxs" : "um-icon-md"
+      )
+      iconEl = cloneElement(iconType, {
+        class: cls
+      })
+    }
+    const buttonProps = {
+      class: wrapCls,
+      attrs: {
+        role: "button",
+        "aria-disabled": disabled
+      },
+      on: {
+        click: this.onClick
       }
     }
+    return (
+      <TouchFeedback activeClassName={`${prefixCls}-active`} disabled={disabled}>
+        <a {...buttonProps}>
+          {iconEl}
+          {kids}
+        </a>
+      </TouchFeedback>
+    )
   }
 }
 </script>
-<style lang="less">
-@import './style/index';
-</style>

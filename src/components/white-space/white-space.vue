@@ -1,31 +1,26 @@
-<template>
-  <div :class="wrapCls">
-  </div>
-</template>
 <script>
+import classnames from "classnames"
 export default {
-  nume: 'WhiteSpace',
-  data () {
-    return {
-      prefixCls: 'um-whitespace'
-    }
-  },
-  computed: {
-    wrapCls () {
-      return [
-        this.prefixCls,
-        `${this.prefixCls}-${this.size}`
-      ]
-    }
-  },
+  name: "WhiteSpace",
   props: {
     size: {
       type: String,
-      default: 'md'
+      default: "md"
+    },
+    prefixCls: {
+      type: String,
+      default: "um-whitespace"
     }
+  },
+  methods: {
+    onClick(e) {
+      this.$emit("click", e)
+    }
+  },
+  render() {
+    const { prefixCls, size } = this.$props
+    const wrapCls = classnames(prefixCls, `${prefixCls}-${size}`)
+    return <div class={wrapCls} on-click={this.onClick} />
   }
 }
 </script>
-<style lang="less">
-@import 'style/index.less';
-</style>

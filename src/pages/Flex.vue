@@ -109,15 +109,12 @@ export default {
   font-size: 14px;
   padding: 30px 0 18px 0;
 }
-
 .inline {
   width: 80px!important;
   margin: 9px 9px 9px 0;
 }
-
 .small {
   height: 20px!important;
   line-height: 20px!important;
 }
-
 </style>

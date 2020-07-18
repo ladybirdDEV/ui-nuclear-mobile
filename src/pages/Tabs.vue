@@ -98,15 +98,11 @@
 </template>
 <script>
 import Tabs from '@/components/tabs'
-import Badge from '@/components/badge'
 import WhiteSpace from '@/components/white-space'
-import Sticky from 'vue-sticky-position'
 export default {
   components: {
-    Badge,
     Tabs,
     WhiteSpace,
-    Sticky
   },
   data () {
     return {

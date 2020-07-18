@@ -8,17 +8,20 @@
       :style="{minHeight: clientHeight + 'px'}"
       :contentStyle="{ color: '#A6A6A6', textAlign: 'center', paddingTop: '42px' }"
       ref="drawer"
-      v-model="open"
-      enableDragHandle>
+      :open="open"
+      @open-change="onOpenChange"
+    >
       <template slot="sidebar">
         <List>
           <ListItem
             thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
-            multipleLine>Category</ListItem>
+            multipleLine
+          >Category</ListItem>
           <ListItem
             v-for="index in 15"
             :key="index"
-            thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png">Category{{index}}</ListItem>
+            thumb="https://zos.alipayobjects.com/rmsportal/eOZidTabPoEbPeU.png"
+          >Category{{index}}</ListItem>
         </List>
       </template>
       Click upper-left corner
@@ -26,11 +29,11 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/icon'
-import NavBar from '@/components/nav-bar'
-import Drawer from '@/components/drawer'
-import List from '@/components/list'
-import ListItem from '@/components/list-item'
+import Icon from "@/components/icon"
+import NavBar from "@/components/nav-bar"
+import Drawer from "@/components/drawer"
+import List from "@/components/list"
+import ListItem from "@/components/list-item"
 export default {
   components: {
     NavBar,
@@ -39,17 +42,17 @@ export default {
     List,
     ListItem
   },
-  mounted () {
+  mounted() {
     this.clientHeight = document.documentElement.clientHeight
   },
-  data () {
+  data() {
     return {
-      clientHeight: '',
-      open: false
+      clientHeight: "",
+      open: true
     }
   },
   methods: {
-    onOpenChange () {
+    onOpenChange() {
       this.open = !this.open
     }
   }

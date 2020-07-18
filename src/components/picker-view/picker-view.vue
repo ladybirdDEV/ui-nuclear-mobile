@@ -23,7 +23,9 @@
           :key="index" v-model="valueCopy[index]"
           :disabled="disabled"
           :indicatorStyle="indicatorStyle">
-            <MobilePickerItem v-for="innerItem in data[index]" :key="innerItem.value" v-if="data[index].length > 0" :value="innerItem.value" :style="pickerItemStyle">{{innerItem.label}}</MobilePickerItem>
+          <template v-if="data[index].length > 0">
+            <MobilePickerItem v-for="innerItem in data[index]" :key="innerItem.value"  :value="innerItem.value" :style="pickerItemStyle">{{innerItem.label}}</MobilePickerItem>
+          </template>
         </MobilePicker>
       </template>
     </MobileMultiPicker>
@@ -106,15 +108,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-.um-picker-view .mobile-picker-item.mobile-picker-item-selected {
-  color: #000;
-  font-size: 17px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  html:not([data-scale]) .um-picker-view .mobile-picker-indicator {
-    border-bottom: none;
-    border-top: none;
-  }
-}
-</style>
