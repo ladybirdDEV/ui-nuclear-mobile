@@ -129,7 +129,7 @@
         title="Select Time"
         @change="change"
       >
-        <template slot-scope="props">
+        <template>
           <div
             style="background-color: rgb(255, 255, 255); height: 45px; line-height: 45px; padding: 0px 15px;"
           >
