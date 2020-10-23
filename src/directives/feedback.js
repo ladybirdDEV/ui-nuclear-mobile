@@ -1,19 +1,23 @@
 // Thanks to: https://github.com/yuanwen0327/vue-touch-feedback-plugin/blob/master/src/feedback.js
 // Thanks to: https://github.com/kilohaty/v-feedback/blob/master/src/index.js
 
-function addClass (event) {
+function addClass(event) {
   const el = event.currentTarget
   const className = event.currentTarget.getAttribute('data-active-class')
-  el.classList.add(className)
+  if (className) {
+    el.classList.add(className)
+  }
 }
 
-function removeClass (event) {
+function removeClass(event) {
   const el = event.currentTarget
   const className = event.currentTarget.getAttribute('data-active-class')
-  el.classList.remove(className)
+  if (className) {
+    el.classList.remove(className)
+  }
 }
 
-function feedback (el, className, option) {
+function feedback(el, className, option) {
   el.setAttribute('data-active-class', className)
   if (option === 'add') {
     el.addEventListener('mousedown', addClass)
@@ -30,14 +34,14 @@ function feedback (el, className, option) {
   }
 }
 export default {
-  bind (el, binding) {
+  bind(el, binding) {
     const className = binding.value.activeClass
     const disabled = !!binding.value.disabled
     if (!disabled) {
       feedback(el, className, 'add')
     }
   },
-  componentUpdated (el, binding) {
+  componentUpdated(el, binding) {
     const className = binding.value.activeClass
     const disabled = !!binding.value.disabled
     const oldDisabled = !!binding.oldValue.disabled
@@ -49,7 +53,7 @@ export default {
       }
     }
   },
-  unbind (el, binding) {
+  unbind(el, binding) {
     const className = binding.value.activeClass
     feedback(el, className, 'remove')
   }
